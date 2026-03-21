@@ -1,0 +1,191 @@
+/* ========================================
+   CRYPTO ACCESS SECTION
+   ======================================== */
+.caccess {
+  padding: 140px 0;
+  background: var(--color-bg);
+}
+
+.caccess__container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* ----------------------------------------
+   LEFT: Image area
+   ---------------------------------------- */
+.caccess__image-wrapper {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.caccess__image-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  background: #f4f4f4;
+  overflow: hidden;
+}
+
+.caccess__coin {
+  position: absolute;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.caccess__coin--1 {
+  width: 70%;
+  bottom: -5%;
+  left: -5%;
+  z-index: 4;
+}
+
+.caccess__coin--2 {
+  width: 56%;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.caccess__coin--3 {
+  width: 72%;
+  top: -5%;
+  right: -10%;
+  z-index: 2;
+}
+
+.caccess__coin--4 {
+  width: 64%;
+  top: 5%;
+  left: 5%;
+  z-index: 1;
+}
+
+/* ----------------------------------------
+   RIGHT: Content
+   ---------------------------------------- */
+.caccess__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 36px;
+  padding: 40px 0;
+}
+
+.caccess__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.caccess__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  padding: 6px 16px 6px 8px;
+  width: fit-content;
+}
+
+.caccess__badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  background: var(--color-primary);
+}
+
+.caccess__badge-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.caccess__title {
+  font-size: clamp(30px, 3.5vw, 44px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #212121;
+}
+
+.caccess__desc {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #212121;
+  opacity: 0.55;
+  max-width: 440px;
+}
+
+/* ----------------------------------------
+   CTA: Dot + text button
+   ---------------------------------------- */
+.caccess__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #212121;
+  background: var(--color-primary);
+  padding: 6px 6px 6px 20px;
+  border-radius: 100px;
+  width: fit-content;
+  transition: all 0.25s ease;
+}
+
+.caccess__cta:hover {
+  background: #d4a01e;
+  transform: translateY(-1px);
+}
+
+.caccess__cta:hover .cta__icon svg:first-child {
+  transform: translateX(36px);
+}
+.caccess__cta:hover .cta__icon svg:last-child {
+  transform: translateX(0);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 991px) {
+  .caccess {
+    padding: 100px 0;
+  }
+
+  .caccess__container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .caccess__image-bg {
+    min-height: 380px;
+  }
+
+  .caccess__content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .caccess {
+    padding: 80px 0;
+  }
+
+  .caccess__container {
+    padding: 0 16px;
+  }
+
+  .caccess__image-bg {
+    min-height: 300px;
+  }
+}

@@ -1,0 +1,154 @@
+.abtteam {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.abtteam__container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ---- Header ---- */
+.abtteam__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.abtteam__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-primary, #e6b026);
+}
+
+.abtteam__heading {
+  font-size: clamp(28px, 3.5vw, 46px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #212121;
+  text-align: center;
+}
+
+/* ---- Grid ---- */
+.abtteam__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* ---- Card ---- */
+.abtteam__card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #f0ece4;
+}
+
+.abtteam__card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.abtteam__card-img {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.abtteam__card:hover .abtteam__card-img {
+  transform: scale(1.05);
+}
+
+.abtteam__card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.abtteam__card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.abtteam__card-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #212121;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.abtteam__card-role {
+  font-size: 14px;
+  font-weight: 400;
+  color: #212121;
+  opacity: 0.6;
+  text-align: center;
+}
+
+/* ---- Socials ---- */
+.abtteam__card-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: #f9f6f0;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+.abtteam__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #212121;
+  transition: color 0.2s ease;
+}
+
+.abtteam__social-link:hover {
+  color: var(--color-primary, #e6b026);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 991px) {
+  .abtteam {
+    padding: 60px 0;
+  }
+
+  .abtteam__container {
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .abtteam__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 479px) {
+  .abtteam {
+    padding: 48px 0;
+  }
+
+  .abtteam__container {
+    padding: 0 16px;
+    gap: 32px;
+  }
+
+  .abtteam__grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}

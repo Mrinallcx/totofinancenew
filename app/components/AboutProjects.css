@@ -1,0 +1,244 @@
+.abtproj {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.abtproj__container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ---- Header ---- */
+.abtproj__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px;
+  border-radius: 12px;
+  background: var(--color-primary, #e6b026);
+}
+
+.abtproj__logo {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.abtproj__logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.abtproj__heading {
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 500;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+.abtproj__heading-accent {
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.abtproj__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #212121;
+  background: #1a1a1a;
+  padding: 6px 6px 6px 20px;
+  border-radius: 100px;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.abtproj__cta:hover {
+  background: #333333;
+  transform: translateY(-1px);
+}
+
+.abtproj__cta-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--color-primary, #e6b026);
+  border-radius: 200px;
+  color: #212121;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.abtproj__cta-arrow svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.abtproj__cta-arrow svg:last-child {
+  position: absolute;
+  transform: translateX(-36px);
+}
+
+.abtproj__cta:hover .abtproj__cta-arrow svg:first-child {
+  transform: translateX(36px);
+}
+
+.abtproj__cta:hover .abtproj__cta-arrow svg:last-child {
+  transform: translateX(0);
+}
+
+/* ---- Grid ---- */
+.abtproj__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* ---- Card ---- */
+.abtproj__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 320px;
+  transition: transform 0.3s ease;
+}
+
+.abtproj__card:hover {
+  transform: translateY(-4px);
+}
+
+.abtproj__card-img {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+
+.abtproj__card:hover .abtproj__card-img {
+  transform: scale(1.05);
+}
+
+.abtproj__card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.abtproj__card-content {
+  position: relative;
+  z-index: 2;
+  padding: 24px 24px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.abtproj__card-title {
+  font-size: clamp(24px, 2.5vw, 32px);
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.abtproj__card-desc {
+  font-size: 15px;
+  font-weight: 400;
+  color: #ffffff;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+.abtproj__card-link {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: gap 0.25s ease;
+}
+
+.abtproj__card:hover .abtproj__card-link {
+  gap: 12px;
+}
+
+.abtproj__card-link svg {
+  width: 16px;
+  height: 14px;
+  transition: transform 0.25s ease;
+}
+
+.abtproj__card:hover .abtproj__card-link svg {
+  transform: translateX(2px);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 991px) {
+  .abtproj {
+    padding: 80px 0;
+  }
+
+  .abtproj__container {
+    padding: 0 20px;
+  }
+
+  .abtproj__header {
+    padding: 28px;
+  }
+
+  .abtproj__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 479px) {
+  .abtproj {
+    padding: 60px 0;
+  }
+
+  .abtproj__container {
+    padding: 0 16px;
+  }
+
+  .abtproj__card {
+    min-height: 280px;
+  }
+
+  .abtproj__card-title {
+    font-size: 18px;
+  }
+
+  .abtproj__card-desc {
+    font-size: 13px;
+  }
+
+  .abtproj__card-content {
+    padding: 20px 20px 8px;
+  }
+
+  .abtproj__card-link {
+    padding: 8px 20px 20px;
+  }
+}

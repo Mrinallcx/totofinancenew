@@ -1,0 +1,223 @@
+/* ========================================
+   SERVICES GRID — AUTO-SCROLL MARQUEE
+   ======================================== */
+.sgrid {
+  padding: 140px 0;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+/* ----------------------------------------
+   HEADER: Title & Description
+   ---------------------------------------- */
+.sgrid__header {
+  max-width: 1300px;
+  margin: 0 auto 60px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sgrid__title {
+  font-size: clamp(30px, 3.5vw, 44px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-dark);
+}
+
+.sgrid__desc {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-dark);
+  opacity: 0.6;
+  max-width: 520px;
+}
+
+/* ----------------------------------------
+   TRACK: Infinite scroll
+   ---------------------------------------- */
+.sgrid__track-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+}
+
+.sgrid__track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scrollMarquee 40s linear infinite;
+}
+
+.sgrid__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ----------------------------------------
+   FOOTER: CTA
+   ---------------------------------------- */
+.sgrid__footer {
+  max-width: 1300px;
+  margin: 48px auto 0;
+  padding: 0 40px;
+}
+
+.sgrid__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #212121;
+  background: var(--color-primary);
+  padding: 6px 6px 6px 20px;
+  border-radius: 100px;
+  transition: all 0.25s ease;
+}
+
+.sgrid__cta:hover {
+  background: #d4a01e;
+  transform: translateY(-1px);
+}
+
+.sgrid__cta:hover .cta__icon svg:first-child {
+  transform: translateX(36px);
+}
+.sgrid__cta:hover .cta__icon svg:last-child {
+  transform: translateX(0);
+}
+
+/* ----------------------------------------
+   CARD
+   ---------------------------------------- */
+.sgrid__card {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 300px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.sgrid__card:hover {
+  transform: translateY(-4px);
+}
+
+.sgrid__card:hover .sgrid__img {
+  transform: scale(1.04);
+}
+
+/* ----------------------------------------
+   IMAGE WRAPPER
+   ---------------------------------------- */
+.sgrid__img-wrap {
+  position: relative;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sgrid__img-inner {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.sgrid__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* ----------------------------------------
+   INFO: Name
+   ---------------------------------------- */
+.sgrid__info {
+  padding: 16px 4px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sgrid__name {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--color-dark);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 991px) {
+  .sgrid {
+    padding: 100px 0;
+  }
+
+  .sgrid__header {
+    padding: 0 20px;
+    margin-bottom: 48px;
+  }
+
+  .sgrid__footer {
+    padding: 0 20px;
+  }
+
+  .sgrid__card {
+    width: 260px;
+  }
+
+  .sgrid__track {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sgrid {
+    padding: 80px 0;
+  }
+
+  .sgrid__header {
+    padding: 0 16px;
+    margin-bottom: 40px;
+  }
+
+  .sgrid__footer {
+    padding: 0 16px;
+  }
+
+  .sgrid__card {
+    width: 220px;
+  }
+
+  .sgrid__track {
+    gap: 12px;
+  }
+
+  .sgrid__name {
+    font-size: 18px;
+  }
+
+  .sgrid__info {
+    padding: 12px 2px 4px;
+  }
+}

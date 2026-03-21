@@ -1,0 +1,178 @@
+.abtmission {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.abtmission__container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+/* ---- Tagline ---- */
+.abtmission__tagline {
+  font-size: 14px;
+  font-weight: 500;
+  color: #5c3a0e;
+  text-align: center;
+}
+
+/* ---- Heading ---- */
+.abtmission__heading {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.03em;
+  color: #212121;
+  text-align: center;
+  max-width: 900px;
+  text-wrap: balance;
+}
+
+.abtmission__inline-icon {
+  display: inline-flex;
+  vertical-align: middle;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.abtmission__inline-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---- Video ---- */
+.abtmission__video-wrap {
+  width: 75%;
+  height: 35vh;
+  margin: 0 auto;
+  border-radius: 150px;
+  overflow: hidden;
+}
+
+.abtmission__video {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 50%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* ---- Stats ---- */
+.abtmission__stats {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  width: 100%;
+  padding-top: 16px;
+}
+
+.abtmission__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  max-width: 280px;
+}
+
+.abtmission__stat-value {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: clamp(36px, 4.5vw, 56px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #212121;
+}
+
+.abtmission__stat-suffix {
+  color: var(--color-primary, #e6b026);
+}
+
+.abtmission__stat-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(33, 33, 33, 0.15);
+}
+
+.abtmission__stat-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #212121;
+  opacity: 0.6;
+  text-align: center;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 991px) {
+  .abtmission {
+    padding: 60px 0;
+  }
+
+  .abtmission__container {
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .abtmission__inline-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .abtmission__video-wrap {
+    border-radius: 32px;
+  }
+
+  .abtmission__video {
+    height: 40vh;
+  }
+
+  .abtmission__stats {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 479px) {
+  .abtmission {
+    padding: 48px 0;
+  }
+
+  .abtmission__container {
+    padding: 0 16px;
+    gap: 32px;
+  }
+
+  .abtmission__inline-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .abtmission__video-wrap {
+    border-radius: 24px;
+  }
+
+  .abtmission__video {
+    height: 30vh;
+  }
+
+  .abtmission__stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .abtmission__stat {
+    max-width: 100%;
+    width: 100%;
+  }
+}
