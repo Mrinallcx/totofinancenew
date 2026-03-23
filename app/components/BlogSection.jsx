@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import useScrollReveal from "../hooks/useScrollReveal";
+import SplitWords from "../hooks/SplitWords";
 import "./BlogSection.css";
 
 const POSTS = [
@@ -77,12 +81,16 @@ function BlogCard({ post }) {
 }
 
 export default function BlogSection() {
+  const sectionRef = useScrollReveal();
+
   return (
-    <section className="blog">
+    <section className="blog" ref={sectionRef}>
       <div className="blog__header-wrap">
         <div className="blog__header">
-          <h2 className="blog__title">Featured news and insights</h2>
-          <a href="/blog" className="blog__cta">
+          <h2 className="blog__title">
+            <SplitWords text="Featured news and insights" />
+          </h2>
+          <a href="/blog" className="blog__cta sr-item" style={{ animationDelay: "0.4s" }}>
             <span>View all articles</span>
             <span className="cta__icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">

@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import useScrollReveal from "../hooks/useScrollReveal";
+import SplitWords from "../hooks/SplitWords";
 import "./AboutTeam.css";
 
 const TEAM = [
@@ -36,12 +40,16 @@ const LinkedInIcon = () => (
 );
 
 export default function AboutTeam() {
+  const sectionRef = useScrollReveal();
+
   return (
-    <section className="abtteam" id="about-team">
+    <section className="abtteam" id="about-team" ref={sectionRef}>
       <div className="abtteam__container">
         <div className="abtteam__header">
-          <p className="abtteam__label">Team</p>
-          <h2 className="abtteam__heading">Meet the Consultant</h2>
+          <p className="abtteam__label sr-item" style={{ animationDelay: "0s" }}>Team</p>
+          <h2 className="abtteam__heading">
+            <SplitWords text="Meet the Consultant" startDelay={0.1} stagger={0.06} />
+          </h2>
         </div>
 
         <div className="abtteam__grid">

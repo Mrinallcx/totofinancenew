@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Globe from "./Globe";
+import useScrollReveal from "../hooks/useScrollReveal";
+import SplitWords from "../hooks/SplitWords";
 import "./WhatWeDo.css";
 
 const STATS = [
@@ -13,24 +17,27 @@ const STATS = [
   { value: "$12T+", label: "Precious Metals Market" },
 ];
 
+const HEADING_TEXT = "Toto Finance is building the infrastructure layer for tokenized global commodities.";
+
 export default function WhatWeDo() {
+  const sectionRef = useScrollReveal();
+
   return (
-    <section className="wwd" id="overview">
+    <section className="wwd" id="overview" ref={sectionRef}>
       <div className="wwd__container">
         <div className="wwd__top">
           <div className="wwd__left">
-            <div className="wwd__label">
+            <div className="wwd__label sr-item" style={{ animationDelay: "0s" }}>
               <span className="wwd__dot" />
               <span className="wwd__label-text">What we do</span>
               <span className="wwd__dot" />
             </div>
 
             <h2 className="wwd__heading">
-              Toto Finance is building the infrastructure layer for tokenized
-              global commodities.
+              <SplitWords text={HEADING_TEXT} />
             </h2>
 
-            <a href="/about-us" className="wwd__cta">
+            <a href="/about-us" className="wwd__cta sr-item" style={{ animationDelay: "0.8s" }}>
               <span>About Company</span>
               <span className="cta__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">

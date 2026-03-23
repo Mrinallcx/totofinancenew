@@ -1,8 +1,14 @@
+"use client";
+
+import useScrollReveal from "../hooks/useScrollReveal";
+import SplitWords from "../hooks/SplitWords";
 import "./ProductsHero.css";
 
 export default function ProductsHero() {
+  const sectionRef = useScrollReveal(0.1);
+
   return (
-    <section className="prodhero" id="products-overview">
+    <section className="prodhero" id="products-overview" ref={sectionRef}>
       <div className="prodhero__video-wrap">
         <video
           className="prodhero__video"
@@ -22,15 +28,17 @@ export default function ProductsHero() {
           <div className="prodhero__left">
             <div className="prodhero__text">
               <h1 className="prodhero__title">
-                Tokenized commodities, the future of global trade
+                <SplitWords text="Tokenized commodities, the future of global trade" startDelay={0.2} stagger={0.06} />
               </h1>
               <p className="prodhero__body">
-                Institutional-grade, asset-backed digital commodities that bring
-                transparency, instant settlement, and borderless access to
-                metals, energy, and real-world assets.
+                <SplitWords
+                  text="Institutional-grade, asset-backed digital commodities that bring transparency, instant settlement, and borderless access to metals, energy, and real-world assets."
+                  startDelay={0.7}
+                  stagger={0.015}
+                />
               </p>
             </div>
-            <a href="/global-market" className="prodhero__cta">
+            <a href="/global-market" className="prodhero__cta sr-item" style={{ animationDelay: "1.1s" }}>
               <span>Explore products</span>
               <span className="cta__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">

@@ -1,3 +1,7 @@
+"use client";
+
+import useScrollReveal from "../hooks/useScrollReveal";
+import SplitWords from "../hooks/SplitWords";
 import "./AboutImpact.css";
 
 const CARDS = [
@@ -28,13 +32,16 @@ const CARDS = [
 ];
 
 export default function AboutImpact() {
+  const sectionRef = useScrollReveal();
+
   return (
-    <section className="abtimpact">
+    <section className="abtimpact" ref={sectionRef}>
       <div className="abtimpact__container">
         <h2 className="abtimpact__heading">
-          Toto Finance transforms commodities with tokenized solutions, building
-          a more transparent, efficient future through on-chain systems that
-          empower global participants.
+          <SplitWords
+            text="Toto Finance transforms commodities with tokenized solutions, building a more transparent, efficient future through on-chain systems that empower global participants."
+            stagger={0.04}
+          />
         </h2>
 
         <div className="abtimpact__grid">

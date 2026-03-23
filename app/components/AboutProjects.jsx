@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import useScrollReveal from "../hooks/useScrollReveal";
+import SplitWords from "../hooks/SplitWords";
 import "./AboutProjects.css";
 
 const PROJECTS = [
@@ -29,18 +33,19 @@ const PROJECTS = [
 ];
 
 export default function AboutProjects() {
+  const sectionRef = useScrollReveal();
+
   return (
-    <section className="abtproj" id="about-projects">
+    <section className="abtproj" id="about-projects" ref={sectionRef}>
       <div className="abtproj__container">
         <div className="abtproj__grid">
           <div className="abtproj__header">
             <h2 className="abtproj__heading">
-              Explore our{" "}
+              <SplitWords text="Explore our" />
               <span className="abtproj__heading-accent">
-                innovative projects
+                <SplitWords text="innovative projects" startDelay={0.2} />
               </span>{" "}
-              that drive sustainability, reduce carbon footprints, and transform
-              energy systems worldwide.
+              <SplitWords text="that drive sustainability, reduce carbon footprints, and transform energy systems worldwide." startDelay={0.3} stagger={0.04} />
             </h2>
             <a href="/projects" className="abtproj__cta">
               <span>View Our Projects</span>

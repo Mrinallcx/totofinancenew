@@ -44,3 +44,41 @@ img, video {
   max-width: 100%;
   display: block;
 }
+
+/* ========================================
+   SHARED SCROLL-REVEAL TEXT ANIMATION
+   ======================================== */
+@keyframes scrollWordReveal {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+  }
+  50% {
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+.sr-word {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(10px);
+  will-change: transform, opacity, filter;
+  margin-right: 0.25em;
+}
+
+.sr-item {
+  opacity: 0;
+  filter: blur(10px);
+  will-change: transform, opacity, filter;
+}
+
+.sr-visible .sr-word,
+.sr-visible .sr-item {
+  animation: scrollWordReveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}

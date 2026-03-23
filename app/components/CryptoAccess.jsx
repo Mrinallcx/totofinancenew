@@ -1,9 +1,15 @@
+"use client";
+
 import TokenBlockSystem from "./TokenBlockSystem";
+import useScrollReveal from "../hooks/useScrollReveal";
+import SplitWords from "../hooks/SplitWords";
 import "./CryptoAccess.css";
 
 export default function CryptoAccess() {
+  const sectionRef = useScrollReveal();
+
   return (
-    <section className="caccess" id="token">
+    <section className="caccess" id="token" ref={sectionRef}>
       <div className="caccess__container">
         <div className="caccess__image-wrapper">
           <TokenBlockSystem />
@@ -11,20 +17,22 @@ export default function CryptoAccess() {
 
         <div className="caccess__content">
           <div className="caccess__text">
-            <div className="caccess__badge">
+            <div className="caccess__badge sr-item" style={{ animationDelay: "0s" }}>
               <span className="caccess__badge-dot" />
               <span className="caccess__badge-text">Toto Token</span>
             </div>
             <h2 className="caccess__title">
-              The $TOTO Token
+              <SplitWords text="The $TOTO Token" stagger={0.08} />
             </h2>
             <p className="caccess__desc">
-              Powering the Open Commodity Economy. $TOTO token is the universal
-              utility powering tokenization, settlement, fees, and access across
-              the Toto Finance ecosystem.
+              <SplitWords
+                text="Powering the Open Commodity Economy. $TOTO token is the universal utility powering tokenization, settlement, fees, and access across the Toto Finance ecosystem."
+                startDelay={0.4}
+                stagger={0.015}
+              />
             </p>
           </div>
-          <a href="/marketplace" className="caccess__cta">
+          <a href="/marketplace" className="caccess__cta sr-item" style={{ animationDelay: "0.8s" }}>
             <span>Explore Marketplace</span>
             <span className="cta__icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">

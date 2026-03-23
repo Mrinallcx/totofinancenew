@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import useScrollReveal from "../hooks/useScrollReveal";
+import SplitWords from "../hooks/SplitWords";
 import "./CaseStudy.css";
 import kycAnimation from "../../public/kyc-scanner.json";
 import vaultAnimation from "../../public/secure-vault.json";
@@ -67,18 +69,24 @@ export default function CaseStudy() {
   const handlePrev = () => { goPrev(); resetTimer(); };
   const handleNext = () => { goNext(); resetTimer(); };
 
+  const sectionRef = useScrollReveal();
+
   return (
-    <section className="cstudy">
+    <section className="cstudy" ref={sectionRef}>
       <div className="cstudy__header">
         <div className="cstudy__header-text">
           <h2 className="cstudy__title">
-            Institutional-Grade Commodity Tokenization
+            <SplitWords text="Institutional-Grade Commodity Tokenization" />
           </h2>
           <p className="cstudy__desc">
-            Trust, compliance, and transparency embedded at the protocol level.
+            <SplitWords
+              text="Trust, compliance, and transparency embedded at the protocol level."
+              startDelay={0.4}
+              stagger={0.03}
+            />
           </p>
         </div>
-        <a href="/marketplace" className="cstudy__header-cta">
+        <a href="/marketplace" className="cstudy__header-cta sr-item" style={{ animationDelay: "0.7s" }}>
           <span>Explore Marketplace</span>
           <span className="cta__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">

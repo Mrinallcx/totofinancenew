@@ -1,3 +1,7 @@
+"use client";
+
+import useScrollReveal from "../hooks/useScrollReveal";
+import SplitWords from "../hooks/SplitWords";
 import "./ProductsCases.css";
 
 const CASES = [
@@ -24,16 +28,20 @@ const CASES = [
 ];
 
 export default function ProductsCases() {
+  const sectionRef = useScrollReveal();
+
   return (
-    <section className="prodcases" id="products-commodities">
+    <section className="prodcases" id="products-commodities" ref={sectionRef}>
       <div className="prodcases__container">
         <div className="prodcases__header">
           <div className="prodcases__header-left">
-            <span className="prodcases__badge">CASE STUDIES</span>
+            <span className="prodcases__badge sr-item" style={{ animationDelay: "0s" }}>CASE STUDIES</span>
             <h2 className="prodcases__heading">
-              Sustainability delivered Impactful{" "}
-              <span className="prodcases__heading--muted">case studies</span>{" "}
-              from our clients
+              <SplitWords text="Sustainability delivered Impactful" />
+              <span className="prodcases__heading--muted">
+                <SplitWords text="case studies" startDelay={0.3} />
+              </span>{" "}
+              <SplitWords text="from our clients" startDelay={0.4} />
             </h2>
           </div>
           <div className="prodcases__header-right">

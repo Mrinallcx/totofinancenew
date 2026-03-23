@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import useScrollReveal from "../hooks/useScrollReveal";
+import SplitWords from "../hooks/SplitWords";
 import "./AboutProcess.css";
 
 const STEPS = [
@@ -23,18 +27,22 @@ const STEPS = [
 ];
 
 export default function AboutProcess() {
+  const sectionRef = useScrollReveal();
+
   return (
-    <section className="abtprocess" id="about-process">
+    <section className="abtprocess" id="about-process" ref={sectionRef}>
       <div className="abtprocess__container">
         <div className="abtprocess__content">
           <div className="abtprocess__header">
             <h2 className="abtprocess__heading">
-              Our Process
+              <SplitWords text="Our Process" stagger={0.08} />
             </h2>
             <p className="abtprocess__desc">
-              Our commitment to sustainability and cutting-edge technology
-              ensures you&apos;ll enjoy energy that&apos;s not only reliable but
-              also beneficial in multiple ways.
+              <SplitWords
+                text="Our commitment to sustainability and cutting-edge technology ensures you'll enjoy energy that's not only reliable but also beneficial in multiple ways."
+                startDelay={0.3}
+                stagger={0.02}
+              />
             </p>
           </div>
 

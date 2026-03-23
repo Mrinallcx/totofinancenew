@@ -1,5 +1,7 @@
 "use client";
 
+import useScrollReveal from "../hooks/useScrollReveal";
+import SplitWords from "../hooks/SplitWords";
 import "./ServicesGrid.css";
 
 const SERVICES = [
@@ -33,16 +35,20 @@ function Card({ item }) {
 }
 
 export default function ServicesGrid() {
+  const sectionRef = useScrollReveal();
+
   return (
-    <section className="sgrid" id="services">
+    <section className="sgrid" id="services" ref={sectionRef}>
       <div className="sgrid__header">
         <h2 className="sgrid__title">
-          Tokenized Commodities, Live on Global Markets
+          <SplitWords text="Tokenized Commodities, Live on Global Markets" />
         </h2>
         <p className="sgrid__desc">
-          Access real-world, asset-backed commodities across metals, gemstones,
-          energy, and environmental assets — tokenized for instant settlement,
-          transparent ownership, and compliant global trade.
+          <SplitWords
+            text="Access real-world, asset-backed commodities across metals, gemstones, energy, and environmental assets — tokenized for instant settlement, transparent ownership, and compliant global trade."
+            startDelay={0.5}
+            stagger={0.015}
+          />
         </p>
       </div>
       <div className="sgrid__track-wrap">

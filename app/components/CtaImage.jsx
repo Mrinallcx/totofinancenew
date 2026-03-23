@@ -1,9 +1,15 @@
+"use client";
+
 import Image from "next/image";
+import useScrollReveal from "../hooks/useScrollReveal";
+import SplitWords from "../hooks/SplitWords";
 import "./CtaImage.css";
 
 export default function CtaImage() {
+  const sectionRef = useScrollReveal();
+
   return (
-    <section className="ctaimg">
+    <section className="ctaimg" ref={sectionRef}>
       <div className="ctaimg__bg">
         <Image
           src="https://framerusercontent.com/images/I63aDOGkxJKmUUtuNtByyqTZAHU.jpg?scale-down-to=1024"
@@ -16,11 +22,14 @@ export default function CtaImage() {
       </div>
       <div className="ctaimg__content">
         <h2 className="ctaimg__title">
-          Ready to transform your financial future?
+          <SplitWords text="Ready to transform your financial future?" />
         </h2>
         <p className="ctaimg__desc">
-          Join thousands of businesses and investors already leveraging our
-          institutional-grade platform for tokenized commodities and sustainable growth.
+          <SplitWords
+            text="Join thousands of businesses and investors already leveraging our institutional-grade platform for tokenized commodities and sustainable growth."
+            startDelay={0.5}
+            stagger={0.015}
+          />
         </p>
         <div className="ctaimg__actions">
           <a href="/contact" className="ctaimg__btn ctaimg__btn--primary">

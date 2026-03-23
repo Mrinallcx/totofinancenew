@@ -1,6 +1,8 @@
 "use client";
 
 import { useRef, useCallback } from "react";
+import useScrollReveal from "../hooks/useScrollReveal";
+import SplitWords from "../hooks/SplitWords";
 import "./ProductsBlog.css";
 
 const BLOGS = [
@@ -51,16 +53,20 @@ export default function ProductsBlog() {
     wrap.scrollBy({ left: dir * scrollAmount, behavior: "smooth" });
   }, []);
 
+  const sectionRef = useScrollReveal();
+
   return (
-    <section className="prodblog" id="products-how">
+    <section className="prodblog" id="products-how" ref={sectionRef}>
       <div className="prodblog__container">
         <div className="prodblog__layout">
           <div className="prodblog__header">
-            <span className="prodblog__badge">OUR BLOG</span>
+            <span className="prodblog__badge sr-item" style={{ animationDelay: "0s" }}>OUR BLOG</span>
             <h2 className="prodblog__heading">
-              Inspiring insights for a smarter,{" "}
-              <span className="prodblog__heading--muted">greener </span>
-              future
+              <SplitWords text="Inspiring insights for a smarter," />
+              <span className="prodblog__heading--muted">
+                <SplitWords text="greener" startDelay={0.4} />
+              </span>{" "}
+              <SplitWords text="future" startDelay={0.45} />
             </h2>
           </div>
 

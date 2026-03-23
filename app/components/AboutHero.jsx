@@ -1,16 +1,22 @@
+"use client";
+
+import useScrollReveal from "../hooks/useScrollReveal";
+import SplitWords from "../hooks/SplitWords";
 import "./AboutHero.css";
 
 export default function AboutHero() {
+  const sectionRef = useScrollReveal(0.1);
+
   return (
-    <section className="abthero" id="about-overview">
+    <section className="abthero" id="about-overview" ref={sectionRef}>
       <div className="abthero__container">
-        <div className="abthero__badge">
+        <div className="abthero__badge sr-item" style={{ animationDelay: "0s" }}>
           <span className="abthero__badge-dot" />
           <span className="abthero__badge-text">About us</span>
           <span className="abthero__badge-dot" />
         </div>
         <h1 className="abthero__heading">
-          Driven by innovation, inspired by nature.
+          <SplitWords text="Driven by innovation, inspired by nature." startDelay={0.15} stagger={0.06} />
         </h1>
       </div>
 

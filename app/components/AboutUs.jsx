@@ -1,3 +1,6 @@
+"use client";
+
+import useScrollReveal from "../hooks/useScrollReveal";
 import "./AboutUs.css";
 
 const STATS = [
@@ -19,20 +22,48 @@ const STATS = [
   },
 ];
 
+const HEADING_PARTS = [
+  { text: "Toto Finance " },
+  { text: "tokenizes ", em: true },
+  { text: "diamonds and " },
+  { text: "global commodities", em: true },
+  { text: ", unlocking transparent, " },
+  { text: "compliant access ", em: true },
+  { text: "to physical assets and " },
+  { text: "inground reserves", em: true },
+  { text: "." },
+];
+
+function SplitHeading({ parts, startDelay = 0.1, stagger = 0.05 }) {
+  let wordIndex = 0;
+  return parts.map((part, pi) => {
+    const words = part.text.split(" ").filter(Boolean);
+    const spans = words.map((word) => {
+      const delay = startDelay + wordIndex * stagger;
+      wordIndex++;
+      return (
+        <span key={`${pi}-${wordIndex}`} className="sr-word" style={{ animationDelay: `${delay}s` }}>
+          {word}
+        </span>
+      );
+    });
+    return part.em ? <em key={pi}>{spans}</em> : <span key={pi}>{spans}</span>;
+  });
+}
+
 export default function AboutUs() {
+  const sectionRef = useScrollReveal();
+
   return (
-    <section className="aboutus" id="about">
+    <section className="aboutus" id="about" ref={sectionRef}>
       <div className="aboutus__container">
         <div className="aboutus__content">
-          <div className="aboutus__tag">
+          <div className="aboutus__tag sr-item" style={{ animationDelay: "0s" }}>
             <span className="aboutus__tag-dot" />
             <span className="aboutus__tag-text">About us</span>
           </div>
           <h2 className="aboutus__heading">
-            Toto Finance <em>tokenizes</em> diamonds and{" "}
-            <em>global commodities</em>, unlocking transparent,{" "}
-            <em>compliant access</em> to physical assets and{" "}
-            <em>inground reserves</em>.
+            <SplitHeading parts={HEADING_PARTS} />
           </h2>
         </div>
 
