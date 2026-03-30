@@ -1,0 +1,52 @@
+/* Scroll stack: hero recedes (perspective) while blog cards overlap from below */
+
+.blogpage {
+  --blog-hero-scroll-depth: min(72vh, 560px);
+}
+
+.blogpage__pin-stack {
+  position: relative;
+  z-index: 1;
+}
+
+.blogpage__hero-layer {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  transform-origin: 50% 45%;
+  will-change: transform, opacity;
+}
+
+.blogpage__hero-spacer {
+  height: var(--blog-hero-scroll-depth);
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.blogpage__cards-shell {
+  position: relative;
+  z-index: 2;
+  margin-top: calc(-1 * var(--blog-hero-scroll-depth));
+}
+
+@media (max-width: 600px) {
+  .blogpage {
+    --blog-hero-scroll-depth: min(56vh, 420px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blogpage__hero-layer {
+    position: relative;
+    top: auto;
+    will-change: auto;
+  }
+
+  .blogpage__hero-spacer {
+    display: none;
+  }
+
+  .blogpage__cards-shell {
+    margin-top: 0;
+  }
+}
