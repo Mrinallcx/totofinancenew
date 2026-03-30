@@ -1,17 +1,9 @@
 import { fetchWordPressPostUrlsForSitemap } from "../lib/wordpress";
-
-function siteUrl() {
-  const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  if (fromEnv) return fromEnv;
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL.replace(/^https?:\/\//, "")}`;
-  }
-  return "http://localhost:3000";
-}
+import { getSiteUrl } from "../lib/site-url";
 
 /** @type {import('next').MetadataRoute.Sitemap} */
 export default async function sitemap() {
-  const base = siteUrl();
+  const base = getSiteUrl();
   const now = new Date();
 
   const staticPaths = ["", "/about", "/products", "/blog"];

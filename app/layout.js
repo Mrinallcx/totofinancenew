@@ -1,4 +1,5 @@
 import { DM_Sans } from "next/font/google";
+import { getSiteUrl } from "../lib/site-url";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -8,6 +9,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata = {
+  metadataBase: new URL(getSiteUrl()),
   title: "Toto Finance — The Global Infrastructure for Tokenized Commodities",
   description:
     "Toto Finance is building the digital infrastructure for tokenized commodities - enabling asset-backed ownership, instant settlement, and compliant global trade across metals, energy, and real-world assets.",
