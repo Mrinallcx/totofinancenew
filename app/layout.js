@@ -23,6 +23,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta name="apple-mobile-web-app-title" content="Toto" />
+        <link rel="manifest" href="/manifest.json" />
         <link
           rel="preload"
           as="video"
