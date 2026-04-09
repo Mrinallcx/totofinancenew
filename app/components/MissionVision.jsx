@@ -34,7 +34,7 @@ const SECTIONS = [
     ],
     description:
       "Toto Finance introduces the infrastructure layer for tokenized commodities enabling T+0 settlement, 24/7 global markets, programmable ownership, and on-chain liquidity for assets traditionally constrained by manual processes, intermediaries, and settlement delays.",
-    cta: { label: "Meet Our Team", href: "/about" },
+    cta: { label: "Meet Our Team", href: "/about-us" },
     useSpinCube: true,
   },
   {

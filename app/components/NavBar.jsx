@@ -5,8 +5,8 @@ import { createPortal } from "react-dom";
 import "./HeroSection.css";
 
 const GLOBAL_LINKS = [
-  { label: "About us", href: "/about" },
-  { label: "Products", href: "/products" },
+  { label: "About us", href: "/about-us" },
+  { label: "Products", href: "/product" },
 ];
 
 const FLYOUT_GROUPS = [
@@ -14,7 +14,7 @@ const FLYOUT_GROUPS = [
     title: "Explore",
     links: [
       { label: "Home", href: "/" },
-      { label: "About us", href: "/about" },
+      { label: "About us", href: "/about-us" },
       { label: "Projects", href: "/projects" },
       { label: "Services", href: "/services" },
     ],

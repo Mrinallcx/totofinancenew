@@ -1,4 +1,5 @@
 import { DM_Sans } from "next/font/google";
+import BharatXWidgetScripts from "./components/BharatXWidget";
 import { getSiteUrl } from "../lib/site-url";
 import "./globals.css";
 
@@ -20,7 +21,7 @@ const websiteJsonLd = {
       "@id": `${siteUrlTrailing}#website`,
       url: siteUrlTrailing,
       name: SITE_NAME,
-      alternateName: ["Toto Finance", "totofinance.xyz"],
+      alternateName: ["Toto Finance", "totofinance.co", "totofinance.xyz"],
       publisher: { "@id": `${siteUrlTrailing}#organization` },
     },
     {
@@ -80,7 +81,10 @@ export default function RootLayout({ children }) {
           href="https://framerusercontent.com"
         />
       </head>
-      <body className={`${dmSans.className} ${dmSans.variable}`}>{children}</body>
+      <body className={`${dmSans.className} ${dmSans.variable}`}>
+        {children}
+        <BharatXWidgetScripts />
+      </body>
     </html>
   );
 }

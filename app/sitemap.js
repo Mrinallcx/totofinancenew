@@ -6,7 +6,7 @@ export default async function sitemap() {
   const base = getSiteUrl();
   const now = new Date();
 
-  const staticPaths = ["", "/about", "/products", "/blog"];
+  const staticPaths = ["", "/about-us", "/product", "/blog"];
 
   const staticEntries = staticPaths.map((path) => ({
     url: path ? `${base}${path}` : base,

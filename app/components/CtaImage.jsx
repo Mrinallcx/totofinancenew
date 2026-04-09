@@ -43,7 +43,7 @@ export default function CtaImage() {
               </svg>
             </span>
           </a>
-          <a href="/about" className="ctaimg__btn ctaimg__btn--outline">
+          <a href="/about-us" className="ctaimg__btn ctaimg__btn--outline">
             Learn more
           </a>
         </div>
