@@ -1,3 +1,4 @@
+import { getAllFooterHrefs } from "../lib/footer-nav";
 import { fetchWordPressPostUrlsForSitemap } from "../lib/wordpress";
 import { getSiteUrl } from "../lib/site-url";
 
@@ -6,7 +7,15 @@ export default async function sitemap() {
   const base = getSiteUrl();
   const now = new Date();
 
-  const staticPaths = ["", "/about-us", "/product", "/blog"];
+  const staticPaths = [
+    ...new Set([
+      "",
+      "/about-us",
+      "/product",
+      "/blog",
+      ...getAllFooterHrefs(),
+    ]),
+  ];
 
   const staticEntries = staticPaths.map((path) => ({
     url: path ? `${base}${path}` : base,

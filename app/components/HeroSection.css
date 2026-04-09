@@ -60,11 +60,66 @@
 }
 
 /* ========================================
+   TOP NOTIFICATION RIBBON (above global nav)
+   ======================================== */
+:root {
+  --nav-ribbon-h: 40px;
+}
+
+.nav-ribbon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--nav-ribbon-h);
+  padding: 9px 24px;
+  box-sizing: border-box;
+  background: var(--color-primary);
+  border-bottom: 1px solid rgba(29, 61, 62, 0.12);
+}
+
+.nav-ribbon__inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.nav-ribbon__text {
+  margin: 0;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+@media (max-width: 600px) {
+  :root {
+    --nav-ribbon-h: 56px;
+  }
+
+  .nav-ribbon {
+    padding: 10px 16px;
+  }
+
+  .nav-ribbon__text {
+    font-size: 11px;
+    font-weight: 500;
+  }
+}
+
+/* ========================================
    GLOBAL NAV
    ======================================== */
 .globalnav {
   position: fixed;
-  top: 0;
+  top: var(--nav-ribbon-h);
   left: 0;
   right: 0;
   z-index: 110;
@@ -270,7 +325,7 @@
    ======================================== */
 .localnav {
   position: fixed;
-  top: 44px;
+  top: calc(var(--nav-ribbon-h) + 44px);
   left: 0;
   right: 0;
   background: rgba(251, 251, 253, 0.92);
@@ -289,7 +344,7 @@
 }
 
 .localnav--top {
-  top: 0;
+  top: var(--nav-ribbon-h);
 }
 
 .localnav--expanded {
@@ -756,7 +811,7 @@
   background: #fbfbfd;
   display: flex;
   flex-direction: column;
-  padding: 52px 0 0;
+  padding: calc(var(--nav-ribbon-h) + 52px) 0 0;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;

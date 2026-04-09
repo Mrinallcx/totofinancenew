@@ -1,0 +1,39 @@
+.placeholder-page {
+  min-height: 48vh;
+  padding: clamp(100px, 18vw, 160px) 40px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+}
+
+.placeholder-page__inner {
+  max-width: 560px;
+  text-align: center;
+}
+
+.placeholder-page__title {
+  margin: 0 0 16px;
+  font-family: inherit;
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: var(--color-dark);
+}
+
+.placeholder-page__lead {
+  margin: 0;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-gray);
+}
+
+@media (max-width: 600px) {
+  .placeholder-page {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
