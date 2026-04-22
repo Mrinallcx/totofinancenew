@@ -16,7 +16,7 @@ export default function AboutHero() {
           <span className="abthero__badge-dot" />
         </div>
         <h1 className="abthero__heading">
-          <SplitWords text="Driven by innovation, inspired by nature." startDelay={0.15} stagger={0.06} />
+          <SplitWords text="Building Infrastructure for Global Digital Commodities" startDelay={0.15} stagger={0.06} />
         </h1>
       </div>
 

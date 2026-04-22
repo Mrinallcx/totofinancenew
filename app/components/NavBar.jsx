@@ -15,15 +15,17 @@ const FLYOUT_GROUPS = [
     links: [
       { label: "Home", href: "/" },
       { label: "About us", href: "/about-us" },
-      { label: "Projects", href: "/projects" },
-      { label: "Services", href: "/services" },
+      { label: "Vision", href: "/vision-2030" },
+      { label: "Rare Earth", href: "/rare-earth-mineral" },
+      { label: "Ecosystem", href: "/ecosystem" },
+      { label: "Doc & Imprint", href: "/doc-imprint" },
+      { label: "Products", href: "/product" },
     ],
   },
   {
     title: "Quick Links",
     links: [
       { label: "Blog", href: "/blog" },
-      { label: "Contact us", href: "/contact-us" },
     ],
   },
 ];

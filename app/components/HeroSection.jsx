@@ -50,17 +50,9 @@ export default function HeroSection() {
         <div className="hero__content">
           <div className="hero__text-wrap">
             <h1 className="hero__title">
-              <span className="hero__title--white">
-                {"Toto Finance".split(" ").map((word, i) => (
-                  <span key={i} className="hero__word" style={{ animationDelay: `${0.2 + i * 0.06}s` }}>
-                    {word}
-                  </span>
-                ))}
-              </span>
-              <br />
               <span className="hero__title--green">
-                {"The Global Infrastructure for Tokenized Commodities".split(" ").map((word, i) => (
-                  <span key={i} className="hero__word" style={{ animationDelay: `${0.35 + i * 0.05}s` }}>
+                {"The Infrastructure for Tokenized Commodities".split(" ").map((word, i) => (
+                  <span key={i} className="hero__word" style={{ animationDelay: `${0.2 + i * 0.05}s` }}>
                     {word}
                   </span>
                 ))}
@@ -68,7 +60,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="hero__subtitle">
-              {"Toto Finance is building the digital infrastructure for tokenized commodities - enabling asset-backed ownership, instant settlement, and compliant global trade across metals, energy, and real-world assets.".split(" ").map((word, i) => (
+              {"Asset-backed ownership, instant settlement, and compliant global trade for metals, energy, and real-world assets.".split(" ").map((word, i) => (
                 <span key={i} className="hero__char-word" style={{ animationDelay: `${0.7 + i * 0.015}s` }}>
                   {word}
                 </span>

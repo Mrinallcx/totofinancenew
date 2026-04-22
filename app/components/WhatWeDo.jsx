@@ -17,7 +17,7 @@ const STATS = [
   { value: "$12T+", label: "Precious Metals Market" },
 ];
 
-const HEADING_TEXT = "Toto Finance is building the infrastructure layer for tokenized global commodities.";
+const HEADING_TEXT = "Building the infrastructure layer for tokenized global commodities.";
 
 export default function WhatWeDo() {
   const sectionRef = useScrollReveal();

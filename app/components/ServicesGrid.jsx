@@ -45,7 +45,7 @@ export default function ServicesGrid() {
         </h2>
         <p className="sgrid__desc">
           <SplitWords
-            text="Access real-world, asset-backed commodities across metals, gemstones, energy, and environmental assets — tokenized for instant settlement, transparent ownership, and compliant global trade."
+            text="Real-world commodities tokenized for instant settlement, transparent ownership, and compliant global trade."
             startDelay={0.5}
             stagger={0.015}
           />

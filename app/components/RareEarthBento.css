@@ -1,0 +1,191 @@
+/* ================================================
+   Rare Earth — Bento Grid Section
+   ================================================ */
+
+.rembento {
+  background: #ffffff;
+  padding: clamp(48px, 7vw, 88px) 0;
+}
+
+.rembento__inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 80px);
+}
+
+/* --- Bento grid --- */
+.rembento__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 260px 260px;
+  gap: clamp(14px, 2vw, 20px);
+}
+
+.rembento__card--a { grid-column: 1; grid-row: 1; }
+.rembento__card--b { grid-column: 2; grid-row: 1; }
+.rembento__card--c { grid-column: 3; grid-row: 1 / 3; }
+.rembento__card--d { grid-column: 1 / 3; grid-row: 2; }
+
+/* --- Shared card base --- */
+.rembento__card {
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* --- Text-only cards (bordered) --- */
+.rembento__card--text {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rembento__card-title {
+  font-family: inherit;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin: 0;
+}
+
+.rembento__card-body {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #000000;
+  margin: 0;
+}
+
+/* --- Slider card --- */
+.rembento__card--slider {
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.rembento__slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: ew-resize;
+  user-select: none;
+  touch-action: none;
+  border-radius: inherit;
+}
+
+.rembento__slider-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.rembento__slider-img--after {
+  clip-path: inset(0 50% 0 0);
+}
+
+.rembento__slider-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rembento__slider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  transform: translateX(-1px);
+}
+
+.rembento__slider-knob {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(10, 15, 21);
+  z-index: 3;
+}
+
+/* --- Image card with overlay text --- */
+.rembento__card--image {
+  position: relative;
+}
+
+.rembento__card--image img {
+  object-fit: cover;
+}
+
+.rembento__card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1;
+  background: linear-gradient(transparent 0%, rgba(10, 15, 21, 0.7) 100%);
+  border-radius: 0 0 40px 40px;
+}
+
+.rembento__card-title--light {
+  color: #ffffff;
+}
+
+.rembento__card-body--light {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ================================================
+   Responsive
+   ================================================ */
+@media (max-width: 899px) {
+  .rembento__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .rembento__card--a,
+  .rembento__card--b,
+  .rembento__card--c,
+  .rembento__card--d {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .rembento__card--text {
+    min-height: 200px;
+  }
+
+  .rembento__card--slider {
+    min-height: 400px;
+  }
+
+  .rembento__card--image {
+    min-height: 200px;
+  }
+}

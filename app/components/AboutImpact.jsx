@@ -6,28 +6,28 @@ import "./AboutImpact.css";
 
 const CARDS = [
   {
-    value: "100+",
-    title: "Closed Projects",
+    value: "$30T+",
+    title: "Global Commodity Market",
     description:
-      "We've successfully delivered energy projects, from solar installations to wind farms, helping communities reduce their carbon footprint.",
+      "The total addressable market for physical commodities including metals, minerals, and energy traded globally each year.",
   },
   {
-    value: "50,000",
-    title: "Tons of CO\u2082 Saved",
+    value: "$16T+",
+    title: "Tokenized Assets by 2030",
     description:
-      "Our clean-energy solutions have helped cut greenhouse emissions, actively supporting a healthier planet for future generations.",
+      "The projected value of real world assets expected to be tokenized on blockchain infrastructure within this decade.",
   },
   {
-    value: "20+",
-    title: "Industry Awards",
+    value: "30,000+",
+    title: "Assets Live On-Chain",
     description:
-      "Recognized globally for our strong commitment to innovation and sustainability, we\u2019ve earned over 20 awards in green energy.",
+      "Verified commodity assets already tokenized and live on-chain, starting with the world's largest tokenized diamond market.",
   },
   {
-    value: "12+",
-    title: "Trusted Expertise",
+    value: "5+",
+    title: "Blockchains Supported",
     description:
-      "With a decade of proven expertise in renewable energy, we proudly continue to lead the way in implementing impactful solutions.",
+      "Multi-chain infrastructure supporting leading networks including Cardano & Ethereum.",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function AboutImpact() {
       <div className="abtimpact__container">
         <h2 className="abtimpact__heading">
           <SplitWords
-            text="Toto Finance transforms commodities with tokenized solutions, building a more transparent, efficient future through on-chain systems that empower global participants."
+            text="Institutional grade infrastructure for compliant tokenization, settlement, and global trading of real-world commodities."
             stagger={0.04}
           />
         </h2>

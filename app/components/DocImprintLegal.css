@@ -1,0 +1,134 @@
+/* ================================================
+   Doc & Imprint — Legal Information Section
+   ================================================ */
+
+.doclegal {
+  background: #ffffff;
+  padding: clamp(48px, 7vw, 88px) 0;
+}
+
+.doclegal__inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 80px);
+}
+
+/* --- Main heading --- */
+.doclegal__heading {
+  font-family: inherit;
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: rgb(0, 0, 0);
+  margin: 0 0 clamp(36px, 5vw, 56px);
+}
+
+/* --- 2-up / 3-up info grid --- */
+.doclegal__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 32px);
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+
+.doclegal__block {
+  padding: clamp(20px, 2.5vw, 28px);
+  background: rgb(240, 241, 245);
+  border-radius: 12px;
+}
+
+/* --- Full-width prose sections --- */
+.doclegal__section {
+  max-width: 860px;
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+
+.doclegal__section--full {
+  max-width: none;
+}
+
+.doclegal__section:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Typography --- */
+.doclegal__subtitle {
+  font-family: inherit;
+  font-size: clamp(22px, 2.4vw, 28px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: rgb(0, 0, 0);
+  margin: 0 0 16px;
+}
+
+.doclegal__title {
+  font-family: inherit;
+  font-size: clamp(15px, 1.6vw, 17px);
+  font-weight: 600;
+  line-height: 1.4;
+  color: rgb(0, 0, 0);
+  margin: 0 0 8px;
+}
+
+.doclegal__text {
+  font-family: inherit;
+  font-size: clamp(14px, 1.4vw, 15px);
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgb(96, 95, 95);
+  margin: 0 0 12px;
+}
+
+.doclegal__text:last-child {
+  margin-bottom: 0;
+}
+
+.doclegal__text strong {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+
+/* --- Links list (Official Channels) --- */
+.doclegal__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.doclegal__label {
+  font-family: inherit;
+  font-size: clamp(14px, 1.4vw, 15px);
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+.doclegal__link {
+  font-family: inherit;
+  font-size: clamp(14px, 1.4vw, 15px);
+  font-weight: 400;
+  color: var(--color-primary, #e6b026);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.doclegal__link:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+.doclegal__grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* --- Responsive --- */
+@media (max-width: 899px) {
+  .doclegal__grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+}

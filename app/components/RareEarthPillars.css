@@ -1,0 +1,78 @@
+/* ================================================
+   Rare Earth — Pillars Section
+   ================================================ */
+
+.rempillars {
+  background: #ffffff;
+  padding: clamp(48px, 7vw, 88px) 0;
+}
+
+.rempillars__inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 80px);
+}
+
+.rempillars__grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(14px, 2vw, 20px);
+}
+
+/* --- Card --- */
+.rempillars__card {
+  background: rgb(240, 241, 245);
+  border-radius: 12px;
+  padding: clamp(24px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 2vw, 20px);
+}
+
+/* --- Tag pill --- */
+.rempillars__tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgb(10, 15, 21);
+  background: #ffffff;
+  padding: 6px 14px;
+  border-radius: 99px;
+}
+
+/* --- Title --- */
+.rempillars__title {
+  font-family: inherit;
+  font-size: clamp(17px, 1.8vw, 20px);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: rgb(10, 15, 21);
+  margin: 0;
+}
+
+/* --- Body --- */
+.rempillars__body {
+  font-family: inherit;
+  font-size: clamp(14px, 1.5vw, 15px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgb(101, 112, 132);
+  margin: 0;
+}
+
+/* ================================================
+   Responsive
+   ================================================ */
+@media (max-width: 899px) {
+  .rempillars__grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+}

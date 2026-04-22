@@ -5,32 +5,31 @@ import "./AboutUs.css";
 
 const STATS = [
   {
-    value: "92%",
-    desc: "Of clients report measurable performance improvements within year.",
+    value: "30,000+",
+    desc: "Verified Diamonds On-Chain",
   },
   {
-    value: "$50M",
-    desc: "In revenue growth generated across client portfolios in the last 3 years.",
+    value: "5+",
+    desc: "Blockchains Supported",
   },
   {
-    value: "100+",
-    desc: "Businesses advised across industries from tech startups to established enterprises.",
+    value: "$25T+",
+    desc: "Addressable Commodity Market",
   },
   {
-    value: "15+",
-    desc: "Years of combined expertise guiding business strategy and execution.",
+    value: "7+",
+    desc: "Commodity Asset Classes",
   },
 ];
 
 const HEADING_PARTS = [
   { text: "Toto Finance " },
   { text: "tokenizes ", em: true },
-  { text: "diamonds and " },
   { text: "global commodities", em: true },
-  { text: ", unlocking transparent, " },
+  { text: " unlocking " },
   { text: "compliant access ", em: true },
   { text: "to physical assets and " },
-  { text: "inground reserves", em: true },
+  { text: "in-ground reserves", em: true },
   { text: "." },
 ];
 

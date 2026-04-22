@@ -8,21 +8,32 @@ import "./AboutProcess.css";
 const STEPS = [
   {
     number: "01",
-    title: "Consultation and Assessment",
+    title: "Registered and Regulated",
     description:
-      "We start by understanding your unique energy needs and thoroughly evaluating your specific site to recommend the best renewable solutions tailored to your goals.",
+      "Toto Finance Inc. is incorporated in the United States (Reg. No. 10480139), headquartered at 447 Broadway, New York. TotoHolding AG is incorporated in Liechtenstein with LEI 5299005UXAQFO3US5C38, independently verifiable via GLEIF.",
   },
   {
     number: "02",
-    title: "Design and Implementation",
-    description:
-      "Our expert team carefully creates a customized plan, then installs and seamlessly integrates the systems efficiently, ensuring optimal performance and sustainability.",
+    title: "Audited and Secured",
+    descriptionRich: (
+      <>
+        Independent third-party security audits ensure the integrity of smart contracts and platform infrastructure. Audit providers:{" "}
+        <a href="https://hacken.io/audits/toto-finance/" target="_blank" rel="noopener noreferrer">
+          Hacken (https://hacken.io/audits/toto-finance/)
+        </a>{" "}
+        and{" "}
+        <a href="https://skynet.certik.com/projects/tiamonds" target="_blank" rel="noopener noreferrer">
+          CertiK (https://skynet.certik.com/projects/tiamonds)
+        </a>
+        .
+      </>
+    ),
   },
   {
     number: "03",
-    title: "Support and Optimization",
+    title: "Institutional Grade Credibility",
     description:
-      "After installation, we provide ongoing expert technical support, continuously monitor system performance, and offer timely upgrades to maximize energy savings over time.",
+      "Compliance-first infrastructure with independent physical validation, proof of reserves, third-party custody, and registered legal entities in Liechtenstein and the United States.",
   },
 ];
 
@@ -35,11 +46,11 @@ export default function AboutProcess() {
         <div className="abtprocess__content">
           <div className="abtprocess__header">
             <h2 className="abtprocess__heading">
-              <SplitWords text="Our Process" stagger={0.08} />
+              <SplitWords text="Compliance First" stagger={0.08} />
             </h2>
             <p className="abtprocess__desc">
               <SplitWords
-                text="Our commitment to sustainability and cutting-edge technology ensures you'll enjoy energy that's not only reliable but also beneficial in multiple ways."
+                text="Toto Finance operates through legally registered entities in the United States and Liechtenstein, ensuring structural transparency and regulatory clarity."
                 startDelay={0.3}
                 stagger={0.02}
               />
@@ -55,7 +66,9 @@ export default function AboutProcess() {
                   </span>
                   <h5 className="abtprocess__step-title">{step.title}</h5>
                 </div>
-                <p className="abtprocess__step-desc">{step.description}</p>
+                <p className="abtprocess__step-desc">
+                  {step.descriptionRich ?? step.description}
+                </p>
               </div>
             ))}
 

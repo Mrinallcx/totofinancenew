@@ -1,0 +1,185 @@
+/* Rare Earth Minerals — Hero with background image + dark overlay */
+
+@keyframes remWordReveal {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+  }
+  50% {
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+@keyframes remCharReveal {
+  0% {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+.remhero__title-word {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(10px);
+  will-change: transform, opacity, filter;
+  animation: remWordReveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  margin-right: 0.25em;
+}
+
+.remhero__desc-word {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(6px);
+  will-change: transform, opacity, filter;
+  animation: remCharReveal 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  margin-right: 0.3em;
+}
+
+/* --- Section --- */
+.remhero {
+  position: relative;
+  color: var(--color-white);
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  padding-top: calc(var(--nav-ribbon-h, 40px) + 44px + clamp(40px, 6vw, 72px));
+  padding-bottom: clamp(80px, 12vw, 140px);
+  overflow: hidden;
+}
+
+/* --- Fullscreen background image --- */
+.remhero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.remhero__bg-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.remhero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 15, 21, 0.72);
+}
+
+/* --- Content --- */
+.remhero__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 80px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 40px);
+}
+
+.remhero__headline {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 28px);
+}
+
+.remhero__title {
+  margin: 0;
+  max-width: 920px;
+  font-family: inherit;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: var(--color-white);
+}
+
+.remhero__description-section {
+  max-width: 680px;
+}
+
+.remhero__description {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(15px, 1.8vw, 17px);
+  font-weight: 400;
+  line-height: 1.65;
+  color: #bfc7d4;
+}
+
+/* --- CTAs --- */
+.remhero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.remhero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  padding: 12px 24px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.remhero__btn--primary {
+  background: var(--color-primary);
+  color: var(--color-dark);
+}
+
+.remhero__btn--primary:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 8px 24px rgba(230, 176, 38, 0.35);
+}
+
+.remhero__btn--ghost {
+  background: transparent;
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.remhero__btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* --- Responsive --- */
+@media (prefers-reduced-motion: reduce) {
+  .remhero__btn {
+    transition: none;
+  }
+
+  .remhero__title-word,
+  .remhero__desc-word {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    animation: none;
+    will-change: auto;
+  }
+}

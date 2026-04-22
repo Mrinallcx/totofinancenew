@@ -1,0 +1,131 @@
+/* ================================================
+   Vision 2030 – Content Cards
+   ================================================ */
+
+.v2030cc {
+  background: #ffffff;
+  padding: clamp(48px, 7vw, 88px) clamp(20px, 4vw, 80px);
+}
+
+.v2030cc__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- Section header --- */
+.v2030cc__header {
+  text-align: left;
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+.v2030cc__section-title {
+  font-family: inherit;
+  font-size: clamp(28px, 4.2vw, 44px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  color: rgb(10, 15, 21);
+  margin: 0 0 clamp(12px, 2vw, 20px);
+}
+
+.v2030cc__section-desc {
+  font-family: inherit;
+  font-size: clamp(14px, 1.5vw, 15px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgb(101, 112, 132);
+  margin: 0;
+}
+
+.v2030cc__br-desktop {
+  display: block;
+}
+
+/* --- Grid --- */
+.v2030cc__grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(14px, 2vw, 20px);
+}
+
+/* --- Card --- */
+.v2030cc__card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* --- Image area --- */
+.v2030cc__media {
+  position: relative;
+  aspect-ratio: 1056 / 808;
+  overflow: hidden;
+}
+
+.v2030cc__media img {
+  object-fit: cover;
+}
+
+/* --- Dark content area --- */
+.v2030cc__content {
+  background: rgb(19, 21, 23);
+  padding: clamp(16px, 2.5vw, 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+/* --- Heading row (indicator dot + title) --- */
+.v2030cc__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.v2030cc__indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: rgb(212, 177, 68);
+  flex-shrink: 0;
+}
+
+.v2030cc__title {
+  font-family: inherit;
+  font-size: clamp(15px, 1.65vw, 17px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* --- Body text --- */
+.v2030cc__body {
+  font-family: inherit;
+  font-size: clamp(14px, 1.5vw, 15px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+
+/* ================================================
+   Responsive
+   ================================================ */
+@media (max-width: 899px) {
+  .v2030cc__grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .v2030cc__br-desktop {
+    display: none;
+  }
+}

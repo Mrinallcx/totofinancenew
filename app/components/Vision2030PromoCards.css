@@ -1,0 +1,104 @@
+/* Framer c3zsa3 — image + content cards, body rgb(116,126,144), black pill CTA */
+
+.v2030promo {
+  background: #ffffff;
+  padding: clamp(24px, 5vw, 56px) clamp(20px, 4vw, 80px) clamp(48px, 7vw, 88px);
+}
+
+.v2030promo__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.v2030promo__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2.5vw, 24px);
+  align-items: stretch;
+}
+
+@media (max-width: 899px) {
+  .v2030promo__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.v2030promo__card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(10, 15, 21, 0.06);
+  border: 1px solid rgba(10, 15, 21, 0.06);
+}
+
+.v2030promo__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  flex-shrink: 0;
+  background: rgb(240, 241, 245);
+}
+
+.v2030promo__img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.v2030promo__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(12px, 2vw, 16px);
+  padding: clamp(22px, 3.5vw, 28px);
+  flex: 1 1 auto;
+}
+
+.v2030promo__title {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(15px, 1.65vw, 17px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: rgb(10, 15, 21);
+}
+
+.v2030promo__body {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(14px, 1.5vw, 15px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgb(116, 126, 144);
+}
+
+.v2030promo__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: rgb(255, 255, 255);
+  background-color: rgb(10, 15, 21);
+  text-decoration: none;
+  transition: filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.v2030promo__btn:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 8px 24px rgba(10, 15, 21, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v2030promo__btn {
+    transition: none;
+  }
+}

@@ -159,27 +159,25 @@ export default function CaseStudy() {
           </div>
           <div className="cstudy__visual-cards">
             <div className="cstudy__stat-card">
-              <span className="cstudy__stat-value">40%</span>
-              <span className="cstudy__stat-label">improvement in revenue forecasting</span>
+              <span className="cstudy__stat-value">$2B+</span>
+              <span className="cstudy__stat-label">in tokenizable commodity pipeline</span>
             </div>
             <div className="cstudy__quote-card">
               <p className="cstudy__quote-text">
-                &ldquo;Modern Consulting &amp; Finance has been a game-changer
-                for our business. Their expert guidance helped us optimize our
-                financial strategy, ensuring long-term success.&rdquo;
+                &ldquo;Toto Finance is building the institutional grade infrastructure that commodity markets have always needed. Compliant by design, backed by real assets, and built for regulated markets from day one.&rdquo;
               </p>
               <div className="cstudy__client">
                 <Image
                   src="https://framerusercontent.com/images/BIFZ35M267ODYvDNB0ELkZ7Bc.png?scale-down-to=512"
-                  alt="Michael Tah"
+                  alt="Monty Metzger"
                   className="cstudy__avatar"
                   width={48}
                   height={48}
                   loading="lazy"
                 />
                 <div className="cstudy__client-info">
-                  <span className="cstudy__client-name">Michael Tah</span>
-                  <span className="cstudy__client-role">Product Manager</span>
+                  <span className="cstudy__client-name">Monty Metzger</span>
+                  <span className="cstudy__client-role">CEO, Toto Finance</span>
                 </div>
               </div>
             </div>

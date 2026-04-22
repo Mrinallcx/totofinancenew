@@ -33,7 +33,7 @@ const SECTIONS = [
       { text: "Trade", em: true },
     ],
     description:
-      "Toto Finance introduces the infrastructure layer for tokenized commodities enabling T+0 settlement, 24/7 global markets, programmable ownership, and on-chain liquidity for assets traditionally constrained by manual processes, intermediaries, and settlement delays.",
+      "Tokenized commodity infrastructure built for T+0 settlement, 24/7 global markets, and programmable on-chain ownership.",
     cta: { label: "Meet Our Team", href: "/about-us" },
     useSpinCube: true,
   },
@@ -45,7 +45,7 @@ const SECTIONS = [
       { text: "Tokenization" },
     ],
     description:
-      "Settle and deliver with Toto Clear atomic delivery-versus-payment for tokenized commodities using stablecoins. Hold, redeem, or re-trade assets with settlement, custody, logistics, and regulatory compliance automated on-chain via oracle infrastructure.",
+      "Hold, redeem, or re-trade tokenized commodities with settlement, custody, and compliance fully automated on-chain.",
     cta: { label: "Learn More", href: "/how-it-works" },
     useFlowDiagram: true,
     reverse: true,

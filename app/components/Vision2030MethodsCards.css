@@ -1,0 +1,87 @@
+/* Framer Cards — rgb(240,241,245) surface, white pill, body rgb(101,112,132) */
+
+.v2030mc {
+  background: #ffffff;
+  padding: 0 clamp(20px, 4vw, 80px) clamp(48px, 7vw, 88px);
+}
+
+.v2030mc__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.v2030mc__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 20px);
+}
+
+@media (max-width: 899px) {
+  .v2030mc__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.v2030mc__card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-height: 0;
+  padding: clamp(22px, 3.5vw, 28px);
+  border-radius: 12px;
+  background-color: rgb(240, 241, 245);
+}
+
+/* Framer order: SVG → Content (pill → h5 → p) */
+.v2030mc__icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-bottom: clamp(16px, 2.5vw, 22px);
+  color: rgb(0, 0, 0);
+}
+
+.v2030mc__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(12px, 2vw, 16px);
+  min-width: 0;
+}
+
+.v2030mc__pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px 6px 14px;
+  border-radius: 99px;
+  background-color: rgb(255, 255, 255);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgb(10, 15, 21);
+}
+
+.v2030mc__card-title {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(15px, 1.65vw, 17px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: rgb(10, 15, 21);
+}
+
+.v2030mc__card-body {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(14px, 1.5vw, 15px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgb(101, 112, 132);
+}

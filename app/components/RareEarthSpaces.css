@@ -1,0 +1,209 @@
+/* ================================================
+   Rare Earth — Spaces Section
+   ================================================ */
+
+.remspaces {
+  background: #ffffff;
+  padding: clamp(48px, 7vw, 88px) 0;
+}
+
+.remspaces__inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 80px);
+  display: flex;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: flex-start;
+}
+
+/* --- Left: text + CTA --- */
+.remspaces__text {
+  flex: 0 0 clamp(260px, 30vw, 360px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 4vw, 36px);
+  position: sticky;
+  top: calc(var(--nav-ribbon-h, 40px) + 44px + 32px);
+}
+
+.remspaces__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2vw, 20px);
+}
+
+.remspaces__title {
+  font-family: inherit;
+  font-size: clamp(28px, 4.2vw, 44px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  color: rgb(10, 15, 21);
+  margin: 0;
+}
+
+.remspaces__desc {
+  font-family: inherit;
+  font-size: clamp(14px, 1.5vw, 15px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgb(101, 112, 132);
+  margin: 0;
+}
+
+.remspaces__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  background: rgb(10, 15, 21);
+  color: #ffffff;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.remspaces__cta:hover {
+  background: rgb(40, 44, 52);
+  box-shadow: 0 4px 16px rgba(10, 15, 21, 0.15);
+}
+
+/* --- Right: cards (sticky stack) --- */
+.remspaces__cards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Individual card --- */
+.remspaces__card {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(16px, 2.5vw, 24px);
+  padding: clamp(20px, 3vw, 28px);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  position: sticky;
+  will-change: transform;
+  box-shadow: 0 4px 20px rgba(10, 15, 21, 0.06);
+}
+
+.remspaces__card:nth-child(1) { top: 110px; z-index: 1; }
+.remspaces__card:nth-child(2) { top: 125px; z-index: 2; }
+.remspaces__card:nth-child(3) { top: 140px; z-index: 3; }
+.remspaces__card:nth-child(4) { top: 155px; z-index: 4; }
+
+.remspaces__card + .remspaces__card {
+  margin-top: clamp(14px, 2vw, 20px);
+}
+
+/* --- Icon --- */
+.remspaces__icon-wrap {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.remspaces__svg {
+  width: 100%;
+  height: 100%;
+  fill: rgb(10, 15, 21);
+}
+
+/* --- Card text --- */
+.remspaces__card-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.remspaces__card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.remspaces__card-title {
+  font-family: inherit;
+  font-size: clamp(15px, 1.65vw, 17px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: rgb(10, 15, 21);
+  margin: 0;
+}
+
+.remspaces__card-subtitle {
+  font-family: inherit;
+  font-size: clamp(14px, 1.5vw, 15px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgb(101, 112, 132);
+  margin: 0;
+}
+
+.remspaces__card-body {
+  font-family: inherit;
+  font-size: clamp(14px, 1.5vw, 15px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgb(101, 112, 132);
+  margin: 0;
+}
+
+/* ================================================
+   Responsive
+   ================================================ */
+@media (max-width: 899px) {
+  .remspaces__inner {
+    flex-direction: column;
+  }
+
+  .remspaces__text {
+    flex: none;
+    width: 100%;
+    position: static;
+  }
+
+  .remspaces__cards {
+    width: 100%;
+    gap: clamp(14px, 2vw, 20px);
+  }
+
+  .remspaces__card {
+    position: relative;
+    top: auto !important;
+    z-index: auto !important;
+    box-shadow: none;
+  }
+
+  .remspaces__card + .remspaces__card {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 599px) {
+  .remspaces__card {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,114 @@
+/* ================================================
+   Ecosystem — Cards Section
+   ================================================ */
+
+.ecocards {
+  background: #ffffff;
+  padding: clamp(48px, 7vw, 88px) 0;
+}
+
+.ecocards__inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 80px);
+}
+
+.ecocards__grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(14px, 2vw, 20px);
+}
+
+.ecocards__card {
+  position: relative;
+  background: rgb(240, 241, 245);
+  border-radius: 12px;
+  padding: clamp(24px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 2vw, 20px);
+}
+
+/* --- Icon + Badge row --- */
+.ecocards__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- Icon --- */
+.ecocards__icon-wrap {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  background: #ffffff;
+  color: rgb(10, 15, 21);
+}
+
+.ecocards__svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Arrow (bottom-right, 45°) --- */
+.ecocards__arrow {
+  position: absolute;
+  bottom: clamp(24px, 3vw, 32px);
+  right: clamp(24px, 3vw, 32px);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(10, 15, 21, 0.06);
+  color: rgb(10, 15, 21);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.ecocards__card:hover .ecocards__arrow {
+  background: rgb(10, 15, 21);
+  color: #ffffff;
+  transform: translate(2px, -2px);
+}
+
+.ecocards__tag {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgb(10, 15, 21);
+  background: #ffffff;
+  padding: 6px 14px;
+  border-radius: 99px;
+}
+
+.ecocards__body {
+  font-family: inherit;
+  font-size: clamp(14px, 1.5vw, 15px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgb(101, 112, 132);
+  margin: 0;
+}
+
+.ecocards__grid--2 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 899px) {
+  .ecocards__grid,
+  .ecocards__grid--2 {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+}

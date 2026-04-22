@@ -1,0 +1,118 @@
+/* ================================================
+   Rare Earth — Features Section
+   ================================================ */
+
+.remfeat {
+  background: #ffffff;
+  padding: clamp(48px, 7vw, 88px) 0;
+}
+
+.remfeat__inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 80px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(14px, 2vw, 20px);
+  min-height: 560px;
+}
+
+/* --- Left: feature cards grid --- */
+.remfeat__left {
+  display: flex;
+}
+
+.remfeat__cards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(14px, 2vw, 16px);
+  width: 100%;
+}
+
+/* --- Individual card --- */
+.remfeat__card {
+  background: rgba(230, 176, 38, 0.06);
+  border-radius: 24px;
+  padding: clamp(20px, 2.5vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 2vw, 20px);
+}
+
+/* --- Icon --- */
+.remfeat__icon-wrap {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid rgb(231, 230, 228);
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.remfeat__svg {
+  width: 100%;
+  height: 100%;
+  fill: rgb(44, 45, 46);
+  color: rgb(44, 45, 46);
+}
+
+/* --- Card text --- */
+.remfeat__card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.remfeat__card-title {
+  font-family: inherit;
+  font-size: clamp(15px, 1.65vw, 17px);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: rgb(44, 45, 46);
+  margin: 0;
+}
+
+.remfeat__card-body {
+  font-family: inherit;
+  font-size: clamp(14px, 1.4vw, 15px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(3, 32, 43, 0.7);
+  margin: 0;
+}
+
+/* --- Right: image --- */
+.remfeat__right {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.remfeat__right img {
+  object-fit: cover;
+}
+
+/* ================================================
+   Responsive
+   ================================================ */
+@media (max-width: 899px) {
+  .remfeat__inner {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .remfeat__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .remfeat__right {
+    min-height: 400px;
+  }
+}

@@ -7,28 +7,28 @@ import "./AboutProjects.css";
 
 const PROJECTS = [
   {
-    title: "Eco Factory Transformation",
+    title: "Tokenization Infrastructure",
     description:
-      "Integration of energy-efficient technologies into the production process of a food manufacturing factory. The project featured renewable energy systems and waste heat recovery.",
+      "Issuance of asset-backed digital commodities with integrated KYC/AML, transfer controls, and regulatory compliance built into the protocol.",
     image:
       "https://framerusercontent.com/images/yH1q2XHHegiGQ9Ie9qOjt2KinP0.jpg?scale-down-to=1024",
-    href: "/projects/eco-factory-transformation",
+    href: "/how-it-works",
   },
   {
-    title: "Solar Future Project",
+    title: "Compliance and Custody Layer",
     description:
-      "Development and installation of solar panels for a residential complex consisting of 50 houses. The project included designing custom solar solutions and integrating them with existing electrical systems.",
+      "Structured custody, independent audits, and on-chain proof of reserves connecting every token to a verified physical asset.",
     image:
       "https://framerusercontent.com/images/5qa8ZakJTH0inFeN7CbEx0MBc8.jpg?scale-down-to=1024",
-    href: "/projects/solar-future-project",
+    href: "/product",
   },
   {
-    title: "Wind Power for Community",
+    title: "Institutional Asset Access",
     description:
-      "Installation of a wind power plant to supply electricity to a small village with 1,000 residents. The project included assessing wind conditions, selecting optimal turbine locations, and training local staff for maintenance.",
+      "Infrastructure built for producers, investors, and financial institutions to access, trade, and settle tokenized commodities globally.",
     image:
       "https://framerusercontent.com/images/JaqFUHBBZfS471xmQx9iM7uDLIY.jpg?scale-down-to=1024",
-    href: "/projects/wind-power-for-community",
+    href: "/marketplace",
   },
 ];
 
@@ -41,14 +41,19 @@ export default function AboutProjects() {
         <div className="abtproj__grid">
           <div className="abtproj__header">
             <h2 className="abtproj__heading">
-              <SplitWords text="Explore our" />
-              <span className="abtproj__heading-accent">
-                <SplitWords text="innovative projects" startDelay={0.2} />
-              </span>{" "}
-              <SplitWords text="that drive sustainability, reduce carbon footprints, and transform energy systems worldwide." startDelay={0.3} stagger={0.04} />
+              <SplitWords
+                text="Build on the infrastructure layer powering the next generation of tokenized commodities for global markets."
+                startDelay={0.1}
+                stagger={0.04}
+              />
             </h2>
-            <a href="/projects" className="abtproj__cta">
-              <span>View Our Projects</span>
+            <a
+              href="https://app.totofinance.co/"
+              className="abtproj__cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Explore Marketplace →</span>
               <span className="abtproj__cta-arrow">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

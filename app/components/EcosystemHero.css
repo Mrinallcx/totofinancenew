@@ -1,0 +1,124 @@
+/* ================================================
+   Ecosystem — Hero
+   ================================================ */
+
+@keyframes ecoWordReveal {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+  }
+  50% {
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+@keyframes ecoCharReveal {
+  0% {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+
+.ecohero__title-word {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(10px);
+  will-change: transform, opacity, filter;
+  animation: ecoWordReveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  margin-right: 0.25em;
+}
+
+.ecohero__desc-word {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(6px);
+  will-change: transform, opacity, filter;
+  animation: ecoCharReveal 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  margin-right: 0.3em;
+}
+
+/* --- Section --- */
+.ecohero {
+  background: var(--color-primary, #e6b026);
+  min-height: 75svh;
+  display: flex;
+  align-items: flex-end;
+  padding-top: calc(var(--nav-ribbon-h, 40px) + 44px + clamp(40px, 6vw, 72px));
+  padding-bottom: clamp(80px, 12vw, 140px);
+  overflow: hidden;
+}
+
+.ecohero__inner {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 80px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(48px, 8vw, 80px);
+}
+
+/* --- Content --- */
+.ecohero__content {
+  text-align: left;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 3vw, 24px);
+}
+
+.ecohero__title {
+  font-family: inherit;
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: var(--color-dark, #1d3d3e);
+  margin: 0;
+}
+
+.ecohero__desc {
+  font-family: inherit;
+  font-size: clamp(15px, 1.8vw, 18px);
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(10, 15, 21, 0.7);
+  margin: 0;
+}
+
+.ecohero__link {
+  color: rgb(10, 15, 21);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.ecohero__link:hover {
+  color: rgba(10, 15, 21, 0.8);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .ecohero__title-word,
+  .ecohero__desc-word {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    animation: none;
+    will-change: auto;
+  }
+
+}

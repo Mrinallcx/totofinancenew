@@ -1,0 +1,214 @@
+/* ================================================
+   Vision 2030 – Timeline
+   ================================================ */
+
+.v2030tl {
+  background: #ffffff;
+  padding: clamp(48px, 7vw, 88px) clamp(20px, 4vw, 80px);
+}
+
+.v2030tl__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+.v2030tl__header {
+  text-align: center;
+  margin-bottom: clamp(40px, 6vw, 72px);
+}
+
+
+.v2030tl__title {
+  font-family: inherit;
+  font-size: clamp(28px, 4.2vw, 44px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  color: rgb(10, 15, 21);
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+/* --- Track (vertical line + items) --- */
+.v2030tl__track {
+  position: relative;
+  padding: 0;
+}
+
+.v2030tl__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgb(224, 229, 235);
+  transform: translateX(-50%);
+}
+
+.v2030tl__progress {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 0;
+  background: rgb(10, 15, 21);
+  transform: translateX(-50%);
+  z-index: 1;
+  will-change: height;
+}
+
+/* --- Individual milestone item --- */
+.v2030tl__item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 50%;
+  padding-bottom: clamp(32px, 5vw, 56px);
+}
+
+.v2030tl__item:last-child {
+  padding-bottom: 0;
+}
+
+.v2030tl__item--left {
+  justify-content: flex-end;
+  padding-right: clamp(28px, 4vw, 48px);
+  text-align: right;
+  align-self: flex-start;
+}
+
+.v2030tl__item--right {
+  justify-content: flex-start;
+  padding-left: clamp(28px, 4vw, 48px);
+  margin-left: 50%;
+}
+
+/* --- Dot on the centre line --- */
+.v2030tl__dot {
+  position: absolute;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.v2030tl__item--left .v2030tl__dot {
+  right: -8px;
+}
+
+.v2030tl__item--right .v2030tl__dot {
+  left: -8px;
+}
+
+.v2030tl__dot-ring {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(10, 15, 21);
+}
+
+.v2030tl__item--future .v2030tl__dot-ring {
+  background: var(--color-primary, #e6b026);
+}
+
+/* --- Card --- */
+.v2030tl__card {
+  max-width: 420px;
+  background: rgb(240, 241, 245);
+  border-radius: 12px;
+  padding: clamp(20px, 3vw, 28px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.v2030tl__card:hover {
+  box-shadow: 0 8px 28px rgba(10, 15, 21, 0.07);
+  transform: translateY(-2px);
+}
+
+.v2030tl__item--left .v2030tl__card {
+  text-align: left;
+}
+
+/* --- Year badge --- */
+.v2030tl__year {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgb(10, 15, 21);
+  background: #ffffff;
+  padding: 4px 12px;
+  border-radius: 99px;
+  margin-bottom: 12px;
+}
+
+.v2030tl__item--future .v2030tl__year {
+  background: var(--color-primary, #e6b026);
+  color: var(--color-dark, #1d3d3e);
+}
+
+/* --- Card title + body --- */
+.v2030tl__card-title {
+  font-family: inherit;
+  font-size: clamp(15px, 1.65vw, 17px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: rgb(10, 15, 21);
+  margin: 0 0 8px;
+}
+
+.v2030tl__card-body {
+  font-family: inherit;
+  font-size: clamp(14px, 1.5vw, 15px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgb(101, 112, 132);
+  margin: 0;
+}
+
+/* ================================================
+   Mobile: single-column
+   ================================================ */
+@media (max-width: 899px) {
+  .v2030tl__line,
+  .v2030tl__progress {
+    left: 12px;
+  }
+
+  .v2030tl__item,
+  .v2030tl__item--left,
+  .v2030tl__item--right {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 44px;
+    padding-right: 0;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .v2030tl__dot,
+  .v2030tl__item--left .v2030tl__dot,
+  .v2030tl__item--right .v2030tl__dot {
+    left: 4px;
+    right: auto;
+  }
+
+  .v2030tl__card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 599px) {
+  .v2030tl__title {
+    max-width: 100%;
+  }
+}
