@@ -3,7 +3,7 @@ import ProductsPageContent from "./ProductsPageContent";
 export const metadata = {
   title: "Product — Toto Finance",
   description:
-    "Explore Toto Finance's tokenized commodity products — institutional-grade, asset-backed digital commodities for the global market.",
+    "Asset-backed tokenized commodities with compliant ownership, instant settlement, and global market access.",
 };
 
 export default function ProductsPage() {

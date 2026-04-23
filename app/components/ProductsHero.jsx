@@ -28,17 +28,23 @@ export default function ProductsHero() {
           <div className="prodhero__left">
             <div className="prodhero__text">
               <h1 className="prodhero__title">
-                <SplitWords text="Tokenized commodities, the future of global trade" startDelay={0.2} stagger={0.06} />
+                <SplitWords text="Tokenized Commodities, Built for Global Markets" startDelay={0.2} stagger={0.06} />
               </h1>
               <p className="prodhero__body">
                 <SplitWords
-                  text="Institutional-grade, asset-backed digital commodities that bring transparency, instant settlement, and borderless access to metals, energy, and real-world assets."
+                  text="Asset-backed tokenized commodities with compliant ownership, instant settlement, and global market access."
                   startDelay={0.7}
                   stagger={0.015}
                 />
               </p>
             </div>
-            <a href="/global-market" className="prodhero__cta sr-item" style={{ animationDelay: "1.1s" }}>
+            <a
+              href="https://app.totofinance.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="prodhero__cta sr-item"
+              style={{ animationDelay: "1.1s" }}
+            >
               <span>Explore products</span>
               <span className="cta__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">

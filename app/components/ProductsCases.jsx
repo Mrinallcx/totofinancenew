@@ -6,20 +6,20 @@ import "./ProductsCases.css";
 
 const CASES = [
   {
-    title: "EcoWare industries smart freight optimization",
+    title: "Toto Global Markets",
     stats: [
-      { value: "200+", label: "Reduction in logistics costs" },
-      { value: "15%", label: "Improved delivery efficiency" },
+      { value: "30,000+", label: "Assets Live On-Chain" },
+      { value: "5+", label: "Blockchains Supported" },
     ],
     image:
       "https://framerusercontent.com/images/rfvg8t1wjVVI72PSQa90RcL851w.jpg?width=770&height=950",
     href: "#",
   },
   {
-    title: "UrbanNest home greening last-mile delivery",
+    title: "Tokenized Assets: Institutional Platform",
     stats: [
-      { value: "50%", label: "Average reduction in energy costs" },
-      { value: "15%", label: "10,000 tons CO₂ reduced" },
+      { value: "$25T+", label: "Addressable Commodity Market" },
+      { value: "7+", label: "Commodity Asset Classes" },
     ],
     image:
       "https://framerusercontent.com/images/eDp1DB9UYKGTjTwzkIevINItXgA.webp?width=770&height=950",
@@ -35,13 +35,13 @@ export default function ProductsCases() {
       <div className="prodcases__container">
         <div className="prodcases__header">
           <div className="prodcases__header-left">
-            <span className="prodcases__badge sr-item" style={{ animationDelay: "0s" }}>CASE STUDIES</span>
+            <span className="prodcases__badge sr-item" style={{ animationDelay: "0s" }}>OUR PLATFORM</span>
             <h2 className="prodcases__heading">
-              <SplitWords text="Sustainability delivered Impactful" />
-              <span className="prodcases__heading--muted">
-                <SplitWords text="case studies" startDelay={0.3} />
-              </span>{" "}
-              <SplitWords text="from our clients" startDelay={0.4} />
+              <SplitWords
+                text="Institutional grade infrastructure for tokenized global commodities."
+                startDelay={0.1}
+                stagger={0.025}
+              />
             </h2>
           </div>
           <div className="prodcases__header-right">
