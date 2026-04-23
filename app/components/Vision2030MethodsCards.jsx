@@ -6,23 +6,23 @@ const CARDS = [
   {
     key: "data",
     tag: "Data Driven",
-    title: "We base every decision on insights, analytics and measurable outcomes",
+    title: "We base every decision on verifiable on-chain data and reserves",
     body:
-      "Toto Finance uses data and analytics to guide strategy and deliver tangible results.",
+      "Toto Finance uses proof of reserves, oracle validation, and independent audits to ensure every tokenized asset is fully backed and transparently reported.",
   },
   {
     key: "hands",
     tag: "Hands On",
-    title: "We work closely with teams to turn strategy into real results",
+    title: "We work directly with producers, custodians, and institutions",
     body:
-      "We collaborate with client teams to ensure infrastructure, custody, and workflows are practical and effective.",
+      "We collaborate with physical commodity owners, vaults, and regulators to ensure the infrastructure is practical, compliant, and ready for real world use.",
   },
   {
     key: "future",
     tag: "Future Focused",
-    title: "We help organizations anticipate change and scale what works",
+    title: "We help organizations access the next generation of commodity markets",
     body:
-      "We design programs that adapt to regulation and market change while supporting sustainable growth.",
+      "We design infrastructure that adapts to evolving regulation and market structures while enabling institutions to tokenize, settle, and trade at global scale.",
   },
 ];
 

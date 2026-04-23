@@ -97,33 +97,38 @@ function IconLock() {
 
 const SECTION_1_CARDS = [
   {
-    key: "defi",
-    tag: "DeFi",
-    body: "We integrate with leading DeFi platforms to enable seamless lending, borrowing, and yield generation",
+    key: "blockchains",
+    tag: "Blockchains",
+    title: "Blockchain and Settlement Layers",
+    body: "Multi-chain infrastructure across Cardano, Ethereum, Polygon, Solana, and XRP Ledger for global commodity settlement and interoperability.",
     icon: <IconDeFi />,
   },
   {
-    key: "infrastructure",
-    tag: "Infrastructure",
-    body: "Enterprise-grade custody, settlement, and compliance tooling built for scale",
+    key: "validation",
+    tag: "Validation",
+    title: "Physical Validation",
+    body: "LCX serves as Physical Validator under the Liechtenstein Blockchain Act, providing legally binding connection between physical assets and on-chain tokens.",
     icon: <IconInfra />,
   },
   {
-    key: "partners",
-    tag: "Partners",
-    body: "We connect regulated financial services with blockchain-native ecosystems worldwide",
+    key: "certification",
+    tag: "Certification",
+    title: "Diamond Certification",
+    body: "GIA, the world's most trusted diamond grading authority, ensures standardized and verifiable origin and quality for all tokenized diamonds.",
     icon: <IconPartners />,
   },
   {
     key: "security",
     tag: "Security",
-    body: "Multi-layer security architecture with real-time threat detection and automated incident response",
+    title: "Smart Contract Audits",
+    body: "Hacken provides specialized cybersecurity services including smart contract audits, infrastructure security analysis, and ongoing risk monitoring.",
     icon: <IconShield />,
   },
   {
-    key: "global",
-    tag: "Global Reach",
-    body: "Operating across 40+ jurisdictions with region-specific compliance and localized settlement rails",
+    key: "tokenization",
+    tag: "Tokenization",
+    title: "Compliant Token Issuance",
+    body: "NMKR provides compliant institutional tokenization infrastructure on Cardano, supporting regulated digital assets with lifecycle management and programmable ownership.",
     icon: <IconGlobe />,
   },
 ];
@@ -132,21 +137,24 @@ const SECTION_1_CARDS = [
 
 const SECTION_2_CARDS = [
   {
-    key: "performance",
-    tag: "Performance",
-    body: "Sub-second transaction finality with optimized throughput for high-frequency institutional workflows",
+    key: "liquidity",
+    tag: "Liquidity",
+    title: "Decentralized Liquidity",
+    body: "Uniswap provides secondary market access, price discovery, and on-chain settlement for supported tokenized assets.",
     icon: <IconLightning />,
   },
   {
-    key: "analytics",
-    tag: "Analytics",
-    body: "Real-time dashboards and on-chain data feeds powering smarter portfolio and risk decisions",
+    key: "compliance",
+    tag: "Compliance",
+    title: "Programmable Compliance",
+    body: "KYC, AML, and jurisdiction-specific transfer rules enforced programmatically at the protocol level across all tokenized assets.",
     icon: <IconChart />,
   },
   {
-    key: "payments",
-    tag: "Payments",
-    body: "Programmable payment rails bridging fiat and digital assets with instant cross-border settlement",
+    key: "custody",
+    tag: "Custody",
+    title: "Institutional Custody",
+    body: "Third-party insured vaults with warehouse warrants, independent audits, and legally enforceable asset backing for all physical commodities.",
     icon: <IconWallet />,
   },
 ];
@@ -155,15 +163,17 @@ const SECTION_2_CARDS = [
 
 const SECTION_3_CARDS = [
   {
-    key: "governance",
-    tag: "Governance",
-    body: "Transparent on-chain governance frameworks enabling community-driven protocol upgrades and decisions",
+    key: "data",
+    tag: "Data",
+    title: "On-Chain Data and Reserves",
+    body: "Proof of reserves, oracle validation, and immutable on-chain audit reports providing complete transparency for every listed asset.",
     icon: <IconGear />,
   },
   {
-    key: "compliance",
-    tag: "Compliance",
-    body: "Automated KYC/AML screening and regulatory reporting integrated directly into the transaction layer",
+    key: "settlement",
+    tag: "Settlement",
+    title: "Atomic Settlement",
+    body: "Delivery versus payment settlement with stablecoin integration, wallet whitelisting, and permissioned transfers removing counterparty risk.",
     icon: <IconLock />,
   },
 ];

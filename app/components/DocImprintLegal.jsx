@@ -173,13 +173,23 @@ export default function DocImprintLegal() {
             </li>
             <li>
               <span className="doclegal__label">LinkedIn:</span>{" "}
-              <a href="#" className="doclegal__link">
+              <a
+                href="https://www.linkedin.com/company/totofinance/"
+                className="doclegal__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Toto Finance
               </a>
             </li>
             <li>
               <span className="doclegal__label">Telegram:</span>{" "}
-              <a href="#" className="doclegal__link">
+              <a
+                href="https://t.me/totofinance"
+                className="doclegal__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Toto Finance
               </a>
             </li>
@@ -194,7 +204,7 @@ export default function DocImprintLegal() {
           <p className="doclegal__text">
             Toto Finance Inc. believes that regulatory compliance and legal
             clarity are critical to the future success of digital finance and
-            real-world asset tokenization.
+            real world asset tokenization.
           </p>
           <p className="doclegal__text">
             For legal or compliance-related inquiries, please contact:{" "}

@@ -9,31 +9,31 @@ const VISION_HERO_POSTER =
   "https://framerusercontent.com/images/K6MW1irIjygTSX9sWkGGuGnD0.webp?width=3840&height=2160";
 
 const DESCRIPTION_WORDS =
-  "Toto Finance partners with leadership teams to unlock tokenized real-world assets — from metals to energy — with institutional-grade settlement and regulatory clarity. We translate ambition into an actionable roadmap using on-chain infrastructure, transparent custody, and close collaboration with global partners.".split(
+  "By 2030, Toto Finance will run the global infrastructure for compliant, asset-backed tokenization and instant settlement of commodities, metals, energy, and strategic real world assets.".split(
     " "
   );
 
 /** Framer stat cards — bullets: true = white, false = rgb(34,38,49) */
 const VISION_STAT_CARDS = [
   {
-    stat: "32%",
+    stat: "2030",
     bullets: [true, false, false, false],
-    caption: "average EBITDA growth in 12 months",
+    caption: "Target Year for Global Infrastructure",
   },
   {
-    stat: "12",
+    stat: "6",
     bullets: [true, true, false, false],
-    caption: "industries served",
+    caption: "Roadmap Milestones",
   },
   {
-    stat: "90%",
+    stat: "$25T+",
     bullets: [true, true, true, false],
-    caption: "successful outcomes",
+    caption: "Addressable Commodity Market",
   },
   {
-    stat: "40x",
+    stat: "5+",
     bullets: [true, true, true, true],
-    caption: "increase in KPI achievement rate",
+    caption: "Blockchains Supported",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function Vision2030Hero() {
       <div className="visionhero__inner">
         <div className="visionhero__headline">
           <h1 id="visionhero-heading" className="visionhero__title">
-            {"Empowering companies to grow smarter and faster".split(" ").map((word, i) => (
+            {"Vision 2030: The Infrastructure for Global Tokenized Commodities".split(" ").map((word, i) => (
               <span key={i} className="visionhero__title-word" style={{ animationDelay: `${0.2 + i * 0.06}s` }}>
                 {word}
               </span>
@@ -101,9 +101,14 @@ export default function Vision2030Hero() {
         </div>
 
         <div className="visionhero__actions">
-          <Link href="/product" className="visionhero__btn visionhero__btn--primary">
-            Explore products
-          </Link>
+          <a
+            href="https://app.totofinance.co/"
+            className="visionhero__btn visionhero__btn--primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore Marketplace
+          </a>
           <Link href="/contact-us" className="visionhero__btn visionhero__btn--ghost">
             Contact us
           </Link>

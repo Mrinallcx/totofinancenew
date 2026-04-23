@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import useScrollReveal from "../hooks/useScrollReveal";
 import SplitWords from "../hooks/SplitWords";
@@ -8,58 +7,58 @@ import "./RareEarthRelax.css";
 
 const CARDS = [
   {
-    key: "room",
+    key: "asset-coverage",
     image: "/relax-room.png",
-    label: "Your room",
-    cta: "Explore rooms",
-    href: "/contact-us",
+    label: "Asset Coverage",
+    cta: "Explore Marketplace",
+    href: "https://app.totofinance.co/",
     hoverText:
-      "Your robe and slippers await beside the kingsize bed with its plush, inviting linens. Should you require a grand piano, we have the perfect suite in mind.",
+      "Tokenization of proven in-ground reserves, above-ground inventories, or offtake rights by asset type, stage, and geography.",
   },
   {
-    key: "golf",
+    key: "full-traceability",
     image: "/relax-golf.jpg",
-    label: "A round of golf",
-    cta: "Take a swing",
-    href: "/contact-us",
+    label: "Full Traceability",
+    cta: "Explore Marketplace",
+    href: "https://app.totofinance.co/",
     hoverText:
-      "Walk in Tiger Woods' path at our 18-hole, championship-level golf course, which was the venue for the Robin Hood Tekkers in 2019.",
+      "Chain linking of geological assessments, assay data, provenance, and audited custody from source to market.",
   },
   {
-    key: "spa",
+    key: "liquid-markets",
     image: "/relax-spa.png",
-    label: "Sensua Spa",
-    cta: "Discover Sensua",
-    href: "/contact-us",
+    label: "Liquid Markets",
+    cta: "Explore Marketplace",
+    href: "https://app.totofinance.co/",
     hoverText:
-      "And exhale… the jacuzi perpetually ready, the 22-meter pool boasts black mosaic tiles, and our exclusive Sensua therapies remain unparalleled.",
+      "Primary market issuance with secondary market trading between qualified counterparties, governed by regulatory requirements.",
   },
   {
-    key: "room-2",
+    key: "programmable-compliance",
     image: "/relax-room.png",
-    label: "Your room",
-    cta: "Explore rooms",
-    href: "/contact-us",
+    label: "Programmable Compliance",
+    cta: "Explore Marketplace",
+    href: "https://app.totofinance.co/",
     hoverText:
-      "Your robe and slippers await beside the kingsize bed with its plush, inviting linens. Should you require a grand piano, we have the perfect suite in mind.",
+      "KYC, AML, and jurisdiction-specific transfer rules enforced programmatically at the protocol level for every tokenized mineral asset.",
   },
   {
-    key: "golf-2",
+    key: "secure-custody",
     image: "/relax-golf.jpg",
-    label: "A round of golf",
-    cta: "Take a swing",
-    href: "/contact-us",
+    label: "Secure Custody",
+    cta: "Explore Marketplace",
+    href: "https://app.totofinance.co/",
     hoverText:
-      "Walk in Tiger Woods' path at our 18-hole, championship-level golf course, which was the venue for the Robin Hood Tekkers in 2019.",
+      "Third-party insured vault storage with warehouse warrants, independent audits, and legally enforceable asset backing.",
   },
   {
-    key: "spa-2",
+    key: "on-chain-reporting",
     image: "/relax-spa.png",
-    label: "Sensua Spa",
-    cta: "Discover Sensua",
-    href: "/contact-us",
+    label: "On-Chain Reporting",
+    cta: "Explore Marketplace",
+    href: "https://app.totofinance.co/",
     hoverText:
-      "And exhale… the jacuzi perpetually ready, the 22-meter pool boasts black mosaic tiles, and our exclusive Sensua therapies remain unparalleled.",
+      "On-chain proof of reserves, validation statements, and independent audit reports immutably anchored for complete transparency.",
   },
 ];
 
@@ -71,11 +70,11 @@ export default function RareEarthRelax() {
       <div className="remrelax__inner">
         <header className="remrelax__header" ref={headerRef}>
           <h3 id="remrelax-heading" className="remrelax__title">
-            <SplitWords text="Relaxation awaits you" startDelay={0.1} stagger={0.04} />
+            <SplitWords text="Built for Strategic Mineral Resources" startDelay={0.1} stagger={0.04} />
           </h3>
           <p className="remrelax__desc">
             <SplitWords
-              text="Rooms open onto a vista of greenery. Generous light from the riverfront seeps in through expansive picturesque windows and spacious patios, crafting the perfect location for recreation."
+              text="Toto Finance tokenizes strategic minerals end-to-end from proven reserves and inventories to offtake rights for traceable, asset-backed digital ownership from mine to market."
               startDelay={0.3}
               stagger={0.012}
             />
@@ -84,7 +83,13 @@ export default function RareEarthRelax() {
 
         <div className="remrelax__cards">
           {CARDS.map((card) => (
-            <Link key={card.key} href={card.href} className="remrelax__card">
+            <a
+              key={card.key}
+              href={card.href}
+              className="remrelax__card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <figure className="remrelax__figure">
                 <Image
                   src={card.image}
@@ -110,7 +115,7 @@ export default function RareEarthRelax() {
                   />
                 </svg>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>

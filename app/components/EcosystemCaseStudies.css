@@ -131,6 +131,17 @@
   padding: 16px 16px 20px;
 }
 
+.ecocase__category {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgb(96, 95, 95);
+  margin: 0 0 6px;
+}
+
 .ecocase__name {
   font-family: inherit;
   font-size: clamp(17px, 1.8vw, 20px);

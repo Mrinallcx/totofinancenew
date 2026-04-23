@@ -22,6 +22,10 @@
   gap: clamp(14px, 2vw, 20px);
 }
 
+.ecocards__item {
+  display: flex;
+}
+
 .ecocards__card {
   position: relative;
   background: rgb(240, 241, 245);
@@ -30,6 +34,18 @@
   display: flex;
   flex-direction: column;
   gap: clamp(14px, 2vw, 20px);
+  width: 100%;
+}
+
+.ecocards__card--link {
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.ecocards__card--link:hover {
+  background: rgb(228, 230, 237);
+  transform: translateY(-2px);
 }
 
 /* --- Icon + Badge row --- */
@@ -69,15 +85,27 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(10, 15, 21, 0.06);
-  color: rgb(10, 15, 21);
-  transition: background 0.25s ease, transform 0.25s ease;
+  background: rgb(10, 15, 21);
+  color: #ffffff;
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
 }
 
 .ecocards__card:hover .ecocards__arrow {
-  background: rgb(10, 15, 21);
-  color: #ffffff;
-  transform: translate(2px, -2px);
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.ecocards__title {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(16px, 1.7vw, 18px);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: rgb(10, 15, 21);
 }
 
 .ecocards__tag {
@@ -90,6 +118,16 @@
   background: #ffffff;
   padding: 6px 14px;
   border-radius: 99px;
+}
+
+.ecocards__card-title {
+  font-family: inherit;
+  font-size: clamp(15px, 1.6vw, 17px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: rgb(10, 15, 21);
+  margin: 0;
 }
 
 .ecocards__body {

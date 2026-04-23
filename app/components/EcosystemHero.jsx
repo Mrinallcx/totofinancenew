@@ -1,16 +1,18 @@
 "use client";
 
-import Link from "next/link";
 import "./EcosystemHero.css";
 
-const DEFAULT_TITLE = "Toto Ecosystem";
+const DEFAULT_TITLE = "Toto Finance Ecosystem";
 const DEFAULT_DESC =
-  "Join our network of leading onchain and traditional financial services providers to bring institutional-grade finance to everyone.";
+  "An integrated worldwide network of blockchains, infrastructure providers, custodians, and data suppliers facilitating compliant, asset-backed tokenization of real world commodities.";
 
+const DEFAULT_READ_MORE_HREF = "https://totofinance.co/blog";
 
 export default function EcosystemHero({
   title = DEFAULT_TITLE,
   description = DEFAULT_DESC,
+  readMoreHref = DEFAULT_READ_MORE_HREF,
+  readMoreLabel = "Read More",
 }) {
   return (
     <section className="ecohero" aria-labelledby="ecohero-heading">
@@ -21,7 +23,16 @@ export default function EcosystemHero({
           </h1>
           <p className="ecohero__desc">
             {description}{" "}
-            <Link href="/blog" className="ecohero__link">Read More</Link>
+            {readMoreHref ?
+              <a
+                href={readMoreHref}
+                className="ecohero__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {readMoreLabel}
+              </a>
+            : null}
           </p>
         </div>
       </div>

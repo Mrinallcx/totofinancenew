@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useEffect, useCallback } from "react";
-import Link from "next/link";
 import useScrollReveal from "../hooks/useScrollReveal";
 import SplitWords from "../hooks/SplitWords";
 import "./RareEarthSpaces.css";
@@ -39,36 +38,36 @@ function IconMeetingRoom() {
 }
 
 const ICON_MAP = {
-  "hot-desk": IconHotDesk,
-  "dedicated-desk": IconDedicatedDesk,
-  "private-office": IconPrivateOffice,
-  "meeting-room": IconMeetingRoom,
+  "institutional-structure": IconHotDesk,
+  "collateralized-liquidity": IconDedicatedDesk,
+  "programmable-compliance": IconPrivateOffice,
+  "transparent-supply": IconMeetingRoom,
 };
 
 const SPACES = [
   {
-    key: "hot-desk",
-    title: "Hot Desk",
-    subtitle: "Sit anywhere, stay flexible",
-    body: "Access a shared workspace whenever you need it — no booking, no hassle. Ideal for freelancers, remote workers, and digital nomads.",
+    key: "institutional-structure",
+    title: "Institutional Grade Structure",
+    subtitle: "Legal frameworks for in-ground assets",
+    body: "Legal structures with audited custody, notifiable reserve information, and asset support for in-ground mineral reserves.",
   },
   {
-    key: "dedicated-desk",
-    title: "Dedicated Desk",
-    subtitle: "Your own desk, every day",
-    body: "Enjoy your personal workstation in an open space. Perfect for regular use, with storage and 24/7 access included.",
+    key: "collateralized-liquidity",
+    title: "Collateralized Liquidity",
+    subtitle: "Liquidity without waiting for extraction",
+    body: "Financing, liquidity, and transferability of notifiable mineral reserves without waiting for extraction and production cycles.",
   },
   {
-    key: "private-office",
-    title: "Private Office",
-    subtitle: "Focus and grow with your team",
-    body: "Enclosed, lockable offices designed for 2–10 people. Fully furnished and customizable — ideal for startups and growing teams.",
+    key: "programmable-compliance",
+    title: "Programmable Compliance",
+    subtitle: "Compliance built into the protocol",
+    body: "KYC, AML, and transfer rules for jurisdictions enforced programmatically at the protocol level.",
   },
   {
-    key: "meeting-room",
-    title: "Meeting Room",
-    subtitle: "Where ideas take shape",
-    body: "Fully equipped rooms for calls, workshops, or presentations — with whiteboards, screens, and unlimited coffee within reach.",
+    key: "transparent-supply",
+    title: "Transparent Supply Chains",
+    subtitle: "From mine to market on-chain",
+    body: "Immutable on-chain records of reserves from geological verification to custody, financing, and delivery.",
   },
 ];
 
@@ -127,15 +126,20 @@ export default function RareEarthSpaces() {
         <div className="remspaces__text">
           <div className="remspaces__text-content">
             <h2 id="remspaces-heading" className="remspaces__title">
-              <SplitWords text="Find your space, your way" startDelay={0.1} stagger={0.04} />
+              <SplitWords text="Connecting Minerals to Institutional Capital" startDelay={0.1} stagger={0.04} />
             </h2>
             <p className="remspaces__desc">
-              <SplitWords text="From flexible desks to fully private offices, our workspaces are designed to adapt to your pace, your needs — and your flow." startDelay={0.3} stagger={0.015} />
+              <SplitWords text="Compliant tokenization of critical mineral reserves for institutional investors, mining companies, and strategic supply chains." startDelay={0.3} stagger={0.015} />
             </p>
           </div>
-          <Link href="/contact-us" className="remspaces__cta">
-            Book a tour
-          </Link>
+          <a
+            href="https://app.totofinance.co/"
+            className="remspaces__cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore Infrastructure
+          </a>
         </div>
 
         <ul className="remspaces__cards" ref={cardsRef}>

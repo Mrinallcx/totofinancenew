@@ -12,7 +12,7 @@ export default function Vision2030MethodsHeadline() {
       <div className="v2030mh__inner">
         <div className="v2030mh__headline">
           <h2 id="v2030mh-heading" className="v2030mh__title">
-            <SplitWords text="Bridging strategy, operations and delivering tangible business growth" startDelay={0.1} stagger={0.04} />
+            <SplitWords text="Global Settlement Layer for the World's Commodities" startDelay={0.1} stagger={0.04} />
           </h2>
         </div>
       </div>

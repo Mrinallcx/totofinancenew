@@ -7,34 +7,34 @@ import "./Vision2030Timeline.css";
 
 const MILESTONES = [
   {
-    year: "2021",
-    title: "Foundation & Vision",
-    body: "Toto Finance was founded with a clear mission — to bridge traditional finance with blockchain technology. Early research and concept validation laid the groundwork for everything ahead.",
-  },
-  {
-    year: "2022",
-    title: "Building the Core",
-    body: "Assembled a world-class team of engineers, economists and compliance experts. Developed our proprietary tokenization framework and secured initial regulatory approvals.",
-  },
-  {
-    year: "2023",
-    title: "First Products Launch",
-    body: "Launched our first suite of commodity-backed tokens, achieving full MiCA compliance. Onboarded institutional partners and crossed $50M in total value locked within the first quarter.",
-  },
-  {
-    year: "2024",
-    title: "Global Expansion",
-    body: "Expanded operations across Europe, the Middle East and Southeast Asia. Partnered with major exchanges and traditional finance institutions to widen market access.",
-  },
-  {
     year: "2025",
-    title: "Scale & Innovation",
-    body: "Introduced advanced DeFi instruments and cross-chain interoperability. Surpassed 100,000 active users and launched our institutional-grade custody solution.",
+    title: "Foundation and Global Expansion",
+    body: "Launch scalable tokenization infrastructure, add more commodities, and develop compliant regulatory frameworks for global operation.",
+  },
+  {
+    year: "2026",
+    title: "Metals and In-Ground Resource Integration",
+    body: "Enhance metals and in-ground resource tokenization, facilitating institutional access to strategic and critical commodities.",
+  },
+  {
+    year: "2027",
+    title: "Resource Layer Expansion",
+    body: "Launch new token models, liquidity tools, and asset interoperability across commodity types.",
+  },
+  {
+    year: "2028",
+    title: "Market Infrastructure Convergence",
+    body: "Synchronize digital commodities with global financial infrastructure for settlement, custody, compliance, and institutional trading.",
+  },
+  {
+    year: "2029",
+    title: "Interoperability and Global Access",
+    body: "Launch cross-border value transfer infrastructure and enhance institutional partnerships for global liquidity access under regulated frameworks.",
   },
   {
     year: "2030",
-    title: "The Destination",
-    body: "Our north star — becoming the global standard for commodity tokenization, making sustainable assets accessible to everyone, everywhere.",
+    title: "Global Liquidity Network",
+    body: "Run a fully interconnected global ecosystem where commodities, in-ground assets, and real world value flow transparently and compliantly.",
     isFuture: true,
   },
 ];
@@ -96,7 +96,7 @@ export default function Vision2030Timeline() {
       <div className="v2030tl__inner">
         <header className="v2030tl__header" ref={headerRef}>
           <h2 id="v2030tl-heading" className="v2030tl__title">
-            <SplitWords text="Key milestones shaping our path to 2030" startDelay={0.1} stagger={0.04} />
+            <SplitWords text="Roadmap to Global Commodity Tokenization" startDelay={0.1} stagger={0.04} />
           </h2>
         </header>
 

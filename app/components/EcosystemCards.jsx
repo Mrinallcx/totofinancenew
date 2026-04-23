@@ -22,18 +22,39 @@ export default function EcosystemCards({ cards, columns = 3, label = "Ecosystem 
     <section className="ecocards" aria-label={label} ref={sectionRef}>
       <div className="ecocards__inner">
         <ul className={gridClass}>
-          {cards.map((c) => (
-            <li key={c.key} className="ecocards__card sr-item">
-              <div className="ecocards__top">
-                <div className="ecocards__icon-wrap">{c.icon}</div>
-                <span className="ecocards__tag">{c.tag}</span>
-              </div>
-              <p className="ecocards__body">{c.body}</p>
-              <div className="ecocards__arrow" aria-hidden>
-                <ArrowIcon />
-              </div>
-            </li>
-          ))}
+          {cards.map((c) => {
+            const inner = (
+              <>
+                <div className="ecocards__top">
+                  <div className="ecocards__icon-wrap">{c.icon}</div>
+                  <span className="ecocards__tag">{c.tag}</span>
+                </div>
+                {c.title ? <h5 className="ecocards__title">{c.title}</h5> : null}
+                <p className="ecocards__body">{c.body}</p>
+                <div className="ecocards__arrow" aria-hidden>
+                  <ArrowIcon />
+                </div>
+              </>
+            );
+
+            return (
+              <li key={c.key} className="ecocards__item">
+                {c.href ? (
+                  <a
+                    href={c.href}
+                    className="ecocards__card sr-item ecocards__card--link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={c.title || c.tag}
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <div className="ecocards__card sr-item">{inner}</div>
+                )}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>

@@ -6,60 +6,80 @@ import "./EcosystemCaseStudies.css";
 
 const CASES = [
   {
-    key: "pluto",
+    key: "cardano",
     image: "/case-pluto.png",
-    alt: "Minimalist Note Card Composition",
+    alt: "Cardano",
     brand: "/brand-pluto.png",
-    year: "2025",
-    name: "Pluto",
-    body: "Helped Pluto scale their product team and streamline onboarding as they expanded into new markets.",
+    year: "2023",
+    name: "Cardano",
+    category: "Blockchain",
+    body: "Research-oriented blockchain providing secure and sustainable infrastructure for regulated, long-term digital asset issuance and settlement.",
+    href: "https://cardano.org/",
   },
   {
-    key: "vitahealth",
+    key: "lcx",
     image: "/case-vitahealth.png",
-    alt: "Green Plant",
+    alt: "LCX",
     brand: "/brand-vitahealth.png",
-    year: "2024",
-    name: "VitaHealth",
-    body: "Partnered with VitaHealth to set up their first operations team from the ground up.",
+    year: "2023",
+    name: "LCX",
+    category: "Physical Validator",
+    body: "Internationally respected Physical Validator under the Liechtenstein Blockchain Act, providing legally binding connection between physical assets and blockchain tokens.",
+    href: "https://exchange.lcx.com/",
   },
   {
-    key: "boxmedia",
+    key: "gia",
     image: "/case-boxmedia.png",
-    alt: "Pink Radio",
+    alt: "GIA",
     brand: "/brand-boxmedia.png",
-    year: "2025",
-    name: "BoxMedia",
-    body: "Supported BoxMedia, a creative agency, in building their client success team and internal delivery process.",
+    year: "2023",
+    name: "GIA",
+    category: "Certification",
+    body: "World's most trusted diamond grading and certification authority, ensuring standardized and verifiable origin and quality for tokenized diamonds.",
+    href: "https://www.gia.edu/",
   },
   {
-    key: "novatech",
+    key: "hacken",
     image: "/case-novatech.png",
-    alt: "Laptop and Plant",
+    alt: "Hacken",
     brand: "/brand-novatech.png",
     year: "2023",
-    name: "NovaTech",
-    body: "Helped NovaTech optimize cross-functional collaboration between marketing, product, and sales teams.",
+    name: "Hacken",
+    category: "Security",
+    body: "Specialized cybersecurity provider for smart contract audits, infrastructure security analysis, and ongoing risk monitoring on blockchain networks.",
+    href: "https://hacken.io/audits/toto-finance/",
   },
 ];
 
-export default function EcosystemCaseStudies() {
+export default function EcosystemCaseStudies({
+  heading = "Our Ecosystem Partners",
+  description = "Toto Finance connects blockchains, validators, auditors, and liquidity protocols to tokenize, trade, and settle real world assets compliantly.",
+  cases = CASES,
+  ctaLabel = "Read more",
+  ctaHref = "#",
+  showCta = true,
+}) {
   const sectionRef = useScrollReveal();
 
   return (
     <section className="ecocase" aria-labelledby="ecocase-heading" ref={sectionRef}>
       <div className="ecocase__inner">
         <header className="ecocase__header sr-item">
-          <h2 className="ecocase__title" id="ecocase-heading">Success stories</h2>
-          <p className="ecocase__desc">
-            We have partnered with growing businesses to build foundations for
-            sustainable success. Explore real stories of transformation.
-          </p>
+          <h2 className="ecocase__title" id="ecocase-heading">{heading}</h2>
+          {description ? (
+            <p className="ecocase__desc">{description}</p>
+          ) : null}
         </header>
 
         <div className="ecocase__grid">
-          {CASES.map((c) => (
-            <a key={c.key} className="ecocase__card sr-item" href="#">
+          {cases.map((c) => (
+            <a
+              key={c.key}
+              className="ecocase__card sr-item"
+              href={c.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="ecocase__image-area">
                 <div className="ecocase__thumb">
                   <Image
@@ -84,6 +104,9 @@ export default function EcosystemCaseStudies() {
                 </div>
               </div>
               <div className="ecocase__content">
+                {c.category ? (
+                  <span className="ecocase__category">{c.category}</span>
+                ) : null}
                 <h5 className="ecocase__name">{c.name}</h5>
                 <p className="ecocase__body">{c.body}</p>
               </div>
@@ -91,9 +114,19 @@ export default function EcosystemCaseStudies() {
           ))}
         </div>
 
-        <div className="ecocase__cta-wrap sr-item">
-          <a href="#" className="ecocase__cta">Read more</a>
-        </div>
+        {showCta && ctaHref ? (
+          <div className="ecocase__cta-wrap sr-item">
+            <a
+              href={ctaHref}
+              className="ecocase__cta"
+              {...(ctaHref.startsWith("http")
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+            >
+              {ctaLabel}
+            </a>
+          </div>
+        ) : null}
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import EcosystemPageContent from "./EcosystemPageContent";
 export const metadata = {
   title: "Ecosystem — Toto Finance",
   description:
-    "Join our network of leading onchain and traditional financial services providers to bring institutional-grade finance to everyone.",
+    "An integrated worldwide network of blockchains, infrastructure providers, custodians, and data suppliers facilitating compliant, asset-backed tokenization of real world commodities.",
 };
 
 export default function EcosystemPage() {

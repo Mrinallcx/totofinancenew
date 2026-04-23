@@ -1,12 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import "./RareEarthHero.css";
 
-const TITLE_TEXT = "Your next workspace starts here.";
+const TITLE_TEXT = "Tokenized Rare Earth Minerals";
 
 const DESCRIPTION_WORDS =
-  "A flexible coworking space built for freelancers, remote teams, and creative minds. From hot desks to private offices — everything you need to do your best work.".split(
+  "Institutional grade access to critical minerals driving AI, energy transition, and global infrastructure, tokenized directly from verified in-ground reserves with compliant ownership, audited custody, and on-chain settlement.".split(
     " "
   );
 
@@ -53,12 +52,17 @@ export default function RareEarthHero() {
         </div>
 
         <div className="remhero__actions">
-          <Link href="/product" className="remhero__btn remhero__btn--primary">
-            Explore products
-          </Link>
-          <Link href="/contact-us" className="remhero__btn remhero__btn--ghost">
-            Contact us
-          </Link>
+          <a href="mailto:hello@totofinance.co" className="remhero__btn remhero__btn--primary">
+            Contact Us
+          </a>
+          <a
+            href="https://app.totofinance.co/"
+            className="remhero__btn remhero__btn--ghost"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore Marketplace
+          </a>
         </div>
       </div>
     </section>
