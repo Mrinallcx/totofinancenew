@@ -7,10 +7,9 @@ import "./EcosystemCaseStudies.css";
 const CASES = [
   {
     key: "cardano",
-    image: "/case-pluto.png",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292648/Cardano_cck2t4.png",
     alt: "Cardano",
-    brand: "/brand-pluto.png",
-    year: "2023",
     name: "Cardano",
     category: "Blockchain",
     body: "Research-oriented blockchain providing secure and sustainable infrastructure for regulated, long-term digital asset issuance and settlement.",
@@ -18,10 +17,9 @@ const CASES = [
   },
   {
     key: "lcx",
-    image: "/case-vitahealth.png",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292671/LCX_xjs4uv.png",
     alt: "LCX",
-    brand: "/brand-vitahealth.png",
-    year: "2023",
     name: "LCX",
     category: "Physical Validator",
     body: "Internationally respected Physical Validator under the Liechtenstein Blockchain Act, providing legally binding connection between physical assets and blockchain tokens.",
@@ -29,10 +27,9 @@ const CASES = [
   },
   {
     key: "gia",
-    image: "/case-boxmedia.png",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292669/GIA_rhxd48.png",
     alt: "GIA",
-    brand: "/brand-boxmedia.png",
-    year: "2023",
     name: "GIA",
     category: "Certification",
     body: "World's most trusted diamond grading and certification authority, ensuring standardized and verifiable origin and quality for tokenized diamonds.",
@@ -40,10 +37,9 @@ const CASES = [
   },
   {
     key: "hacken",
-    image: "/case-novatech.png",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292672/Hacken_d5ybjl.png",
     alt: "Hacken",
-    brand: "/brand-novatech.png",
-    year: "2023",
     name: "Hacken",
     category: "Security",
     body: "Specialized cybersecurity provider for smart contract audits, infrastructure security analysis, and ongoing risk monitoring on blockchain networks.",
@@ -89,18 +85,6 @@ export default function EcosystemCaseStudies({
                     sizes="(min-width: 1200px) calc((min(100vw,1200px) - 184px) / 2), (min-width: 810px) calc((min(100vw,1200px) - 152px) / 2), calc(100vw - 64px)"
                     className="ecocase__img"
                   />
-                </div>
-                <div className="ecocase__brand-row">
-                  <div className="ecocase__brand">
-                    <Image
-                      src={c.brand}
-                      alt=""
-                      width={250}
-                      height={55}
-                      className="ecocase__brand-img"
-                    />
-                  </div>
-                  <span className="ecocase__year">{c.year}</span>
                 </div>
               </div>
               <div className="ecocase__content">

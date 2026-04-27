@@ -123,6 +123,11 @@
   transition: transform 0.4s ease;
 }
 
+.blog__card-image--placeholder {
+  background:
+    linear-gradient(135deg, #efe7d4 0%, #f6f1e2 50%, #ece3cd 100%);
+}
+
 .blog__card-details {
   padding: 20px 0 0;
   display: flex;

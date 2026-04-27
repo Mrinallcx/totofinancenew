@@ -74,8 +74,6 @@
 .ecocase__thumb {
   position: relative;
   aspect-ratio: 16 / 9;
-  mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.95) 100%);
-  -webkit-mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.95) 100%);
 }
 
 .ecocase__img {
@@ -85,45 +83,6 @@
 
 .ecocase__card:hover .ecocase__img {
   transform: scale(1.03);
-}
-
-/* Brand + Year row (overlaid at bottom of image area) */
-.ecocase__brand-row {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 16px;
-}
-
-.ecocase__brand {
-  position: relative;
-  width: 250px;
-  height: 55px;
-  flex-shrink: 0;
-}
-
-.ecocase__brand-img {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-}
-
-/* Year badge (pill) */
-.ecocase__year {
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 500;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 5px 14px;
-  border-radius: 49px;
-  line-height: 1.3;
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 
 /* --- Content below image --- */
@@ -191,10 +150,5 @@
     grid-template-columns: 1fr;
     max-width: 560px;
     margin: 0 auto;
-  }
-
-  .ecocase__brand {
-    width: 180px;
-    height: 40px;
   }
 }

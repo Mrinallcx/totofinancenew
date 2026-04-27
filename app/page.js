@@ -9,8 +9,19 @@ import BlogSection from "./components/BlogSection";
 import AskAI from "./components/AskAI";
 import CtaImage from "./components/CtaImage";
 import Footer from "./components/Footer";
+import { fetchWordPressPosts } from "../lib/wordpress";
 
-export default function Home() {
+export const revalidate = 120;
+
+export default async function Home() {
+  let featuredPosts = [];
+  try {
+    const all = await fetchWordPressPosts({ revalidate: 120 });
+    featuredPosts = all.slice(0, 10);
+  } catch {
+    featuredPosts = [];
+  }
+
   return (
     <main>
       <HeroSection />
@@ -20,7 +31,7 @@ export default function Home() {
       <MissionVision />
       <CryptoAccess />
       <AboutUs />
-      <BlogSection />
+      <BlogSection initialPosts={featuredPosts} />
       <AskAI />
       <CtaImage />
       <Footer />
