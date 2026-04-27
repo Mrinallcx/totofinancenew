@@ -18,12 +18,22 @@ const STEPS = [
     descriptionRich: (
       <>
         Independent third-party security audits ensure the integrity of smart contracts and platform infrastructure. Audit providers:{" "}
-        <a href="https://hacken.io/audits/toto-finance/" target="_blank" rel="noopener noreferrer">
-          Hacken (https://hacken.io/audits/toto-finance/)
+        <a
+          href="https://hacken.io/audits/toto-finance/"
+          className="abtprocess__step-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Hacken
         </a>{" "}
         and{" "}
-        <a href="https://skynet.certik.com/projects/tiamonds" target="_blank" rel="noopener noreferrer">
-          CertiK (https://skynet.certik.com/projects/tiamonds)
+        <a
+          href="https://skynet.certik.com/projects/tiamonds"
+          className="abtprocess__step-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CertiK
         </a>
         .
       </>
@@ -88,8 +98,8 @@ export default function AboutProcess() {
 
         <div className="abtprocess__image-wrap">
           <Image
-            src="https://framerusercontent.com/images/1PBUhFCt9fIr7Az12qTFt92c4.jpg?scale-down-to=1024"
-            alt="Process"
+            src="https://res.cloudinary.com/dusinlidl/image/upload/v1777031297/compliance_first_j5qvvw.webp"
+            alt="Compliance and team collaboration"
             fill
             sizes="(max-width: 991px) 100vw, 50vw"
             className="abtprocess__image"

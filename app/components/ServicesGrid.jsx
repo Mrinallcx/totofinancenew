@@ -10,8 +10,6 @@ const SERVICES = [
   { name: "Platinum", image: "/product card/Platinum.webp", href: "/marketplace" },
   { name: "Diamond", image: "/product card/Diamond.webp", href: "/marketplace" },
   { name: "Sapphire", image: "/product card/Sapphire.webp", href: "/marketplace" },
-  { name: "Carbon Credit", image: "/product card/carbon-credit.webp", href: "/marketplace" },
-  { name: "Energy", image: "/product card/energy.webp", href: "/marketplace" },
 ];
 
 function Card({ item }) {

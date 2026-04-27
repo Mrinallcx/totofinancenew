@@ -109,6 +109,20 @@
   margin-top: 12px;
 }
 
+.abtprocess__step-link {
+  color: var(--color-primary, #e6b026);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--color-primary, #e6b026);
+  transition: color 0.2s ease;
+}
+
+.abtprocess__step-link:hover {
+  color: #d4a01e;
+  text-decoration-color: #d4a01e;
+}
+
 /* ---- CTA ---- */
 .abtprocess__cta {
   display: inline-flex;

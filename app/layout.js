@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
         <link
           rel="preload"
           as="video"
-          href="https://res.cloudinary.com/djsb5ye4c/video/upload/v1773754964/totofinance%20background%2001.mp4"
+          href="https://framerusercontent.com/assets/3TnIHiADX1QoCypro3Mc3TsFLKk.mp4"
           type="video/mp4"
         />
         <link

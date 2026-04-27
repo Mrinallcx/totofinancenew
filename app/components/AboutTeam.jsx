@@ -7,29 +7,32 @@ import "./AboutTeam.css";
 
 const TEAM = [
   {
-    name: "Dr. Elara Wells",
-    role: "Holistic Wellness Consultant",
+    name: "Monty Metzger",
+    role: "Founder",
+    linkedin: "https://www.linkedin.com/in/montymetzger/",
     image:
-      "https://framerusercontent.com/images/BKN2xjvqhSyX22YsUl2OxfQbpHY.jpg?scale-down-to=1024",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777032441/monty_z1hq12.jpg",
   },
   {
-    name: "Naya Hart",
-    role: "Nutrition Specialist",
+    name: "Steven Gaertner",
+    role: "President",
+    linkedin: "https://www.linkedin.com/in/steven-gaertner/",
     image:
-      "https://framerusercontent.com/images/m5QDkK8NzSKbTL3gmy7yLe1tYVc.jpg?scale-down-to=1024",
-    imagePosition: "50.7% 21.2%",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777032440/steven_nqzsof.jpg",
   },
   {
-    name: "Sofia Green",
-    role: "Lifestyle Coach",
+    name: "Priyanshu Rajput",
+    role: "CTO",
+    linkedin: "https://www.linkedin.com/in/priyanshu-rajput-037899189/",
     image:
-      "https://framerusercontent.com/images/p0D3veR8Fg6mu2XDD9xgWnlyqM.jpg?scale-down-to=1024",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777032440/priyanshu_vgdadw.jpg",
   },
   {
-    name: "Amara Lee",
-    role: "Mindfulness Therapist",
+    name: "Danil Kerimi",
+    role: "Non-Executive Board Member",
+    linkedin: "https://www.linkedin.com/in/danil-kerimi/",
     image:
-      "https://framerusercontent.com/images/ItVzC9IZ39d1vBjCv8zOwKplKxc.jpg?scale-down-to=1024",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777032612/daneil_bobtsp.jpg",
   },
 ];
 
@@ -48,13 +51,13 @@ export default function AboutTeam() {
         <div className="abtteam__header">
           <p className="abtteam__label sr-item" style={{ animationDelay: "0s" }}>Team</p>
           <h2 className="abtteam__heading">
-            <SplitWords text="Meet the Consultant" startDelay={0.1} stagger={0.06} />
+            <SplitWords text="Meet the Leadership" startDelay={0.1} stagger={0.06} />
           </h2>
         </div>
 
         <div className="abtteam__grid">
           {TEAM.map((member) => (
-            <div key={member.name} className="abtteam__card">
+            <div key={member.linkedin} className="abtteam__card">
               <div className="abtteam__card-img-wrap">
                 <Image
                   src={member.image}
@@ -63,7 +66,7 @@ export default function AboutTeam() {
                   sizes="(max-width: 479px) 100vw, (max-width: 991px) 50vw, 25vw"
                   className="abtteam__card-img"
                   style={{
-                    objectPosition: member.imagePosition || "center center",
+                    objectPosition: member.imagePosition ?? "center center",
                   }}
                 />
               </div>
@@ -73,7 +76,7 @@ export default function AboutTeam() {
                   <p className="abtteam__card-role">{member.role}</p>
                 </div>
                 <div className="abtteam__card-socials">
-                  <a href={member.linkedin || "https://linkedin.com"} target="_blank" rel="noopener noreferrer" className="abtteam__social-link">
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="abtteam__social-link">
                     <LinkedInIcon />
                   </a>
                 </div>

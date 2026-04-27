@@ -3,10 +3,8 @@
 import Link from "next/link";
 import "./Vision2030Hero.css";
 
-const VISION_HERO_VIDEO_SRC =
-  "https://framerusercontent.com/assets/XWnzN2LkYQkgWYrpoQWvJt3VA.mp4";
-const VISION_HERO_POSTER =
-  "https://framerusercontent.com/images/K6MW1irIjygTSX9sWkGGuGnD0.webp?width=3840&height=2160";
+const VISION_HERO_VIDEO_EMBED =
+  "https://player.cloudinary.com/embed/?cloud_name=dusinlidl&public_id=vision%202030%20hero%20section%20page&autoplay=true&muted=true&loop=true&controls=false&playsinline=true";
 
 const DESCRIPTION_WORDS =
   "By 2030, Toto Finance will run the global infrastructure for compliant, asset-backed tokenization and instant settlement of commodities, metals, energy, and strategic real world assets.".split(
@@ -64,16 +62,13 @@ export default function Vision2030Hero() {
         </div>
 
         <div className="visionhero__video-wrap">
-          <video
+          <iframe
             className="visionhero__video"
-            src={VISION_HERO_VIDEO_SRC}
-            poster={VISION_HERO_POSTER}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            aria-label="Vision 2030 highlight"
+            src={VISION_HERO_VIDEO_EMBED}
+            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+            allowFullScreen
+            title="Vision 2030 highlight"
+            style={{ border: "none" }}
           />
         </div>
 

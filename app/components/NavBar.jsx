@@ -36,8 +36,6 @@ const EXPLORE_PRODUCTS = [
   { label: "Platinum", image: "/product card/Platinum.webp", href: "/marketplace" },
   { label: "Diamond", image: "/product card/Diamond.webp", href: "/marketplace" },
   { label: "Sapphire", image: "/product card/Sapphire.webp", href: "/marketplace" },
-  { label: "Carbon Credit", image: "/product card/carbon-credit.webp", href: "/marketplace" },
-  { label: "Energy", image: "/product card/energy.webp", href: "/marketplace" },
 ];
 
 const ALL_PAGE_LINKS = FLYOUT_GROUPS.flatMap((g) => g.links);
@@ -46,6 +44,7 @@ const GLOBAL_NAV_HIDE_THRESHOLD = 200;
 const LOCAL_NAV_SHOW_THRESHOLD = 200;
 
 export default function NavBar({ pageTitle = "Toto Finance", localLinks = [] }) {
+  const [mounted, setMounted] = useState(false);
   const [globalHidden, setGlobalHidden] = useState(false);
   const [localVisible, setLocalVisible] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -66,6 +65,10 @@ export default function NavBar({ pageTitle = "Toto Finance", localLinks = [] }) 
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -193,7 +196,7 @@ export default function NavBar({ pageTitle = "Toto Finance", localLinks = [] }) 
         </div>
       </header>
 
-      {dropdownOpen && typeof document !== "undefined" &&
+      {mounted && dropdownOpen &&
         createPortal(
           <div
             className="globalnav__curtain"
@@ -340,7 +343,7 @@ export default function NavBar({ pageTitle = "Toto Finance", localLinks = [] }) 
         </div>
       )}
 
-      {exploreOpen && typeof document !== "undefined" &&
+      {mounted && exploreOpen &&
         createPortal(
           <div
             className="localnav__curtain"

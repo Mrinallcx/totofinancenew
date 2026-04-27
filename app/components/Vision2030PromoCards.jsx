@@ -8,7 +8,7 @@ const PROMO_CARDS = [
   {
     key: "transform",
     imageSrc:
-      "https://framerusercontent.com/images/K3p4vDOZMx9XlZYJBJzTGqsjIts.webp?width=6571&height=4381",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777282342/toto_finance_vision_page_card_2_mpc2z4.webp",
     title: "Connecting Physical Assets to Digital Markets",
     body:
       "Toto Finance provides compliant blockchain infrastructure that links physical commodities to digital settlement, custody, and liquidity at institutional scale.",
@@ -18,7 +18,7 @@ const PROMO_CARDS = [
   {
     key: "partner",
     imageSrc:
-      "https://framerusercontent.com/images/7rykZ1X19HC6ibxzXY7RVL6VQo.webp?width=5760&height=3840",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777282341/toto_finance_vision_page_card_1_mh8ma7.webp",
     title: "Programmability for Real World Assets",
     body:
       "We make real world assets programmable, enabling instant settlement, compliant global access, and institutional grade liquidity for producers, investors, and institutions.",

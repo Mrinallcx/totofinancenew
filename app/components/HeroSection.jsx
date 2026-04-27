@@ -30,10 +30,9 @@ export default function HeroSection() {
             playsInline
             preload="auto"
             fetchPriority="high"
-            poster="https://framerusercontent.com/images/KUY43qTaTIwPFzOc0fNZn3tcfE.png"
           >
             <source
-              src="https://res.cloudinary.com/djsb5ye4c/video/upload/v1773754964/totofinance%20background%2001.mp4"
+              src="https://framerusercontent.com/assets/3TnIHiADX1QoCypro3Mc3TsFLKk.mp4"
               type="video/mp4"
             />
           </video>

@@ -4,6 +4,10 @@ import useScrollReveal from "../hooks/useScrollReveal";
 import SplitWords from "../hooks/SplitWords";
 import "./ProductsHero.css";
 
+/** Same asset as https://player.cloudinary.com/embed/?cloud_name=dusinlidl&public_id=product_page_hero_video_epuhvw */
+const PRODUCT_HERO_VIDEO_MP4 =
+  "https://res.cloudinary.com/dusinlidl/video/upload/q_auto,f_auto/product_page_hero_video_epuhvw.mp4";
+
 export default function ProductsHero() {
   const sectionRef = useScrollReveal(0.1);
 
@@ -12,14 +16,15 @@ export default function ProductsHero() {
       <div className="prodhero__video-wrap">
         <video
           className="prodhero__video"
-          src="https://framerusercontent.com/assets/7fXDqEHIBqWkfaAU7ddHgPqholw.mp4"
-          loop
-          preload="auto"
-          poster="https://framerusercontent.com/images/w9K8ltdxMfkapZKUCjyk8m6Og.jpg?width=1280&height=720"
-          muted
-          playsInline
           autoPlay
-        />
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src={PRODUCT_HERO_VIDEO_MP4} type="video/mp4" />
+        </video>
         <div className="prodhero__overlay" />
       </div>
 
@@ -69,10 +74,10 @@ export default function ProductsHero() {
                 <div className="prodhero__card-image-wrap">
                   <img
                     className="prodhero__card-image"
-                    src="https://framerusercontent.com/images/8cUgs5U8JERfBz2wyLRNN4fmHw.jpg?width=770&height=950"
-                    alt="Case study"
-                    width={770}
-                    height={950}
+                    src="https://res.cloudinary.com/dusinlidl/image/upload/v1777038609/toto_finance_corges.png"
+                    alt="Tokenized commodities and secure value"
+                    width={800}
+                    height={800}
                   />
                 </div>
               </div>

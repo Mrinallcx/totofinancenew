@@ -4,12 +4,21 @@
 
 .v2030cc {
   background: #ffffff;
-  padding: clamp(48px, 7vw, 88px) clamp(20px, 4vw, 80px);
+  padding: clamp(48px, 7vw, 88px) 0;
 }
 
 .v2030cc__inner {
-  max-width: 1100px;
+  max-width: 1380px;
   margin: 0 auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media (max-width: 991px) {
+  .v2030cc__inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 /* --- Section header --- */

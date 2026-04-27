@@ -4,6 +4,10 @@ import useScrollReveal from "../hooks/useScrollReveal";
 import SplitWords from "../hooks/SplitWords";
 import "./AboutHero.css";
 
+/** Same asset as https://player.cloudinary.com/embed/?cloud_name=dusinlidl&public_id=toto%20finance%20about%20us%20hero%20section */
+const ABOUT_HERO_VIDEO_MP4 =
+  "https://res.cloudinary.com/dusinlidl/video/upload/q_auto,f_auto/toto%20finance%20about%20us%20hero%20section.mp4";
+
 export default function AboutHero() {
   const sectionRef = useScrollReveal(0.1);
 
@@ -28,12 +32,8 @@ export default function AboutHero() {
           loop
           playsInline
           preload="auto"
-          poster="https://framerusercontent.com/images/MG4kQb9JYjsjUVxKv8YbPohmP0I.png"
         >
-          <source
-            src="https://videos.pexels.com/video-files/9136349/9136349-uhd_2560_1440_25fps.mp4"
-            type="video/mp4"
-          />
+          <source src={ABOUT_HERO_VIDEO_MP4} type="video/mp4" />
         </video>
       </div>
     </section>

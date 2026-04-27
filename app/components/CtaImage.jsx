@@ -1,9 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import useScrollReveal from "../hooks/useScrollReveal";
 import SplitWords from "../hooks/SplitWords";
 import "./CtaImage.css";
+
+/** Same asset as https://player.cloudinary.com/embed/?cloud_name=dusinlidl&public_id=toto%20finance */
+const CTA_BG_VIDEO_MP4 =
+  "https://res.cloudinary.com/dusinlidl/video/upload/q_auto,f_auto/toto%20finance.mp4";
 
 export default function CtaImage({
   title = "Ready to transform your financial future?",
@@ -21,14 +24,17 @@ export default function CtaImage({
   return (
     <section className="ctaimg" ref={sectionRef}>
       <div className="ctaimg__bg">
-        <Image
-          src="https://framerusercontent.com/images/I63aDOGkxJKmUUtuNtByyqTZAHU.jpg?scale-down-to=1024"
-          alt=""
-          className="ctaimg__bg-img"
-          width={1300}
-          height={600}
-          loading="lazy"
-        />
+        <video
+          className="ctaimg__bg-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src={CTA_BG_VIDEO_MP4} type="video/mp4" />
+        </video>
       </div>
       <div className="ctaimg__content">
         <h2 className="ctaimg__title">

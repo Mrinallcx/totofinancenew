@@ -2,12 +2,21 @@
 
 .v2030promo {
   background: #ffffff;
-  padding: clamp(24px, 5vw, 56px) clamp(20px, 4vw, 80px) clamp(48px, 7vw, 88px);
+  padding: clamp(24px, 5vw, 56px) 0 clamp(48px, 7vw, 88px);
 }
 
 .v2030promo__inner {
-  max-width: 1100px;
+  max-width: 1380px;
   margin: 0 auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media (max-width: 991px) {
+  .v2030promo__inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .v2030promo__grid {

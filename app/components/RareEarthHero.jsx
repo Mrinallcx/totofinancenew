@@ -13,11 +13,12 @@ export default function RareEarthHero() {
   return (
     <section className="remhero" aria-labelledby="remhero-heading">
       <div className="remhero__bg" aria-hidden>
-        <img
-          className="remhero__bg-img"
-          src="/rare-earth-hero.jpg"
-          alt=""
-          loading="eager"
+        <iframe
+          className="remhero__bg-video"
+          src="https://player.cloudinary.com/embed/?cloud_name=dusinlidl&public_id=rare-earth-mineral%20page%20hero%20section%20video&autoplay=true&muted=true&loop=true&controls=false&playsinline=true"
+          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+          title=""
+          tabIndex={-1}
         />
         <div className="remhero__overlay" />
       </div>

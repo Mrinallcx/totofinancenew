@@ -12,7 +12,7 @@ const CASES = [
       { value: "5+", label: "Blockchains Supported" },
     ],
     image:
-      "https://framerusercontent.com/images/rfvg8t1wjVVI72PSQa90RcL851w.jpg?width=770&height=950",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777041621/global_marekt_jp5jto.jpg",
     href: "#",
   },
   {
@@ -22,7 +22,7 @@ const CASES = [
       { value: "7+", label: "Commodity Asset Classes" },
     ],
     image:
-      "https://framerusercontent.com/images/eDp1DB9UYKGTjTwzkIevINItXgA.webp?width=770&height=950",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777041080/toto_institution_gb9fzg.png",
     href: "#",
   },
 ];

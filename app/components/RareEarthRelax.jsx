@@ -8,7 +8,8 @@ import "./RareEarthRelax.css";
 const CARDS = [
   {
     key: "asset-coverage",
-    image: "/relax-room.png",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777286561/Asset_coverage_h4bt00.png",
     label: "Asset Coverage",
     cta: "Explore Marketplace",
     href: "https://app.totofinance.co/",
@@ -17,7 +18,8 @@ const CARDS = [
   },
   {
     key: "full-traceability",
-    image: "/relax-golf.jpg",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777286752/Full_Tracebility_t75ftj.png",
     label: "Full Traceability",
     cta: "Explore Marketplace",
     href: "https://app.totofinance.co/",
@@ -26,7 +28,8 @@ const CARDS = [
   },
   {
     key: "liquid-markets",
-    image: "/relax-spa.png",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777287022/Liquid_Market_sar9z0.png",
     label: "Liquid Markets",
     cta: "Explore Marketplace",
     href: "https://app.totofinance.co/",
@@ -35,7 +38,8 @@ const CARDS = [
   },
   {
     key: "programmable-compliance",
-    image: "/relax-room.png",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777287060/Programmable_compliance_ungm0l.png",
     label: "Programmable Compliance",
     cta: "Explore Marketplace",
     href: "https://app.totofinance.co/",
@@ -44,7 +48,8 @@ const CARDS = [
   },
   {
     key: "secure-custody",
-    image: "/relax-golf.jpg",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777287141/Secure_Custody_xzsacf.png",
     label: "Secure Custody",
     cta: "Explore Marketplace",
     href: "https://app.totofinance.co/",
@@ -53,7 +58,8 @@ const CARDS = [
   },
   {
     key: "on-chain-reporting",
-    image: "/relax-spa.png",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777287195/On_chain_reporting_nuq1di.png",
     label: "On-Chain Reporting",
     cta: "Explore Marketplace",
     href: "https://app.totofinance.co/",

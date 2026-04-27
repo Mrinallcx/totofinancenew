@@ -168,7 +168,7 @@ export default function CaseStudy() {
               </p>
               <div className="cstudy__client">
                 <Image
-                  src="https://framerusercontent.com/images/BIFZ35M267ODYvDNB0ELkZ7Bc.png?scale-down-to=512"
+                  src="https://res.cloudinary.com/dusinlidl/image/upload/v1777032441/monty_z1hq12.jpg"
                   alt="Monty Metzger"
                   className="cstudy__avatar"
                   width={48}
@@ -184,42 +184,6 @@ export default function CaseStudy() {
           </div>
         </div>
 
-        {/* Row 2: Portrait Image + Quote Card */}
-        <div className="cstudy__row2">
-          <div className="cstudy__portrait">
-            <Image
-              src="https://framerusercontent.com/images/9alJ1fPyAmNHOCFspdaxUoOzlqk.jpg?scale-down-to=1024"
-              alt=""
-              className="cstudy__portrait-img"
-              width={600}
-              height={800}
-              loading="lazy"
-            />
-          </div>
-
-          <div className="cstudy__small-cards">
-            <div className="cstudy__quote-card">
-              <p className="cstudy__quote-text">
-                &ldquo;Their portfolio consulting has significantly enhanced our
-                investment strategy and returns.&rdquo;
-              </p>
-              <div className="cstudy__client">
-                <Image
-                  src="https://framerusercontent.com/images/0YMO4DCSjsUdwT3ZVFrNq1MGgAE.png?scale-down-to=512"
-                  alt="Emily Watson"
-                  className="cstudy__avatar"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
-                <div className="cstudy__client-info">
-                  <span className="cstudy__client-name">Emily Watson</span>
-                  <span className="cstudy__client-role">Investment Director, Bright Capital</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
