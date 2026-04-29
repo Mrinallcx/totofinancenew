@@ -60,7 +60,12 @@ export default function ServicesGrid() {
         </div>
       </div>
       <div className="sgrid__footer">
-        <a href="/marketplace" className="sgrid__cta">
+        <a
+          href="https://app.totofinance.co/"
+          className="sgrid__cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span>Explore Marketplace</span>
           <span className="cta__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">

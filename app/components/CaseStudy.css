@@ -220,7 +220,7 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 12px;
   flex-shrink: 0;
   min-width: 160px;
 }
@@ -230,6 +230,13 @@
   font-weight: 600;
   line-height: 1;
   color: #ffffff;
+}
+
+.cstudy__stat-value-sub {
+  font-size: 0.42em;
+  font-weight: 400;
+  line-height: 1.4;
+  opacity: 0.95;
 }
 
 .cstudy__stat-label {

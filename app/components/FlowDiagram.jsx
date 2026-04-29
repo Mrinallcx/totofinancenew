@@ -5,13 +5,16 @@ import "./FlowDiagram.css";
 
 const TRIGGER = {
   icon: "⚡",
-  title: "Commodity Tokenized",
+  title: "Tokenized Commodity",
   subtitle: "Asset Verified",
 };
 
 const TARGETS = [
+  { icon: "🛒", title: "Purchase", subtitle: "Physical Asset" },
   { icon: "🔒", title: "Toto Clear", subtitle: "T+0 Settlement" },
-  { icon: "📡", title: "Oracle", subtitle: "Price Feed" },
+  { icon: "📡", title: "Oracle", subtitle: "Live Price" },
+  { icon: "✅", title: "LCX", subtitle: "Physical Validator" },
+  { icon: "🛡️", title: "Lloyds", subtitle: "Insurance" },
   { icon: "📜", title: "Smart Contract", subtitle: "Compliance" },
   { icon: "🏦", title: "Custody", subtitle: "Secure Storage" },
   { icon: "🔗", title: "Blockchain", subtitle: "On-chain Record" },

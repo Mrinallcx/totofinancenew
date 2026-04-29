@@ -5,7 +5,7 @@ import "./AboutUs.css";
 
 const STATS = [
   {
-    value: "30,000+",
+    value: "45,000+",
     desc: "Verified Diamonds On-Chain",
   },
   {
@@ -17,8 +17,8 @@ const STATS = [
     desc: "Addressable Commodity Market",
   },
   {
-    value: "7+",
-    desc: "Commodity Asset Classes",
+    value: "100%",
+    desc: "Asset-Backed & Insured",
   },
 ];
 

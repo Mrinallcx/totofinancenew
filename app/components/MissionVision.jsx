@@ -33,8 +33,8 @@ const SECTIONS = [
       { text: "Trade", em: true },
     ],
     description:
-      "Tokenized commodity infrastructure built for T+0 settlement, 24/7 global markets, and programmable on-chain ownership.",
-    cta: { label: "Meet Our Team", href: "/about-us" },
+      "Built for instant settlement, 24/7 global markets, and direct ownership of real commodities.",
+    cta: { label: "Meet Our Team", href: "/about-us#about-team" },
     useSpinCube: true,
   },
   {
@@ -45,8 +45,11 @@ const SECTIONS = [
       { text: "Tokenization" },
     ],
     description:
-      "Hold, redeem, or re-trade tokenized commodities with settlement, custody, and compliance fully automated on-chain.",
-    cta: { label: "Learn More", href: "/how-it-works" },
+      "Hold, trade, or redeem tokenized commodities — with settlement, custody, and compliance handled automatically.",
+    cta: {
+      label: "Learn More",
+      href: "https://totofinance.co/blog/posts/blockchain-in-rwa-tokenization",
+    },
     useFlowDiagram: true,
     reverse: true,
   },

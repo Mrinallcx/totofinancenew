@@ -8,7 +8,7 @@
   min-height: 420px;
   background: #fdf8f0;
   border-radius: 16px;
-  padding: 48px 40px;
+  padding: 40px 32px;
   overflow: hidden;
 }
 
@@ -55,8 +55,8 @@
   border: 1px solid #eae4dc;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   border-radius: 10px;
-  padding: 10px 14px;
-  min-width: 160px;
+  padding: 7px 12px;
+  min-width: 150px;
 }
 
 .fd__target {
@@ -69,8 +69,8 @@
   border: 1px solid #eae4dc;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   border-radius: 10px;
-  padding: 10px 14px;
-  min-width: 160px;
+  padding: 7px 12px;
+  min-width: 150px;
 }
 
 .fd__trigger {
@@ -96,7 +96,7 @@
 .fd__targets {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
   z-index: 2;
 }
 
@@ -109,18 +109,18 @@
 .fd__node-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
 .fd__node-title {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   color: #1a1a1a;
   letter-spacing: 0.02em;
 }
 
 .fd__node-sub {
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 400;
   color: #a08640;
 }

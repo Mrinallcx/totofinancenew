@@ -15,7 +15,7 @@ const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const SLIDES = [
   {
-    subtitle: "Regulated & Audited",
+    subtitle: "Regulated with Compliant",
     heading:
       "Operating within compliant legal frameworks, supported by independent audits, licensed partners, and continuous regulatory oversight.",
     animation: kycAnimation,
@@ -159,8 +159,15 @@ export default function CaseStudy() {
           </div>
           <div className="cstudy__visual-cards">
             <div className="cstudy__stat-card">
-              <span className="cstudy__stat-value">$2B+</span>
-              <span className="cstudy__stat-label">in tokenizable commodity pipeline</span>
+              <div className="cstudy__stat-value">
+                Real <span className="cstudy__stat-value-sub">Asset</span>
+              </div>
+              <div className="cstudy__stat-value">
+                Real <span className="cstudy__stat-value-sub">compliance</span>
+              </div>
+              <div className="cstudy__stat-value">
+                Real <span className="cstudy__stat-value-sub">time proof.</span>
+              </div>
             </div>
             <div className="cstudy__quote-card">
               <p className="cstudy__quote-text">
