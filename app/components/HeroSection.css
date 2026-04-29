@@ -63,7 +63,7 @@
    TOP NOTIFICATION RIBBON (above global nav)
    ======================================== */
 :root {
-  --nav-ribbon-h: 40px;
+  --nav-ribbon-h: 0px;
 }
 
 .nav-ribbon {
@@ -101,7 +101,7 @@
 
 @media (max-width: 600px) {
   :root {
-    --nav-ribbon-h: 56px;
+    --nav-ribbon-h: 0px;
   }
 
   .nav-ribbon {

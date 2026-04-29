@@ -111,16 +111,6 @@ export default function NavBar({ pageTitle = "Toto Finance", localLinks = [] }) 
 
   return (
     <>
-      <div className="nav-ribbon" role="region" aria-label="Site announcement">
-        <div className="nav-ribbon__inner">
-          <p className="nav-ribbon__text">
-            {
-              "We're currently updating the website to improve your experience, please check back shortly."
-            }
-          </p>
-        </div>
-      </div>
-
       {/* Layer 1: Global Nav */}
       <header className={globalNavClass}>
         <nav className="globalnav__nav">
