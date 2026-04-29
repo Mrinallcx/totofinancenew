@@ -27,11 +27,7 @@ export default function Footer() {
               <div className="footer__methods">
                 <div className="footer__method">
                   <span className="footer__method-label">Email</span>
-                  <a href="mailto:hello@sunergy.com" className="footer__method-value">hello@sunergy.com</a>
-                </div>
-                <div className="footer__method">
-                  <span className="footer__method-label">Phone</span>
-                  <a href="tel:+61392817382" className="footer__method-value">+613 9281 7382</a>
+                  <a href="mailto:hello@totofinance.co" className="footer__method-value">hello@totofinance.co</a>
                 </div>
               </div>
             </div>
@@ -78,10 +74,15 @@ export default function Footer() {
                   <svg viewBox="0 0 14 10" fill="currentColor" aria-hidden><path d="M13.861 2.2s-.137-.965-.558-1.389C12.77.253 12.173.25 11.9.218 9.942.075 7.003.075 7.003.075h-.006S4.058.075 2.1.218c-.273.032-.87.035-1.403.593C.276 1.235.142 2.2.142 2.2S0 3.335 0 4.467v1.061c0 1.132.139 2.267.139 2.267s.137.965.556 1.389c.533.557 1.233.538 1.544.598C3.361 9.889 7 9.922 7 9.922s2.942-.006 4.9-.145c.273-.033.87-.036 1.403-.593.421-.424.558-1.389.558-1.389S14 6.663 14 5.528V4.467c0-1.132-.139-2.267-.139-2.267ZM5.554 6.816V2.881l3.781 1.974Z"/></svg>
                 </a>
               </div>
-              <p className="footer__legal">
-                Toto Finance Inc. believes that regulatory compliance and legal
-                clarity are critical to the future success of digital finance and
-                real-world asset tokenization.
+              <p className="footer__tagline">
+                Toto Finance - The Global Infrastructure for Tokenized Commodities
+              </p>
+              <p className="footer__legal-links">
+                <a href="/privacy-policy-page">Privacy policy</a>
+                <span className="footer__legal-sep">|</span>
+                <a href="/terms-and-conditions">Terms & conditions</a>
+                <span className="footer__legal-sep">|</span>
+                <a href="/sitemap.xml">Sitemap</a>
               </p>
             </div>
           </div>

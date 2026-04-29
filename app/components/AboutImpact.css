@@ -72,6 +72,13 @@
   line-height: 1.6;
 }
 
+.abtimpact__card-link {
+  color: var(--color-primary, #e6b026);
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 991px) {
   .abtimpact {

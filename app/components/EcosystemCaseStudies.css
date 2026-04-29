@@ -46,6 +46,10 @@
   gap: clamp(16px, 2.5vw, 32px);
 }
 
+.ecocase__load-sentinel {
+  height: 1px;
+}
+
 /* --- Card (clickable link) --- */
 .ecocase__card {
   display: block;

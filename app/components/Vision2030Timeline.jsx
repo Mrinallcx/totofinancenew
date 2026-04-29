@@ -7,34 +7,29 @@ import "./Vision2030Timeline.css";
 
 const MILESTONES = [
   {
-    year: "2025",
-    title: "Foundation and Global Expansion",
-    body: "Launch scalable tokenization infrastructure, add more commodities, and develop compliant regulatory frameworks for global operation.",
-  },
-  {
     year: "2026",
-    title: "Metals and In-Ground Resource Integration",
-    body: "Enhance metals and in-ground resource tokenization, facilitating institutional access to strategic and critical commodities.",
+    title: "Copper and Critical Minerals Launch",
+    body: "COPTT, our flagship $5B+ copper tokenization mandate. Onboard institutional investors and expand into rare earth and critical mineral mandates.",
   },
   {
     year: "2027",
-    title: "Resource Layer Expansion",
-    body: "Launch new token models, liquidity tools, and asset interoperability across commodity types.",
+    title: "Energy and Industrial Metals",
+    body: "Bring oil, gas, and industrial metals on-chain. Open the platform to commodity producers across South America, MENA, and Southeast Asia.",
   },
   {
     year: "2028",
-    title: "Market Infrastructure Convergence",
-    body: "Synchronize digital commodities with global financial infrastructure for settlement, custody, compliance, and institutional trading.",
+    title: "Institutional Integration",
+    body: "Connect to traditional finance through banking partners, custodians, and exchanges. Tokenized commodities trade alongside bonds, equities, and stablecoins in institutional portfolios.",
   },
   {
     year: "2029",
-    title: "Interoperability and Global Access",
-    body: "Launch cross-border value transfer infrastructure and enhance institutional partnerships for global liquidity access under regulated frameworks.",
+    title: "Global Liquidity",
+    body: "Launch deep secondary markets across major exchanges and DeFi protocols. Cross-border settlement infrastructure live across all major jurisdictions.",
   },
   {
     year: "2030",
-    title: "Global Liquidity Network",
-    body: "Run a fully interconnected global ecosystem where commodities, in-ground assets, and real world value flow transparently and compliantly.",
+    title: "The Standard for Real-World Assets",
+    body: "Toto Finance is the global infrastructure layer for tokenized commodities. Hundreds of billions in real-world assets settling, trading, and redeeming on-chain, every day.",
     isFuture: true,
   },
 ];
@@ -95,10 +90,19 @@ export default function Vision2030Timeline() {
     <section className="v2030tl" aria-labelledby="v2030tl-heading">
       <div className="v2030tl__inner">
         <header className="v2030tl__header" ref={headerRef}>
+          <p className="v2030tl__eyebrow">Roadmap</p>
           <h2 id="v2030tl-heading" className="v2030tl__title">
-            <SplitWords text="Roadmap to Global Commodity Tokenization" startDelay={0.1} stagger={0.04} />
+            <SplitWords
+              text="The Path to 2030 Building the global infrastructure for tokenized commodities."
+              startDelay={0.1}
+              stagger={0.04}
+            />
           </h2>
         </header>
+
+        <p className="v2030tl__callout">
+          <strong>Live Today</strong> 45,000+ assets tokenized · Operating across the EU and US · Lloyd's of London insured · Regulated under MiCA and TVTG
+        </p>
 
         <div className="v2030tl__track" role="list" ref={trackRef}>
           <div className="v2030tl__line" aria-hidden />

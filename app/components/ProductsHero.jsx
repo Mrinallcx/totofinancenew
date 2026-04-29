@@ -50,7 +50,7 @@ export default function ProductsHero() {
               className="prodhero__cta sr-item"
               style={{ animationDelay: "1.1s" }}
             >
-              <span>Explore products</span>
+              <span>Explore Marketplace</span>
               <span className="cta__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
                   <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z" />
@@ -66,7 +66,7 @@ export default function ProductsHero() {
             <a href="#" className="prodhero__card">
               <div className="prodhero__card-top">
                 <p className="prodhero__card-title">
-                  How one city turned its zero-waste vision into reality
+                  Tokenized commodities, live on global markets
                 </p>
               </div>
 
@@ -85,16 +85,16 @@ export default function ProductsHero() {
               <div className="prodhero__card-bottom">
                 <div className="prodhero__stat">
                   <p className="prodhero__stat-label">
-                    Planted trees to restore biodiversity
+                    Assets Live On-Chain
                   </p>
-                  <h2 className="prodhero__stat-value">50K</h2>
+                  <h2 className="prodhero__stat-value">45K+</h2>
                 </div>
                 <div className="prodhero__stat-divider" />
                 <div className="prodhero__stat">
                   <p className="prodhero__stat-label">
-                    Savings through smart logistics
+                    In Operation Since
                   </p>
-                  <h2 className="prodhero__stat-value">200+</h2>
+                  <h2 className="prodhero__stat-value">2023</h2>
                 </div>
               </div>
 

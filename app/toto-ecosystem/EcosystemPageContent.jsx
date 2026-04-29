@@ -186,7 +186,7 @@ export default function EcosystemPageContent() {
       <EcosystemCards cards={SECTION_1_CARDS} columns={3} label="Ecosystem pillars" />
       <EcosystemCards cards={SECTION_2_CARDS} columns={3} label="Ecosystem capabilities" />
       <EcosystemCards cards={SECTION_3_CARDS} columns={2} label="Ecosystem governance" />
-      <EcosystemCaseStudies />
+      <EcosystemCaseStudies showCta={false} />
       <CtaImage />
       <Footer />
     </main>

@@ -5,7 +5,7 @@ import "./RareEarthHero.css";
 const TITLE_TEXT = "Tokenized Rare Earth Minerals";
 
 const DESCRIPTION_WORDS =
-  "Institutional grade access to critical minerals driving AI, energy transition, and global infrastructure, tokenized directly from verified in-ground reserves with compliant ownership, audited custody, and on-chain settlement.".split(
+  "Institutional access to the critical minerals powering AI, energy, and defense, tokenized directly from verified reserves, with audited custody and instant settlement.".split(
     " "
   );
 

@@ -7,36 +7,32 @@ import "./ProductsBlog.css";
 
 const BLOGS = [
   {
-    title: "How eco-supply helped retail giant cut 60% of emissions",
-    category: "Technology",
-    date: "Nov 13, 2025",
+    title: "Gold, Silver and Platinum",
+    category: "Precious Metals",
     image:
-      "https://framerusercontent.com/images/5RQMgK5fHrtHqbZuV1TA0jYKD8g.jpg?width=800&height=850",
-    href: "#",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777471266/vault_gb1kyu.png",
+    href: "/tokenized-gold",
   },
   {
-    title: "The future of sustainable logistics: 5 trends to watch in 2025",
-    category: "Packaging",
-    date: "Nov 10, 2025",
+    title: "Diamonds and Sapphire",
+    category: "Gemstones",
     image:
-      "https://framerusercontent.com/images/pQFkiyY4lQZycbwVGTrwZEOho.jpg?width=800&height=850",
-    href: "#",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777471794/gems_xrzphn.png",
+    href: "/tokenized-diamonds",
   },
   {
-    title: "How green logistics are changing the game",
-    category: "Green Technology",
-    date: "Nov 8, 2025",
+    title: "Copper, Tin and Iron",
+    category: "Industrial Metals",
     image:
-      "https://framerusercontent.com/images/JXVES8YVYLM8Me4gdUlv95EmN94.jpg?width=800&height=850",
-    href: "#",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777471267/copper_wire_usbqn7.png",
+    href: "/tokenized-copper",
   },
   {
-    title: "Rethinking sustainability through circular supply chains",
-    category: "Circular Economy",
-    date: "Nov 2, 2025",
+    title: "Rare Earth Elements",
+    category: "Critical Minerals",
     image:
-      "https://framerusercontent.com/images/pRNq6celAW5r3IY0AFeXBUNZW0.jpg?width=800&height=850",
-    href: "#",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777471267/mine_product_vrzs8b.png",
+    href: "/rare-earth",
   },
 ];
 
@@ -60,13 +56,9 @@ export default function ProductsBlog() {
       <div className="prodblog__container">
         <div className="prodblog__layout">
           <div className="prodblog__header">
-            <span className="prodblog__badge sr-item" style={{ animationDelay: "0s" }}>OUR BLOG</span>
+            <span className="prodblog__badge sr-item" style={{ animationDelay: "0s" }}>OUR PRODUCTS</span>
             <h2 className="prodblog__heading">
-              <SplitWords text="Inspiring insights for a smarter," />
-              <span className="prodblog__heading--muted">
-                <SplitWords text="greener" startDelay={0.4} />
-              </span>{" "}
-              <SplitWords text="future" startDelay={0.45} />
+              <SplitWords text="Tokenized Commodities for Global Markets" />
             </h2>
           </div>
 
@@ -94,7 +86,6 @@ export default function ProductsBlog() {
                       <span className="prodblog__card-category">
                         {blog.category}
                       </span>
-                      <span className="prodblog__card-date">{blog.date}</span>
                     </div>
                     <h2 className="prodblog__card-title">{blog.title}</h2>
                   </div>

@@ -156,7 +156,7 @@ function BlogPageWorkBody({
                         {rowPosts.map((post) => (
                           <a
                             key={post.slug}
-                            href={`/blog/${post.slug}`}
+                            href={`/insights/${post.slug}`}
                             className="blogwork__card-link"
                             role="listitem"
                           >

@@ -192,6 +192,16 @@
   background: #d4a01e;
 }
 
+.prodcases__card-action--disabled {
+  background: transparent;
+  border: 1px solid #cfcfcf;
+  color: #7b7b7b;
+}
+
+.prodcases__card:hover .prodcases__card-action--disabled {
+  background: transparent;
+}
+
 /* Card image */
 
 .prodcases__card-right {

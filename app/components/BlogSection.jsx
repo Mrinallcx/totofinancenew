@@ -16,7 +16,7 @@ const FALLBACK_POSTS = [
     author: DEFAULT_AUTHOR,
     image:
       "https://framerusercontent.com/images/PCn2lxatGu0lCFkc5DzeXtOrA.jpg?scale-down-to=1024",
-    href: "/blog/innovative-marketing-strategies-for-small-businesses",
+    href: "/insights/innovative-marketing-strategies-for-small-businesses",
   },
   {
     id: "fallback-2",
@@ -26,7 +26,7 @@ const FALLBACK_POSTS = [
     author: DEFAULT_AUTHOR,
     image:
       "https://framerusercontent.com/images/Pxt7kappD5aQmZ6ldK0odfmyrek.jpg?scale-down-to=1024",
-    href: "/blog/the-importance-of-diversity-and-inclusion-in-today-s-workplace",
+    href: "/insights/the-importance-of-diversity-and-inclusion-in-today-s-workplace",
   },
   {
     id: "fallback-3",
@@ -36,7 +36,7 @@ const FALLBACK_POSTS = [
     author: DEFAULT_AUTHOR,
     image:
       "https://framerusercontent.com/images/lrMjuPqWh9sEXgomLqDy1Z4fsrk.jpg?scale-down-to=1024",
-    href: "/blog/mastering-time-management-tips-for-busy-professionals",
+    href: "/insights/mastering-time-management-tips-for-busy-professionals",
   },
   {
     id: "fallback-4",
@@ -46,7 +46,7 @@ const FALLBACK_POSTS = [
     author: DEFAULT_AUTHOR,
     image:
       "https://framerusercontent.com/images/6zzldyoWPmdGGaVoCWQRX6Qdbyw.jpg?scale-down-to=1024",
-    href: "/blog/how-ai-is-reshaping-financial-advisory",
+    href: "/insights/how-ai-is-reshaping-financial-advisory",
   },
   {
     id: "fallback-5",
@@ -56,7 +56,7 @@ const FALLBACK_POSTS = [
     author: DEFAULT_AUTHOR,
     image:
       "https://framerusercontent.com/images/axh6uBVzfcWemJ09UA0Xht6Wv8.jpg?scale-down-to=1024",
-    href: "/blog/sustainable-investing-modern-portfolios",
+    href: "/insights/sustainable-investing-modern-portfolios",
   },
   {
     id: "fallback-6",
@@ -66,7 +66,7 @@ const FALLBACK_POSTS = [
     author: DEFAULT_AUTHOR,
     image:
       "https://framerusercontent.com/images/9alJ1fPyAmNHOCFspdaxUoOzlqk.jpg?scale-down-to=1024",
-    href: "/blog/building-resilient-supply-chains",
+    href: "/insights/building-resilient-supply-chains",
   },
 ];
 
@@ -92,7 +92,7 @@ function adaptWordPressPost(post) {
     date: formatPublishDate(post.date),
     author: DEFAULT_AUTHOR,
     image: post.image || null,
-    href: post.slug ? `/blog/${post.slug}` : "/blog",
+    href: post.slug ? `/insights/${post.slug}` : "/insights",
   };
 }
 
@@ -140,7 +140,7 @@ export default function BlogSection({ initialPosts = [] }) {
           <h2 className="blog__title">
             <SplitWords text="Featured news and insights" />
           </h2>
-          <a href="/blog" className="blog__cta sr-item" style={{ animationDelay: "0.4s" }}>
+          <a href="/insights" className="blog__cta sr-item" style={{ animationDelay: "0.4s" }}>
             <span>View all articles</span>
             <span className="cta__icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">

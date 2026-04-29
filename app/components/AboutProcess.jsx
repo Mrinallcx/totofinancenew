@@ -8,7 +8,7 @@ import "./AboutProcess.css";
 const STEPS = [
   {
     number: "01",
-    title: "Registered and Regulated",
+    title: "Operational across US, EU, Asia, and MENA.",
     description:
       "Toto Finance Inc. is incorporated in the United States (Reg. No. 10480139), headquartered at 447 Broadway, New York. TotoHolding AG is incorporated in Liechtenstein with LEI 5299005UXAQFO3US5C38, independently verifiable via GLEIF.",
   },
@@ -43,7 +43,7 @@ const STEPS = [
     number: "03",
     title: "Institutional Grade Credibility",
     description:
-      "Compliance-first infrastructure with independent physical validation, proof of reserves, third-party custody, and registered legal entities in Liechtenstein and the United States.",
+      "Compliance-first infrastructure with independent physical validation by LCX, proof of reserves, third-party custody, and Lloyd's of London insurance.",
   },
 ];
 
@@ -82,7 +82,12 @@ export default function AboutProcess() {
               </div>
             ))}
 
-            <a href="/how-we-work" className="abtprocess__cta">
+            <a
+              href="/docs"
+              className="abtprocess__cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span>View more</span>
               <span className="abtprocess__cta-arrow">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

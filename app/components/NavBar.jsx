@@ -15,17 +15,17 @@ const FLYOUT_GROUPS = [
     links: [
       { label: "Home", href: "/" },
       { label: "About us", href: "/about-us" },
-      { label: "Vision", href: "/vision-2030" },
-      { label: "Rare Earth", href: "/rare-earth-mineral" },
-      { label: "Ecosystem", href: "/ecosystem" },
-      { label: "Doc & Imprint", href: "/doc-imprint" },
+      { label: "Vision", href: "/vision" },
+      { label: "Rare Earth", href: "/rare-earth" },
+      { label: "Ecosystem", href: "/toto-ecosystem" },
+      { label: "Doc & Imprint", href: "/docs" },
       { label: "Products", href: "/product" },
     ],
   },
   {
     title: "Quick Links",
     links: [
-      { label: "Blog", href: "/blog" },
+      { label: "Insights", href: "/insights" },
     ],
   },
 ];
@@ -156,7 +156,7 @@ export default function NavBar({ pageTitle = "Toto Finance", localLinks = [] }) 
               </button>
             </div>
 
-            <a href="/global-market" className="globalnav__cta">
+            <a href="https://app.totofinance.co/" className="globalnav__cta">
               Global Market
             </a>
 
@@ -323,7 +323,7 @@ export default function NavBar({ pageTitle = "Toto Finance", localLinks = [] }) 
                     ))}
                   </ul>
                   <div className="localnav__option-extras">
-                    <a href="/global-market" className="localnav__option-extra">
+                    <a href="https://app.totofinance.co/" className="localnav__option-extra">
                       <span>Global Market</span>
                       <svg className="localnav__option-extra-arrow" width="12" height="12" viewBox="0 0 256 256" fill="currentColor">
                         <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/>

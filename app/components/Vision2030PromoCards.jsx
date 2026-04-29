@@ -9,9 +9,9 @@ const PROMO_CARDS = [
     key: "transform",
     imageSrc:
       "https://res.cloudinary.com/dusinlidl/image/upload/v1777282342/toto_finance_vision_page_card_2_mpc2z4.webp",
-    title: "Connecting Physical Assets to Digital Markets",
+    title: "Bridging Physical and Digital Markets",
     body:
-      "Toto Finance provides compliant blockchain infrastructure that links physical commodities to digital settlement, custody, and liquidity at institutional scale.",
+      "Toto Finance brings physical commodities onto global digital markets with institutional custody and compliance built in. Gold, copper, in-ground reserves, all on-chain.",
     ctaLabel: "Explore Marketplace",
     ctaHref: "https://app.totofinance.co/",
   },
@@ -19,9 +19,9 @@ const PROMO_CARDS = [
     key: "partner",
     imageSrc:
       "https://res.cloudinary.com/dusinlidl/image/upload/v1777282341/toto_finance_vision_page_card_1_mh8ma7.webp",
-    title: "Programmability for Real World Assets",
+    title: "A Smarter Way to Own Real Assets",
     body:
-      "We make real world assets programmable, enabling instant settlement, compliant global access, and institutional grade liquidity for producers, investors, and institutions.",
+      "Tokenized commodities settle instantly, trade around the clock, and give producers and investors direct access, without the friction of traditional markets.",
     ctaLabel: "Get in Touch",
     ctaHref: "/contact-us",
   },

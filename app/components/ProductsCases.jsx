@@ -8,22 +8,26 @@ const CASES = [
   {
     title: "Toto Global Markets",
     stats: [
-      { value: "30,000+", label: "Assets Live On-Chain" },
-      { value: "5+", label: "Blockchains Supported" },
+      { value: "$0", label: "Zero counterparty risk" },
+      { value: "24/7", label: "Always-on trading" },
     ],
     image:
       "https://res.cloudinary.com/dusinlidl/image/upload/v1777041621/global_marekt_jp5jto.jpg",
-    href: "#",
+    href: "https://app.totofinance.co/",
+    ctaLabel: "Explore Marketplace",
+    openInNewTab: true,
   },
   {
-    title: "Tokenized Assets: Institutional Platform",
+    title: "Toto Institutional",
     stats: [
       { value: "$25T+", label: "Addressable Commodity Market" },
-      { value: "7+", label: "Commodity Asset Classes" },
     ],
     image:
-      "https://res.cloudinary.com/dusinlidl/image/upload/v1777041080/toto_institution_gb9fzg.png",
-    href: "#",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777462987/mine_cuasmp.webp",
+    href: "",
+    ctaLabel: "Coming Soon",
+    openInNewTab: false,
+    ctaDisabled: true,
   },
 ];
 
@@ -45,8 +49,13 @@ export default function ProductsCases() {
             </h2>
           </div>
           <div className="prodcases__header-right">
-            <a href="#" className="prodcases__cta">
-              <span>See all case studies</span>
+            <a
+              href="https://app.totofinance.co/"
+              className="prodcases__cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Explore Marketplace</span>
               <span className="cta__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -68,48 +77,58 @@ export default function ProductsCases() {
         </div>
 
         <div className="prodcases__grid">
-          {CASES.map((caseItem) => (
-            <a
-              key={caseItem.title}
-              href={caseItem.href}
-              className="prodcases__card"
-            >
-              <div className="prodcases__card-left">
-                <div className="prodcases__card-top">
-                  <h2 className="prodcases__card-title">{caseItem.title}</h2>
-                  <div className="prodcases__card-info">
-                    {caseItem.stats.map((stat, i) => (
-                      <div key={stat.value + i} className="prodcases__stat-row">
-                        {i > 0 && <div className="prodcases__stat-divider" />}
-                        <div className="prodcases__stat">
-                          <span className="prodcases__stat-value">
-                            {stat.value}
-                          </span>
-                          <span className="prodcases__stat-label">
-                            {stat.label}
-                          </span>
+          {CASES.map((caseItem) => {
+            const CardTag = caseItem.href ? "a" : "div";
+            const cardProps = caseItem.href
+              ? {
+                  href: caseItem.href,
+                  target: caseItem.openInNewTab ? "_blank" : undefined,
+                  rel: caseItem.openInNewTab ? "noopener noreferrer" : undefined,
+                }
+              : {};
+            return (
+              <CardTag key={caseItem.title} className="prodcases__card" {...cardProps}>
+                <div className="prodcases__card-left">
+                  <div className="prodcases__card-top">
+                    <h2 className="prodcases__card-title">{caseItem.title}</h2>
+                    <div className="prodcases__card-info">
+                      {caseItem.stats.map((stat, i) => (
+                        <div key={stat.value + i} className="prodcases__stat-row">
+                          {i > 0 && <div className="prodcases__stat-divider" />}
+                          <div className="prodcases__stat">
+                            <span className="prodcases__stat-value">
+                              {stat.value}
+                            </span>
+                            <span className="prodcases__stat-label">
+                              {stat.label}
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
+                  </div>
+                  <div
+                    className={`prodcases__card-action ${
+                      caseItem.ctaDisabled ? "prodcases__card-action--disabled" : ""
+                    }`}
+                  >
+                    <span>{caseItem.ctaLabel}</span>
                   </div>
                 </div>
-                <div className="prodcases__card-action">
-                  <span>View case</span>
+                <div className="prodcases__card-right">
+                  <div className="prodcases__card-image-wrap">
+                    <img
+                      className="prodcases__card-image"
+                      src={caseItem.image}
+                      alt={caseItem.title}
+                      width={770}
+                      height={950}
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="prodcases__card-right">
-                <div className="prodcases__card-image-wrap">
-                  <img
-                    className="prodcases__card-image"
-                    src={caseItem.image}
-                    alt={caseItem.title}
-                    width={770}
-                    height={950}
-                  />
-                </div>
-              </div>
-            </a>
-          ))}
+              </CardTag>
+            );
+          })}
         </div>
       </div>
     </section>

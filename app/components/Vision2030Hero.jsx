@@ -7,7 +7,7 @@ const VISION_HERO_VIDEO_EMBED =
   "https://player.cloudinary.com/embed/?cloud_name=dusinlidl&public_id=vision%202030%20hero%20section%20page&autoplay=true&muted=true&loop=true&controls=false&playsinline=true";
 
 const DESCRIPTION_WORDS =
-  "By 2030, Toto Finance will run the global infrastructure for compliant, asset-backed tokenization and instant settlement of commodities, metals, energy, and strategic real world assets.".split(
+  "By 2030, Toto Finance powers how the world tokenizes, trades, and settles physical commodities.".split(
     " "
   );
 
@@ -19,19 +19,19 @@ const VISION_STAT_CARDS = [
     caption: "Target Year for Global Infrastructure",
   },
   {
-    stat: "6",
+    stat: "$46T+",
     bullets: [true, true, false, false],
-    caption: "Roadmap Milestones",
+    caption: "Combined Market Size",
   },
   {
-    stat: "$25T+",
+    stat: "$16T+",
     bullets: [true, true, true, false],
-    caption: "Addressable Commodity Market",
+    caption: "Tokenization Market by 2030",
   },
   {
-    stat: "5+",
+    stat: "24/7",
     bullets: [true, true, true, true],
-    caption: "Blockchains Supported",
+    caption: "Always-on Settlement",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function Vision2030Hero() {
       <div className="visionhero__inner">
         <div className="visionhero__headline">
           <h1 id="visionhero-heading" className="visionhero__title">
-            {"Vision 2030: The Infrastructure for Global Tokenized Commodities".split(" ").map((word, i) => (
+            {"Vision 2030: Infrastructure for the World's Commodities".split(" ").map((word, i) => (
               <span key={i} className="visionhero__title-word" style={{ animationDelay: `${0.2 + i * 0.06}s` }}>
                 {word}
               </span>

@@ -6,7 +6,7 @@ import "./AboutImpact.css";
 
 const CARDS = [
   {
-    value: "$30T+",
+    value: "$25T+",
     title: "Global Commodity Market",
     description:
       "The total addressable market for physical commodities including metals, minerals, and energy traded globally each year.",
@@ -14,11 +14,23 @@ const CARDS = [
   {
     value: "$16T+",
     title: "Tokenized Assets by 2030",
-    description:
-      "The projected value of real world assets expected to be tokenized on blockchain infrastructure within this decade.",
+    descriptionRich: (
+      <>
+        The projected value of real world assets expected to be tokenized on
+        blockchain infrastructure within this decade.{" "}
+        <a
+          href="https://reports.weforum.org/docs/WEF_Asset_Tokenization_in_Financial_Markets_2025.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="abtimpact__card-link"
+        >
+          Read more
+        </a>
+      </>
+    ),
   },
   {
-    value: "30,000+",
+    value: "45,000+",
     title: "Assets Live On-Chain",
     description:
       "Verified commodity assets already tokenized and live on-chain, starting with the world's largest tokenized diamond market.",
@@ -50,7 +62,9 @@ export default function AboutImpact() {
               <span className="abtimpact__card-value">{card.value}</span>
               <div className="abtimpact__card-body">
                 <h5 className="abtimpact__card-title">{card.title}</h5>
-                <p className="abtimpact__card-desc">{card.description}</p>
+                <p className="abtimpact__card-desc">
+                  {card.descriptionRich ?? card.description}
+                </p>
               </div>
             </div>
           ))}

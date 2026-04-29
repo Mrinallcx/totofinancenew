@@ -47,27 +47,23 @@ const ICON_MAP = {
 const SPACES = [
   {
     key: "institutional-structure",
-    title: "Institutional Grade Structure",
-    subtitle: "Legal frameworks for in-ground assets",
-    body: "Legal structures with audited custody, notifiable reserve information, and asset support for in-ground mineral reserves.",
+    title: "Institutional-Grade Structure",
+    body: "Built for serious capital. Legal frameworks, audited custody, and verified reserve documentation, designed to meet institutional due diligence standards.",
   },
   {
     key: "collateralized-liquidity",
-    title: "Collateralized Liquidity",
-    subtitle: "Liquidity without waiting for extraction",
-    body: "Financing, liquidity, and transferability of notifiable mineral reserves without waiting for extraction and production cycles.",
+    title: "Liquidity Before Extraction",
+    body: "Capital, years ahead of production. Tokenize in-ground reserves and unlock financing without waiting for the mining cycle. Tradeable, transferable, and settlement-ready from day one.",
   },
   {
     key: "programmable-compliance",
-    title: "Programmable Compliance",
-    subtitle: "Compliance built into the protocol",
-    body: "KYC, AML, and transfer rules for jurisdictions enforced programmatically at the protocol level.",
+    title: "Compliance Built In",
+    body: "KYC, AML, and jurisdictional rules at the protocol level. Transfer permissions and regulatory controls enforced automatically by the token itself, across every jurisdiction.",
   },
   {
     key: "transparent-supply",
-    title: "Transparent Supply Chains",
-    subtitle: "From mine to market on-chain",
-    body: "Immutable on-chain records of reserves from geological verification to custody, financing, and delivery.",
+    title: "Mine to Market,",
+    body: "On-Chain Full transparency, end to end. From geological verification to custody, financing, and delivery, every step recorded on-chain and verifiable in real time.",
   },
 ];
 
@@ -126,10 +122,10 @@ export default function RareEarthSpaces() {
         <div className="remspaces__text">
           <div className="remspaces__text-content">
             <h2 id="remspaces-heading" className="remspaces__title">
-              <SplitWords text="Connecting Minerals to Institutional Capital" startDelay={0.1} stagger={0.04} />
+              <SplitWords text="Critical Minerals, Built for Institutional Capital" startDelay={0.1} stagger={0.04} />
             </h2>
             <p className="remspaces__desc">
-              <SplitWords text="Compliant tokenization of critical mineral reserves for institutional investors, mining companies, and strategic supply chains." startDelay={0.3} stagger={0.015} />
+              <SplitWords text="Tokenized rare earth reserves with the structure, liquidity, and compliance institutions require." startDelay={0.3} stagger={0.015} />
             </p>
           </div>
           <a
@@ -138,7 +134,7 @@ export default function RareEarthSpaces() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Explore Infrastructure
+            Talk to Our Team
           </a>
         </div>
 
@@ -157,7 +153,9 @@ export default function RareEarthSpaces() {
                 <div className="remspaces__card-text">
                   <div className="remspaces__card-header">
                     <h3 className="remspaces__card-title">{space.title}</h3>
-                    <p className="remspaces__card-subtitle">{space.subtitle}</p>
+                    {space.subtitle ? (
+                      <p className="remspaces__card-subtitle">{space.subtitle}</p>
+                    ) : null}
                   </div>
                   <p className="remspaces__card-body">{space.body}</p>
                 </div>

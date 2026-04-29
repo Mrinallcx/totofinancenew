@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import useScrollReveal from "../hooks/useScrollReveal";
 import "./EcosystemCaseStudies.css";
@@ -45,6 +46,66 @@ const CASES = [
     body: "Specialized cybersecurity provider for smart contract audits, infrastructure security analysis, and ongoing risk monitoring on blockchain networks.",
     href: "https://hacken.io/audits/toto-finance/",
   },
+  {
+    key: "ethereum",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292648/Cardano_cck2t4.png",
+    alt: "Ethereum",
+    name: "Ethereum",
+    category: "Settlement Infrastructure",
+    body: "The world's most popular programmable settlement infrastructure for smart contracts, decentralized apps, and extensive global liquidity for tokenized real-world assets.",
+    href: "https://ethereum.org/",
+  },
+  {
+    key: "polygon",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292671/LCX_xjs4uv.png",
+    alt: "Polygon",
+    name: "Polygon",
+    category: "Execution Layer",
+    body: "A scalable execution layer complementing Ethereum's settlement infrastructure with lower costs and greater throughput for efficient on-chain commodity settlement.",
+    href: "https://polygon.technology/",
+  },
+  {
+    key: "solana",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292672/Hacken_d5ybjl.png",
+    alt: "Solana",
+    name: "Solana",
+    category: "High-Performance Chain",
+    body: "A high-performance blockchain enabling fast execution and scalable transaction processing for real-time digital commodity markets.",
+    href: "https://solana.com/",
+  },
+  {
+    key: "xrp-ledger",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292669/GIA_rhxd48.png",
+    alt: "XRP Ledger",
+    name: "XRP Ledger",
+    category: "Settlement Infrastructure",
+    body: "Settlement infrastructure for fast, low-cost value transfer and digital asset trading in the XRP ecosystem.",
+    href: "https://xrp.cafe/collection/tiamonds-rwa",
+  },
+  {
+    key: "nmkr",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292671/LCX_xjs4uv.png",
+    alt: "NMKR",
+    name: "NMKR",
+    category: "Tokenization Infrastructure",
+    body: "Compliant institutional tokenization infrastructure on the Cardano blockchain, supporting regulated digital assets with lifecycle management and programmable ownership.",
+    href: "https://www.nmkr.io/drops/tiamonds-2023",
+  },
+  {
+    key: "uniswap",
+    image:
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292648/Cardano_cck2t4.png",
+    alt: "Uniswap",
+    name: "Uniswap",
+    category: "Liquidity Protocol",
+    body: "Decentralized liquidity protocol providing secondary market access, price discovery, and on-chain settlement for supported tokenized assets.",
+    href: "https://app.uniswap.org/explore/pools/ethereum/0x2f65b1737a4cc3c7cc8ddbf969b9427c0f2be9ab19a5b117dcc7c07d2c008498",
+  },
 ];
 
 export default function EcosystemCaseStudies({
@@ -56,6 +117,32 @@ export default function EcosystemCaseStudies({
   showCta = true,
 }) {
   const sectionRef = useScrollReveal();
+  const [visibleCount, setVisibleCount] = useState(4);
+  const sentinelRef = useRef(null);
+  const visibleCases = cases.slice(0, visibleCount);
+
+  useEffect(() => {
+    setVisibleCount(4);
+  }, [cases]);
+
+  useEffect(() => {
+    if (visibleCount >= cases.length) return;
+    const sentinel = sentinelRef.current;
+    if (!sentinel) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const isVisible = entries.some((entry) => entry.isIntersecting);
+        if (isVisible) {
+          setVisibleCount((prev) => Math.min(prev + 2, cases.length));
+        }
+      },
+      { rootMargin: "300px 0px" }
+    );
+
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [visibleCount, cases.length]);
 
   return (
     <section className="ecocase" aria-labelledby="ecocase-heading" ref={sectionRef}>
@@ -68,7 +155,7 @@ export default function EcosystemCaseStudies({
         </header>
 
         <div className="ecocase__grid">
-          {cases.map((c) => (
+          {visibleCases.map((c) => (
             <a
               key={c.key}
               className="ecocase__card sr-item"
@@ -97,6 +184,10 @@ export default function EcosystemCaseStudies({
             </a>
           ))}
         </div>
+
+        {visibleCount < cases.length ? (
+          <div ref={sentinelRef} className="ecocase__load-sentinel" aria-hidden />
+        ) : null}
 
         {showCta && ctaHref ? (
           <div className="ecocase__cta-wrap sr-item">

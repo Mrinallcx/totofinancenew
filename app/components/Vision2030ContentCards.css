@@ -75,6 +75,22 @@
   overflow: hidden;
 }
 
+.v2030cc__media--animated {
+  background: linear-gradient(180deg, #f7edd2 0%, #f2e5c1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v2030cc__lottie {
+  width: 82%;
+  height: 82%;
+}
+
+.v2030cc__lottie--blend {
+  mix-blend-mode: multiply;
+}
+
 .v2030cc__media img {
   object-fit: cover;
 }

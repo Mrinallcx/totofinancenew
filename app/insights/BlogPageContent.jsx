@@ -64,7 +64,7 @@ export default function BlogPageContent({ initialPosts = [] }) {
 
   return (
     <main className="blogpage">
-      <NavBar pageTitle="Blog" localLinks={BLOG_LOCAL_LINKS} />
+      <NavBar pageTitle="Insights" localLinks={BLOG_LOCAL_LINKS} />
       <div ref={pinStackRef} className="blogpage__pin-stack">
         <div ref={heroLayerRef} className="blogpage__hero-layer">
           <BlogPageHero />

@@ -49,9 +49,9 @@ function CompareSlider() {
       aria-valuenow={50}
       tabIndex={0}
     >
-      <img src="/compare-before.png" alt="" className="rembento__slider-img" draggable={false} />
+      <img src="https://res.cloudinary.com/dusinlidl/image/upload/v1777478225/before_y22ura.webp" alt="" className="rembento__slider-img" draggable={false} />
       <img
-        src="/compare-after.png"
+        src="https://res.cloudinary.com/dusinlidl/image/upload/v1777478119/after_jn3dxt.jpg"
         alt=""
         className="rembento__slider-img rembento__slider-img--after"
         ref={clipRef}
@@ -79,19 +79,19 @@ export default function RareEarthBento() {
         <div className="rembento__grid">
           <div className="rembento__card rembento__card--text rembento__card--a">
             <h3 className="rembento__card-title">
-              <SplitWords text="Verified Impact & Measurable Results" startDelay={0.1} stagger={0.04} />
+              <SplitWords text="Asset Coverage Across the Value Chain" startDelay={0.1} stagger={0.04} />
             </h3>
             <p className="rembento__card-body">
-              Access detailed reports that highlight tangible environmental achievements.
+              Tokenize proven in-ground reserves, above-ground inventories, and offtake rights by asset type, stage, and geography.
             </p>
           </div>
 
           <div className="rembento__card rembento__card--text rembento__card--b">
             <h3 className="rembento__card-title">
-              <SplitWords text="Collaboration Tools for Every Organization" startDelay={0.2} stagger={0.04} />
+              <SplitWords text="Traceability from Geology to Custody" startDelay={0.2} stagger={0.04} />
             </h3>
             <p className="rembento__card-body">
-              Plan, track, and share your progress with ease using integrated dashboards.
+              Chain-linked NI 43-101 and JORC assessments, assay data, provenance, and audited custody from source to market.
             </p>
           </div>
 
@@ -101,17 +101,17 @@ export default function RareEarthBento() {
 
           <div className="rembento__card rembento__card--image rembento__card--d">
             <Image
-              src="/insights-dashboard.png"
-              alt="Data-Backed Environmental Insights"
+              src="https://res.cloudinary.com/dusinlidl/image/upload/v1777477603/rare%20earth%20control%20liquidity%20section.jpg"
+              alt="Controlled Liquidity for Qualified Counterparties"
               fill
               sizes="(max-width: 899px) 100vw, 66vw"
             />
             <div className="rembento__card-overlay">
               <h3 className="rembento__card-title rembento__card-title--light">
-                Data-Backed Environmental Insights
+                Controlled Liquidity for Qualified Counterparties
               </h3>
               <p className="rembento__card-body rembento__card-body--light">
-                Make informed decisions with analytics designed to measure real impact.
+                Primary issuance with permissioned secondary trading between verified counterparties, governed by jurisdictional rules.
               </p>
             </div>
           </div>

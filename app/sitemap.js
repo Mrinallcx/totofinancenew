@@ -12,7 +12,7 @@ export default async function sitemap() {
       "",
       "/about-us",
       "/product",
-      "/blog",
+      "/insights",
       ...getAllFooterHrefs(),
     ]),
   ];
@@ -27,7 +27,7 @@ export default async function sitemap() {
   const wpPosts = await fetchWordPressPostUrlsForSitemap({ revalidate: 300 });
 
   const blogEntries = wpPosts.map((post) => ({
-    url: `${base}/blog/${post.slug}`,
+    url: `${base}/insights/${post.slug}`,
     lastModified: post.modified ? new Date(post.modified) : now,
     changeFrequency: "weekly",
     priority: 0.7,

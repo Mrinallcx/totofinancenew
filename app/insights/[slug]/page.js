@@ -9,9 +9,9 @@ import {
 } from "../../../lib/wordpress";
 import "./BlogPostArticle.css";
 
-const BLOG_LOCAL_LINKS = [
-  { label: "Stories", href: "/blog#blog-hero" },
-  { label: "Articles", href: "/blog#blog-posts" },
+const INSIGHTS_LOCAL_LINKS = [
+  { label: "Stories", href: "/insights#blog-hero" },
+  { label: "Articles", href: "/insights#blog-posts" },
 ];
 
 export const revalidate = 120;
@@ -35,11 +35,11 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${post.title} — Toto Finance`,
-    description: description || `Read “${post.title}” on the Toto Finance blog.`,
+    description: description || `Read "${post.title}" on the Toto Finance insights page.`,
   };
 }
 
-export default async function BlogPostPage({ params }) {
+export default async function InsightsPostPage({ params }) {
   const { slug } = await params;
 
   let post = null;
@@ -65,7 +65,7 @@ export default async function BlogPostPage({ params }) {
 
   return (
     <main>
-      <NavBar pageTitle="Blog" localLinks={BLOG_LOCAL_LINKS} />
+      <NavBar pageTitle="Insights" localLinks={INSIGHTS_LOCAL_LINKS} />
       <article className="blogpost">
         <header className="blogpost__hero">
           <h1 className="blogpost__title">{post.title}</h1>
@@ -118,7 +118,7 @@ export default async function BlogPostPage({ params }) {
                 {[...suggestedPosts, ...suggestedPosts].map((item, i) => (
                   <a
                     key={`${item.slug}-${i}`}
-                    href={`/blog/${item.slug}`}
+                    href={`/insights/${item.slug}`}
                     className="blogpost__suggested-link"
                     tabIndex={i >= suggestedPosts.length ? -1 : undefined}
                     aria-hidden={i >= suggestedPosts.length ? true : undefined}

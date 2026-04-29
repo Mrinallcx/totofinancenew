@@ -9,12 +9,12 @@ const CTA_BG_VIDEO_MP4 =
   "https://res.cloudinary.com/dusinlidl/video/upload/q_auto,f_auto/toto%20finance.mp4";
 
 export default function CtaImage({
-  title = "Ready to transform your financial future?",
-  description = "Join thousands of businesses and investors already leveraging our institutional-grade platform for tokenized commodities and sustainable growth.",
-  primaryLabel = "Get started",
-  primaryHref = "/contact",
-  secondaryLabel = "Learn more",
-  secondaryHref = "/about-us",
+  title = "Institutional Infrastructure for Tokenized Commodities",
+  description = "Subscribe for research, insights, and market intelligence on tokenized commodities, real-world assets, and global trade infrastructure.",
+  primaryLabel = "Explore Marketplace",
+  primaryHref = "https://app.totofinance.co/",
+  secondaryLabel = "Contact Partnerships",
+  secondaryHref = "mailto:hello@totofinance.co",
 }) {
   const sectionRef = useScrollReveal();
 
