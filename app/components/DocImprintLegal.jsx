@@ -161,8 +161,8 @@ export default function DocImprintLegal() {
           <ul className="doclegal__links">
             <li>
               <span className="doclegal__label">Website:</span>{" "}
-              <a href="https://www.totofinance.co" className="doclegal__link" target="_blank" rel="noopener noreferrer">
-                www.totofinance.co
+              <a href="https://totofinance.co" className="doclegal__link" target="_blank" rel="noopener noreferrer">
+                totofinance.co
               </a>
             </li>
             <li>
