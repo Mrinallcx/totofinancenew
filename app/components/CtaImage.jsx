@@ -10,7 +10,7 @@ const CTA_BG_VIDEO_MP4 =
 
 export default function CtaImage({
   title = "Institutional Infrastructure for Tokenized Commodities",
-  description = "Subscribe for research, insights, and market intelligence on tokenized commodities, real-world assets, and global trade infrastructure.",
+  description = "Tokenized commodities, on-chain settlement, and global market access for institutions.",
   primaryLabel = "Explore Marketplace",
   primaryHref = "https://app.totofinance.co/",
   secondaryLabel = "Contact Partnerships",

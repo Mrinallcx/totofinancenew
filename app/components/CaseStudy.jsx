@@ -15,7 +15,7 @@ const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const SLIDES = [
   {
-    subtitle: "Regulated with Compliant",
+    subtitle: "Compliant",
     heading:
       "Operating within compliant legal frameworks, supported by independent audits, licensed partners, and continuous regulatory oversight.",
     animation: kycAnimation,
@@ -86,7 +86,7 @@ export default function CaseStudy() {
             />
           </p>
         </div>
-        <a href="/marketplace" className="cstudy__header-cta sr-item" style={{ animationDelay: "0.7s" }}>
+        <a href="https://app.totofinance.co/" className="cstudy__header-cta sr-item" style={{ animationDelay: "0.7s" }}>
           <span>Explore Marketplace</span>
           <span className="cta__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">

@@ -5,11 +5,11 @@ import SplitWords from "../hooks/SplitWords";
 import "./ServicesGrid.css";
 
 const SERVICES = [
-  { name: "Gold", image: "/product card/Gold.webp", href: "/marketplace" },
-  { name: "Silver", image: "/product card/Silver.webp", href: "/marketplace" },
-  { name: "Platinum", image: "/product card/Platinum.webp", href: "/marketplace" },
-  { name: "Diamond", image: "/product card/Diamond.webp", href: "/marketplace" },
-  { name: "Sapphire", image: "/product card/Sapphire.webp", href: "/marketplace" },
+  { name: "Gold", image: "/product card/Gold.webp", href: "https://app.totofinance.co/category/gold" },
+  { name: "Silver", image: "/product card/Silver.webp", href: "https://app.totofinance.co/category/silver" },
+  { name: "Platinum", image: "/product card/Platinum.webp", href: "https://app.totofinance.co/category/platinum" },
+  { name: "Diamond", image: "/product card/Diamond.webp", href: "https://app.totofinance.co/category/diamonds" },
+  { name: "Sapphire", image: "/product card/Sapphire.webp", href: "https://app.totofinance.co/category/sapphire" },
 ];
 
 function Card({ item }) {

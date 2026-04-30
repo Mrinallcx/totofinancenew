@@ -48,7 +48,7 @@ const SECTIONS = [
       "Hold, trade, or redeem tokenized commodities — with settlement, custody, and compliance handled automatically.",
     cta: {
       label: "Learn More",
-      href: "https://totofinance.co/blog/posts/blockchain-in-rwa-tokenization",
+      href: "https://totofinance.co/insights/100-days-toto-finance-tokenized-commodities",
     },
     useFlowDiagram: true,
     reverse: true,

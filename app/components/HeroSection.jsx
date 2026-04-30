@@ -50,7 +50,7 @@ export default function HeroSection() {
           <div className="hero__text-wrap">
             <h1 className="hero__title">
               <span className="hero__title--green">
-                {"The Infrastructure for Tokenized Commodities".split(" ").map((word, i) => (
+                {"The Global Infrastructure for Tokenized Commodities".split(" ").map((word, i) => (
                   <span key={i} className="hero__word" style={{ animationDelay: `${0.2 + i * 0.05}s` }}>
                     {word}
                   </span>

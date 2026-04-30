@@ -9,6 +9,7 @@ const TEAM = [
   {
     name: "Monty Metzger",
     role: "Founder",
+    bio: "Founded LCX - $500M+ regulated crypto exchange",
     linkedin: "https://www.linkedin.com/in/montymetzger/",
     image:
       "https://res.cloudinary.com/dusinlidl/image/upload/v1777032441/monty_z1hq12.jpg",
@@ -16,6 +17,7 @@ const TEAM = [
   {
     name: "Steven Gaertner",
     role: "President",
+    bio: "Built Fischler Diamonds' Asian operations - 100%+ monthly growth",
     linkedin: "https://www.linkedin.com/in/steven-gaertner/",
     image:
       "https://res.cloudinary.com/dusinlidl/image/upload/v1777032440/steven_nqzsof.jpg",
@@ -23,6 +25,7 @@ const TEAM = [
   {
     name: "Priyanshu Rajput",
     role: "CTO",
+    bio: "Blockchain engineer - Smart contracts & Web3 infrastructure - Driving RWA tokenization",
     linkedin: "https://www.linkedin.com/in/priyanshu-rajput-037899189/",
     image:
       "https://res.cloudinary.com/dusinlidl/image/upload/v1777032440/priyanshu_vgdadw.jpg",
@@ -30,6 +33,7 @@ const TEAM = [
   {
     name: "Danil Kerimi",
     role: "Non-Executive Board Member",
+    bio: "Former MD, World Economic Forum - Board Member SealSQ (Nasdaq)",
     linkedin: "https://www.linkedin.com/in/danil-kerimi/",
     image:
       "https://res.cloudinary.com/dusinlidl/image/upload/v1777032612/daneil_bobtsp.jpg",
@@ -69,6 +73,9 @@ export default function AboutTeam() {
                     objectPosition: member.imagePosition ?? "center center",
                   }}
                 />
+                <div className="abtteam__card-hover">
+                  <p className="abtteam__card-hover-text">{member.bio}</p>
+                </div>
               </div>
               <div className="abtteam__card-content">
                 <div className="abtteam__card-text">

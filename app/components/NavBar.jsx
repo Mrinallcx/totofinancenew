@@ -15,7 +15,7 @@ const FLYOUT_GROUPS = [
     links: [
       { label: "Home", href: "/" },
       { label: "About us", href: "/about-us" },
-      { label: "Vision", href: "/vision" },
+      { label: "Vision 2030", href: "/vision" },
       { label: "Rare Earth", href: "/rare-earth" },
       { label: "Ecosystem", href: "/toto-ecosystem" },
       { label: "Doc & Imprint", href: "/docs" },
@@ -31,11 +31,11 @@ const FLYOUT_GROUPS = [
 ];
 
 const EXPLORE_PRODUCTS = [
-  { label: "Gold", image: "/product card/Gold.webp", href: "/marketplace" },
-  { label: "Silver", image: "/product card/Silver.webp", href: "/marketplace" },
-  { label: "Platinum", image: "/product card/Platinum.webp", href: "/marketplace" },
-  { label: "Diamond", image: "/product card/Diamond.webp", href: "/marketplace" },
-  { label: "Sapphire", image: "/product card/Sapphire.webp", href: "/marketplace" },
+  { label: "Gold", image: "/product card/Gold.webp", href: "https://app.totofinance.co/category/gold" },
+  { label: "Silver", image: "/product card/Silver.webp", href: "https://app.totofinance.co/category/silver" },
+  { label: "Platinum", image: "/product card/Platinum.webp", href: "https://app.totofinance.co/category/platinum" },
+  { label: "Diamond", image: "/product card/Diamond.webp", href: "https://app.totofinance.co/category/diamonds" },
+  { label: "Sapphire", image: "/product card/Sapphire.webp", href: "https://app.totofinance.co/category/sapphire" },
 ];
 
 const ALL_PAGE_LINKS = FLYOUT_GROUPS.flatMap((g) => g.links);
@@ -226,7 +226,7 @@ export default function NavBar({ pageTitle = "Toto Finance", localLinks = [] }) 
                   </button>
                 </li>
                 <li>
-                  <a href="/contact-us" className="localnav__buy-btn">Buy</a>
+                  <a href="https://app.totofinance.co/" className="localnav__buy-btn">Buy</a>
                 </li>
               </ul>
             </div>
@@ -315,12 +315,6 @@ export default function NavBar({ pageTitle = "Toto Finance", localLinks = [] }) 
                   <div className="localnav__option-extras">
                     <a href="https://app.totofinance.co/" className="localnav__option-extra">
                       <span>Global Market</span>
-                      <svg className="localnav__option-extra-arrow" width="12" height="12" viewBox="0 0 256 256" fill="currentColor">
-                        <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/>
-                      </svg>
-                    </a>
-                    <a href="/whitepaper" className="localnav__option-extra">
-                      <span>Mica Ready Whitepaper</span>
                       <svg className="localnav__option-extra-arrow" width="12" height="12" viewBox="0 0 256 256" fill="currentColor">
                         <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/>
                       </svg>

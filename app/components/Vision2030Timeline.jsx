@@ -8,8 +8,8 @@ import "./Vision2030Timeline.css";
 const MILESTONES = [
   {
     year: "2026",
-    title: "Copper and Critical Minerals Launch",
-    body: "COPTT, our flagship $5B+ copper tokenization mandate. Onboard institutional investors and expand into rare earth and critical mineral mandates.",
+    title: "Copper and Critical Minerals",
+    body: "Launch COPTT, our flagship $5B+ copper tokenization mandate. Onboard institutional investors and expand into rare earth and critical mineral mandates.",
   },
   {
     year: "2027",

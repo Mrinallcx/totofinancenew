@@ -4,7 +4,6 @@ import NavBar from "../components/NavBar";
 import EcosystemHero from "../components/EcosystemHero";
 import EcosystemCards from "../components/EcosystemCards";
 import DocImprintLegal from "../components/DocImprintLegal";
-import EcosystemCaseStudies from "../components/EcosystemCaseStudies";
 import CtaImage from "../components/CtaImage";
 import Footer from "../components/Footer";
 
@@ -115,55 +114,6 @@ const SECTION_1_CARDS = [
   },
 ];
 
-/* ── SLOT 3 — Press coverage (4 cards) ────────────── */
-
-const PRESS_COVERAGE = [
-  {
-    key: "blockchainwire",
-    image: "/case-pluto.png",
-    alt: "BlockchainWire",
-    brand: "/brand-pluto.png",
-    year: "2024",
-    name: "BlockchainWire",
-    category: "Press",
-    body: "Toto Finance Debuts New Brand and Platform for Tokenization of Commodities and Real World Assets.",
-    href: "https://blockchainwire.io/press-release/toto-finance-debuts-new-brand-and-platform-for-tokenization-of-commodities-and-real-world-assets",
-  },
-  {
-    key: "yahoo-finance",
-    image: "/case-vitahealth.png",
-    alt: "Yahoo Finance",
-    brand: "/brand-vitahealth.png",
-    year: "2023",
-    name: "Yahoo Finance",
-    category: "Press",
-    body: "Tiamonds Landmark Launch: The Unmissable 1.2M 10 Carat D Flawless Diamond.",
-    href: "https://finance.yahoo.com/news/tiamonds-landmark-launch-unmissable-1-010000749.html",
-  },
-  {
-    key: "blockchain-reporter",
-    image: "/case-boxmedia.png",
-    alt: "Blockchain Reporter",
-    brand: "/brand-boxmedia.png",
-    year: "2024",
-    name: "Blockchain Reporter",
-    category: "Press",
-    body: "Toto Finance Brings Real World Assets On-Chain with RWA Tokenization.",
-    href: "https://blockchainreporter.net/toto-finance-brings-real-world-assets-on-chain-with-rwa-tokenization/",
-  },
-  {
-    key: "cardano-foundation",
-    image: "/case-novatech.png",
-    alt: "Cardano Foundation",
-    brand: "/brand-novatech.png",
-    year: "2024",
-    name: "Cardano Foundation",
-    category: "Case Study",
-    body: "Cardano Foundation Case Study: Toto Finance.",
-    href: "https://cardanofoundation.org/case-studies/toto-finance",
-  },
-];
-
 export default function DocImprintPageContent() {
   return (
     <main>
@@ -175,13 +125,6 @@ export default function DocImprintPageContent() {
       />
       <EcosystemCards cards={SECTION_1_CARDS} columns={3} label="Publications and resources" />
       <DocImprintLegal />
-      <EcosystemCaseStudies
-        heading="As Seen In"
-        description=""
-        cases={PRESS_COVERAGE}
-        ctaLabel="Read more"
-        ctaHref="https://totofinance.co/blog"
-      />
       <CtaImage
         title="Questions or Legal Inquiries?"
         description="For compliance, legal, or partnership inquiries, reach out to the Toto Finance team directly."

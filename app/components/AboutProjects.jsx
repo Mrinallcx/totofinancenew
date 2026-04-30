@@ -12,7 +12,7 @@ const PROJECTS = [
       "Issuance of asset-backed digital commodities with integrated KYC/AML, transfer controls, and regulatory compliance built into the protocol.",
     image:
       "https://res.cloudinary.com/dusinlidl/image/upload/v1777030477/toto_finance_infrastructure_mtly2j.webp",
-    href: "/how-it-works",
+    href: "https://totofinance.co/product",
   },
   {
     title: "Compliance and Custody Layer",
@@ -20,7 +20,7 @@ const PROJECTS = [
       "Structured custody, independent audits, and on-chain proof of reserves connecting every token to a verified physical asset.",
     image:
       "https://res.cloudinary.com/dusinlidl/image/upload/v1777030729/Compliance_and_Custody_Layer_ixrdbt.webp",
-    href: "/product",
+    href: "https://totofinance.co/docs",
   },
   {
     title: "Institutional Asset Access",
@@ -28,7 +28,7 @@ const PROJECTS = [
       "Infrastructure built for producers, investors, and financial institutions to access, trade, and settle tokenized commodities globally.",
     image:
       "https://res.cloudinary.com/dusinlidl/image/upload/v1777031091/Instituional_asset_access_obfszb.webp",
-    href: "/marketplace",
+    href: "https://app.totofinance.co/",
   },
 ];
 

@@ -49,7 +49,7 @@ const CASES = [
   {
     key: "ethereum",
     image:
-      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292648/Cardano_cck2t4.png",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777564461/Ethereum_acumky.png",
     alt: "Ethereum",
     name: "Ethereum",
     category: "Settlement Infrastructure",
@@ -59,7 +59,7 @@ const CASES = [
   {
     key: "polygon",
     image:
-      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292671/LCX_xjs4uv.png",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777564462/Polygon_ved8lx.png",
     alt: "Polygon",
     name: "Polygon",
     category: "Execution Layer",
@@ -69,7 +69,7 @@ const CASES = [
   {
     key: "solana",
     image:
-      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292672/Hacken_d5ybjl.png",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777564461/Solana_liwfap.png",
     alt: "Solana",
     name: "Solana",
     category: "High-Performance Chain",
@@ -79,7 +79,7 @@ const CASES = [
   {
     key: "xrp-ledger",
     image:
-      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292669/GIA_rhxd48.png",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777564468/XRP_bk0vit.png",
     alt: "XRP Ledger",
     name: "XRP Ledger",
     category: "Settlement Infrastructure",
@@ -89,7 +89,7 @@ const CASES = [
   {
     key: "nmkr",
     image:
-      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292671/LCX_xjs4uv.png",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777564461/NMKR_mo17ni.png",
     alt: "NMKR",
     name: "NMKR",
     category: "Tokenization Infrastructure",
@@ -99,7 +99,7 @@ const CASES = [
   {
     key: "uniswap",
     image:
-      "https://res.cloudinary.com/dusinlidl/image/upload/v1777292648/Cardano_cck2t4.png",
+      "https://res.cloudinary.com/dusinlidl/image/upload/v1777564461/Uniswap_pu49be.png",
     alt: "Uniswap",
     name: "Uniswap",
     category: "Liquidity Protocol",

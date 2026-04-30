@@ -105,7 +105,7 @@ export default function Vision2030Hero() {
             Explore Marketplace
           </a>
           <Link href="/contact-us" className="visionhero__btn visionhero__btn--ghost">
-            Contact us
+            Contact Us
           </Link>
         </div>
       </div>

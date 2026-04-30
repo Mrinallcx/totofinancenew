@@ -8,7 +8,7 @@ import "./AboutProcess.css";
 const STEPS = [
   {
     number: "01",
-    title: "Operational across US, EU, Asia, and MENA.",
+    title: "Operational across US, EU, Asia, and MENA",
     description:
       "Toto Finance Inc. is incorporated in the United States (Reg. No. 10480139), headquartered at 447 Broadway, New York. TotoHolding AG is incorporated in Liechtenstein with LEI 5299005UXAQFO3US5C38, independently verifiable via GLEIF.",
   },

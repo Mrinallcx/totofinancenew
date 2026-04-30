@@ -66,7 +66,7 @@ export default function ProductsHero() {
             <a href="#" className="prodhero__card">
               <div className="prodhero__card-top">
                 <p className="prodhero__card-title">
-                  Tokenized commodities, live on global markets
+                  Bridging Physical and Digital Markets
                 </p>
               </div>
 

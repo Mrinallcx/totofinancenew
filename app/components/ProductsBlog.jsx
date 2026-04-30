@@ -18,7 +18,7 @@ const BLOGS = [
     category: "Gemstones",
     image:
       "https://res.cloudinary.com/dusinlidl/image/upload/v1777471794/gems_xrzphn.png",
-    href: "/tokenized-diamonds",
+    href: "/tokenized-diamond",
   },
   {
     title: "Copper, Tin and Iron",

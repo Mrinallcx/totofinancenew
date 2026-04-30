@@ -62,8 +62,8 @@ const SPACES = [
   },
   {
     key: "transparent-supply",
-    title: "Mine to Market,",
-    body: "On-Chain Full transparency, end to end. From geological verification to custody, financing, and delivery, every step recorded on-chain and verifiable in real time.",
+    title: "Mine to Market, On-Chain",
+    body: "Full transparency, end to end. From geological verification to custody, financing, and delivery, every step recorded on-chain and verifiable in real time.",
   },
 ];
 
