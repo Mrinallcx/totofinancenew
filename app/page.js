@@ -11,6 +11,10 @@ import CtaImage from "./components/CtaImage";
 import Footer from "./components/Footer";
 import { fetchWordPressPosts } from "../lib/wordpress";
 
+export const metadata = {
+  alternates: { canonical: "/" },
+};
+
 export const revalidate = 120;
 
 export default async function Home() {

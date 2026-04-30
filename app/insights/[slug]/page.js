@@ -7,6 +7,7 @@ import {
   fetchWordPressPosts,
   stripForMetaDescription,
 } from "../../../lib/wordpress";
+import { canonicalPath } from "../../../lib/site-url";
 import "./BlogPostArticle.css";
 
 const INSIGHTS_LOCAL_LINKS = [
@@ -36,6 +37,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `${post.title} — Toto Finance`,
     description: description || `Read "${post.title}" on the Toto Finance insights page.`,
+    alternates: { canonical: canonicalPath(`/insights/${slug}`) },
   };
 }
 
