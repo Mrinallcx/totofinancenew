@@ -33,8 +33,8 @@ export default function Footer() {
             </div>
 
             <div className="footer__menus">
-              {FOOTER_MENUS.map((menu) => (
-                <div key={menu.title} className="footer__menu">
+              {FOOTER_MENUS.map((menu, index) => (
+                <div key={`${menu.title}-${index}`} className="footer__menu">
                   <span className="footer__menu-title">{menu.title}</span>
                   <div className="footer__menu-links">
                     {menu.links.map((link) => (
@@ -78,9 +78,9 @@ export default function Footer() {
                 Toto Finance - The Global Infrastructure for Tokenized Commodities
               </p>
               <p className="footer__legal-links">
-                <a href="/privacy-policy-page">Privacy policy</a>
+                <a href="/toto-privacy-policy">Privacy policy</a>
                 <span className="footer__legal-sep">|</span>
-                <a href="/terms-and-conditions">Terms & conditions</a>
+                <a href="/toto-terms-and-condition">Terms & conditions</a>
                 <span className="footer__legal-sep">|</span>
                 <a href="/sitemap.xml">Sitemap</a>
               </p>

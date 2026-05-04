@@ -22,6 +22,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `${title} — Toto Finance`,
     description: `${title} — Toto Finance.`,
+    alternates: { canonical: `/${slug}` },
   };
 }
 

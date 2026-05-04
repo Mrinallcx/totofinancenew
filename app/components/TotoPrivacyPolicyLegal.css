@@ -1,0 +1,79 @@
+.privacylegal .doclegal__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.privacylegal .doclegal__heading,
+.privacylegal .doclegal__section,
+.privacylegal .doclegal__section--full {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.privacylegal .doclegal__heading,
+.privacylegal .doclegal__subtitle,
+.privacylegal .doclegal__title,
+.privacylegal .doclegal__text {
+  text-align: left;
+}
+
+.privacylegal .doclegal__links {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 8px 0 0;
+  gap: 6px;
+}
+
+.privacylegal .doclegal__links .doclegal__text {
+  margin: 0;
+}
+
+.privacylegal__highlight {
+  border-left: 3px solid var(--color-primary);
+  padding-left: 12px;
+  margin-top: 10px;
+  color: rgb(56, 56, 56);
+}
+
+.privacylegal__table-wrap {
+  margin-top: 8px;
+  overflow-x: auto;
+}
+
+.privacylegal__table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgba(16, 30, 33, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.privacylegal__table th,
+.privacylegal__table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(16, 30, 33, 0.1);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.privacylegal__table tr:last-child th,
+.privacylegal__table tr:last-child td {
+  border-bottom: none;
+}
+
+.privacylegal__table th {
+  width: 220px;
+  font-weight: 600;
+  color: #101e21;
+  background: rgba(240, 241, 245, 0.75);
+}
+
+.privacylegal__table td {
+  color: rgb(96, 95, 95);
+}
