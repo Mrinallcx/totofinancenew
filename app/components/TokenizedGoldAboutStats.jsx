@@ -3,12 +3,19 @@
 import useScrollReveal from "../hooks/useScrollReveal";
 import "./TokenizedGoldAboutStats.css";
 
-const COUNTERS = [
-  { value: "370", suffix: "+", label: "Residences Across London" },
-  { value: "100", suffix: "+", label: "Commercial Spaces Nationwide" },
+const DEFAULT_COUNTERS = [
+  { value: "$13T", suffix: "+", label: "Global Gold Market Size" },
+  { value: "1:1", suffix: "", label: "Physical Gold Backing" },
 ];
 
-export default function TokenizedGoldAboutStats({ sectionId = "tokenized-gold-highlights" }) {
+export default function TokenizedGoldAboutStats({
+  sectionId = "tokenized-gold-highlights",
+  statement = "Gold has preserved wealth across generations, trusted by central banks, institutions, and investors as a foundation of long term financial security.",
+  statsRowLabel = "PROVEN ASSET CLASS",
+  counters = DEFAULT_COUNTERS,
+  imageSrc = "https://framerusercontent.com/images/jOJvyX3KRy16klinmUYOQpPK9c.png?width=1600&height=1204",
+  imageAlt = "Modern property development exterior",
+}) {
   const sectionRef = useScrollReveal(0.1);
 
   return (
@@ -17,16 +24,14 @@ export default function TokenizedGoldAboutStats({ sectionId = "tokenized-gold-hi
         <div className="tgas__top">
           <div className="tgas__text-wrap">
             <p className="tgas__text sr-item" style={{ animationDelay: "0.1s" }}>
-              Slateon, we <span className="tgas__badge" aria-hidden="true">🪙</span> redefine real estate through
-              luxury, trust, and lifestyle, delivering curated homes and offices with a world-class client
-              experience.
+              {statement}
             </p>
           </div>
 
           <div className="tgas__image-wrap sr-item" style={{ animationDelay: "0.18s" }}>
             <img
-              src="https://framerusercontent.com/images/jOJvyX3KRy16klinmUYOQpPK9c.png?width=1600&height=1204"
-              alt="Modern property development exterior"
+              src={imageSrc}
+              alt={imageAlt}
               className="tgas__image"
               loading="lazy"
             />
@@ -36,11 +41,11 @@ export default function TokenizedGoldAboutStats({ sectionId = "tokenized-gold-hi
         <div className="tgas__bottom">
           <div className="tgas__tag-wrap sr-item" style={{ animationDelay: "0.24s" }}>
             <span className="tgas__tag-dot" aria-hidden="true" />
-            <p className="tgas__tag-label">Projects Completed</p>
+            <p className="tgas__tag-label">{statsRowLabel}</p>
           </div>
 
           <div className="tgas__counter-list sr-item" style={{ animationDelay: "0.3s" }}>
-            {COUNTERS.map((counter) => (
+            {counters.map((counter) => (
               <article key={counter.label} className="tgas__counter">
                 <p className="tgas__counter-value">
                   <span>{counter.value}</span>

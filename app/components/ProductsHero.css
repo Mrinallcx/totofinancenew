@@ -24,6 +24,10 @@
   background-color: #212121;
 }
 
+.prodhero__video--flipped {
+  transform: scaleX(-1);
+}
+
 .prodhero__overlay {
   position: absolute;
   inset: 0;

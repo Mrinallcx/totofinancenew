@@ -7,13 +7,13 @@ import "./ContactUsSection.css";
 const CONTACT_ITEMS = [
   {
     label: "Email Address",
-    value: "hello@kuato.agency",
-    href: "mailto:hello@kuato.agency",
+    value: "hello@totofinance.co",
+    href: "mailto:hello@totofinance.co",
   },
   {
-    label: "Phone",
-    value: "+44 20 7946 0345",
-    href: "tel:+442079460345",
+    label: "Legal and Compliance",
+    value: "legal@totofinance.co",
+    href: "mailto:legal@totofinance.co",
   },
 ];
 
@@ -74,12 +74,16 @@ export default function ContactUsSection() {
       <div className="contactus__inner">
         <div className="contactus__left">
           <div className="contactus__heading">
-            <p className="contactus__eyebrow sr-item">Contact Us</p>
-            <h1 className="contactus__title sr-item">Let&apos;s start building something extraordinary</h1>
+            <p className="contactus__eyebrow sr-item">CONTACT US</p>
+            <h1 className="contactus__title sr-item">
+              Let&apos;s build the future of
+              <br />
+              tokenized commodities, together
+            </h1>
             <p className="contactus__desc sr-item">
-              We&apos;d love to hear from you. Whether you&apos;re ready to start a project or simply want
-              to explore ideas, our team is here to help you grow your brand with strategy, creativity,
-              and measurable results.
+              Whether you are an institutional investor, a mining partner, a regulated counterparty, or
+              simply curious about tokenization, our team is here to answer your questions and explore
+              how Toto Finance can work for you.
             </p>
           </div>
 
@@ -95,20 +99,36 @@ export default function ContactUsSection() {
 
             <div className="contactus__details-row">
               <div className="contactus__list-item">
-                <p className="contactus__label">Location</p>
+                <p className="contactus__label">Headquarters</p>
                 <p className="contactus__text">
-                  Brooklyn, New York
+                  Toto Finance Inc.
                   <br />
-                  123 Wythe Avenue, Suite 4B
+                  447 Broadway, 2nd Floor, Suite 3342
                   <br />
-                  Brooklyn, NY 11249
+                  New York, NY 10013
+                  <br />
+                  United States
                 </p>
               </div>
 
               <div className="contactus__list-item">
+                <p className="contactus__label">Custody Office</p>
+                <p className="contactus__text">
+                  TotoHolding AG
+                  <br />
+                  Herrengasse 6, 9490 Vaduz
+                  <br />
+                  Liechtenstein
+                </p>
+              </div>
+            </div>
+
+            <div className="contactus__details-row">
+              <div className="contactus__list-item">
                 <p className="contactus__label">Hours</p>
-                <p className="contactus__text">Monday - Friday</p>
-                <p className="contactus__text">9:00 AM - 6:00 PM (EST)</p>
+                <p className="contactus__text">
+                  <span className="contactus__text-highlight">24/7 Operational</span>
+                </p>
               </div>
             </div>
           </div>

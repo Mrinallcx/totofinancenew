@@ -44,6 +44,16 @@
   gap: 16px;
 }
 
+.tgwwd__heading {
+  margin-top: 16px;
+  font-size: clamp(34px, 3.5vw, 56px);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: #101e21;
+  font-weight: 500;
+  max-width: 760px;
+}
+
 .tgwwd__card {
   background: rgb(240, 244, 245);
   border-radius: 20px;
@@ -55,6 +65,14 @@
   height: 468px;
   transition: transform 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease,
     border-color 0.28s ease;
+  text-decoration: none;
+  position: relative;
+}
+
+.tgwwd__card--full {
+  grid-column: 1 / -1;
+  min-height: 280px;
+  height: 280px;
 }
 
 .tgwwd__icon {
@@ -69,6 +87,34 @@
   height: 100%;
   display: block;
   fill: currentColor;
+}
+
+.tgwwd__arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(16, 30, 33, 0.08);
+  color: #101e21;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  opacity: 0;
+  transform: translateY(4px) scale(0.92);
+  transition: opacity 0.22s ease, transform 0.22s ease, background-color 0.22s ease;
+}
+
+.tgwwd__arrow svg {
+  width: 16px;
+  height: 16px;
+}
+
+.tgwwd__arrow path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .tgwwd__text-wrap {
@@ -100,12 +146,27 @@
   box-shadow: 0 14px 28px rgba(16, 30, 33, 0.08);
 }
 
+.tgwwd__card:hover .tgwwd__arrow,
+.tgwwd__card:focus-visible .tgwwd__arrow {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.tgwwd__card:hover .tgwwd__arrow {
+  background: rgba(16, 30, 33, 0.16);
+}
+
 .tgwwd__card:hover .tgwwd__icon {
   transform: translateY(-1px) scale(1.04);
 }
 
 .tgwwd__card:hover .tgwwd__text-wrap {
   transform: translateY(-1px);
+}
+
+.tgwwd__card:focus-visible {
+  outline: 2px solid rgba(16, 30, 33, 0.35);
+  outline-offset: 3px;
 }
 
 @media (max-width: 1100px) {
@@ -126,6 +187,12 @@
   .tgwwd__card-list {
     margin-top: 24px;
     gap: 14px;
+  }
+
+  .tgwwd__heading {
+    margin-top: 12px;
+    font-size: clamp(28px, 7.6vw, 44px);
+    line-height: 1;
   }
 
   .tgwwd__card {

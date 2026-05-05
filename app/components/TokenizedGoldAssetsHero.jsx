@@ -4,9 +4,9 @@ import useScrollReveal from "../hooks/useScrollReveal";
 import SplitWords from "../hooks/SplitWords";
 import "./ProductsHero.css";
 
-/** Reuse the same media treatment as the product hero. */
-const TOKENIZED_GOLD_HERO_VIDEO_MP4 =
-  "https://res.cloudinary.com/dusinlidl/video/upload/q_auto,f_auto/product_page_hero_video_epuhvw.mp4";
+/** Shared hero background image for tokenized commodity pages. */
+const TOKENIZED_GOLD_HERO_BG_IMAGE =
+  "https://res.cloudinary.com/dusinlidl/image/upload/v1777992934/gold_bg_banner_aim76i.webp";
 
 function getPluralLabel(commodityName) {
   if (commodityName === "Diamond") return "Diamonds";
@@ -17,24 +17,35 @@ export default function TokenizedGoldAssetsHero({
   commodityName = "Gold",
   sectionId = "tokenized-gold-overview",
   categoryPath = "gold",
+  heroBgImage = TOKENIZED_GOLD_HERO_BG_IMAGE,
+  heroBgFlip = false,
+  heroTitle,
+  heroSubtext,
+  ctaLabel = "Explore Marketplace",
+  sideCardHeading,
+  unitsTokenizedLabel,
+  unitsTokenizedValue = "45K+",
+  marketAccessLabel = "Market Access",
+  marketAccessValue = "24/7",
 }) {
   const sectionRef = useScrollReveal(0.1);
   const pluralLabel = getPluralLabel(commodityName);
+  const titleText = heroTitle ?? `Tokenized ${pluralLabel}, Built for Global Markets`;
+  const subtext =
+    heroSubtext ??
+    `${commodityName}-backed digital assets with compliant ownership, transparent reserves, and instant access to global liquidity.`;
+  const cardHeading =
+    sideCardHeading ?? `Physical ${commodityName}, Fractionalized for the Digital Economy`;
 
   return (
     <section className="prodhero" id={sectionId} ref={sectionRef}>
       <div className="prodhero__video-wrap">
-        <video
-          className="prodhero__video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
+        <img
+          className={`prodhero__video${heroBgFlip ? " prodhero__video--flipped" : ""}`}
+          src={heroBgImage}
+          alt=""
           aria-hidden="true"
-        >
-          <source src={TOKENIZED_GOLD_HERO_VIDEO_MP4} type="video/mp4" />
-        </video>
+        />
         <div className="prodhero__overlay" />
       </div>
 
@@ -43,11 +54,11 @@ export default function TokenizedGoldAssetsHero({
           <div className="prodhero__left">
             <div className="prodhero__text">
               <h1 className="prodhero__title">
-                <SplitWords text={`Tokenized ${pluralLabel}, Built for Global Markets`} startDelay={0.2} stagger={0.06} />
+                <SplitWords text={titleText} startDelay={0.2} stagger={0.06} />
               </h1>
               <p className="prodhero__body">
                 <SplitWords
-                  text={`${commodityName}-backed digital assets with compliant ownership, transparent reserves, and instant access to global liquidity.`}
+                  text={subtext}
                   startDelay={0.7}
                   stagger={0.015}
                 />
@@ -60,7 +71,7 @@ export default function TokenizedGoldAssetsHero({
               className="prodhero__cta sr-item"
               style={{ animationDelay: "1.1s" }}
             >
-              <span>Explore Marketplace</span>
+              <span>{ctaLabel}</span>
               <span className="cta__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
                   <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z" />
@@ -76,7 +87,7 @@ export default function TokenizedGoldAssetsHero({
             <a href={`https://app.totofinance.co/category/${categoryPath}`} className="prodhero__card">
               <div className="prodhero__card-top">
                 <p className="prodhero__card-title">
-                  Physical {commodityName}, Fractionalized for the Digital Economy
+                  {cardHeading}
                 </p>
               </div>
 
@@ -95,16 +106,16 @@ export default function TokenizedGoldAssetsHero({
               <div className="prodhero__card-bottom">
                 <div className="prodhero__stat">
                   <p className="prodhero__stat-label">
-                    {commodityName} Units Tokenized
+                    {unitsTokenizedLabel ?? `${commodityName} Units Tokenized`}
                   </p>
-                  <h2 className="prodhero__stat-value">45K+</h2>
+                  <h2 className="prodhero__stat-value">{unitsTokenizedValue}</h2>
                 </div>
                 <div className="prodhero__stat-divider" />
                 <div className="prodhero__stat">
                   <p className="prodhero__stat-label">
-                    Market Access
+                    {marketAccessLabel}
                   </p>
-                  <h2 className="prodhero__stat-value">24/7</h2>
+                  <h2 className="prodhero__stat-value">{marketAccessValue}</h2>
                 </div>
               </div>
             </a>

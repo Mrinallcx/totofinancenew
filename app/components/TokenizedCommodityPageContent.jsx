@@ -12,6 +12,10 @@ export default function TokenizedCommodityPageContent({
   commodityName = "Gold",
   slugPrefix = "tokenized-gold",
   categoryPath = "gold",
+  heroContent = {},
+  aboutStatsContent = {},
+  whatWeDoContent = {},
+  howItWorksContent = {},
 }) {
   const localLinks = [
     { label: "Overview", href: `#${slugPrefix}-overview` },
@@ -27,13 +31,46 @@ export default function TokenizedCommodityPageContent({
         commodityName={commodityName}
         sectionId={`${slugPrefix}-overview`}
         categoryPath={categoryPath}
+        heroBgImage={heroContent.heroBgImage}
+        heroBgFlip={heroContent.heroBgFlip}
+        heroTitle={heroContent.heroTitle}
+        heroSubtext={heroContent.heroSubtext}
+        ctaLabel={heroContent.ctaLabel}
+        sideCardHeading={heroContent.sideCardHeading}
+        unitsTokenizedLabel={heroContent.unitsTokenizedLabel}
+        unitsTokenizedValue={heroContent.unitsTokenizedValue}
+        marketAccessLabel={heroContent.marketAccessLabel}
+        marketAccessValue={heroContent.marketAccessValue}
       />
-      <TokenizedGoldAboutStats sectionId={`${slugPrefix}-highlights`} />
-      <TokenizedGoldWhatWeDo sectionId={`${slugPrefix}-what-we-do`} />
+      <TokenizedGoldAboutStats
+        sectionId={`${slugPrefix}-highlights`}
+        statement={aboutStatsContent.statement}
+        statsRowLabel={aboutStatsContent.statsRowLabel}
+        counters={aboutStatsContent.counters}
+        imageSrc={aboutStatsContent.imageSrc}
+        imageAlt={aboutStatsContent.imageAlt}
+      />
+      <TokenizedGoldWhatWeDo
+        sectionId={`${slugPrefix}-what-we-do`}
+        overlineLabel={whatWeDoContent.overlineLabel}
+        heading={whatWeDoContent.heading}
+        cards={whatWeDoContent.cards}
+        defaultCardHref={whatWeDoContent.defaultCardHref ?? `https://app.totofinance.co/category/${categoryPath}`}
+      />
       <TokenizedGoldHowItWorks
         sectionId={`${slugPrefix}-how-it-works`}
         commodityName={commodityName}
         categoryPath={categoryPath}
+        overline={howItWorksContent.overline}
+        heading={howItWorksContent.heading}
+        steps={howItWorksContent.steps}
+        marqueeSteps={howItWorksContent.marqueeSteps}
+        subBlockOverline={howItWorksContent.subBlockOverline}
+        subBlockHeading={howItWorksContent.subBlockHeading}
+        subBlockSubtext={howItWorksContent.subBlockSubtext}
+        ctaLabel={howItWorksContent.ctaLabel}
+        featureImageSrc={howItWorksContent.featureImageSrc}
+        featureImageAlt={howItWorksContent.featureImageAlt}
       />
       <CtaImage />
       <Footer />
