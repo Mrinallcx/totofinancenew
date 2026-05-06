@@ -9,11 +9,18 @@ export default function TokenizedGoldAssetsPageContent() {
       slugPrefix="tokenized-gold"
       categoryPath="gold"
       heroContent={{
+        heroBgColor: "#F8E7B5",
         heroTitle: "Gold: Timeless and Accessible",
         heroSubtext:
           "Gold has preserved wealth for centuries, now seamlessly accessible through tokenization. Your complete guide to gold from basics to expert insights. Read More",
         ctaLabel: "Explore Assets",
         sideCardHeading: "Real Gold, Tokenized for the World",
+        cardMediaType: "tradingview-mini-chart",
+        tradingViewSymbol: "TVC:GOLD",
+        tradingViewLineChartType: "Line",
+        tradingViewShowTimeRange: true,
+        tradingViewTimeFrame: "60M",
+        tradingViewShowTimeScale: true,
         unitsTokenizedValue: "$20K",
         marketAccessValue: "24/7",
       }}

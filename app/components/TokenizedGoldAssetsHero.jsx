@@ -1,5 +1,6 @@
 "use client";
 
+import Script from "next/script";
 import useScrollReveal from "../hooks/useScrollReveal";
 import SplitWords from "../hooks/SplitWords";
 import "./ProductsHero.css";
@@ -19,10 +20,20 @@ export default function TokenizedGoldAssetsHero({
   categoryPath = "gold",
   heroBgImage = TOKENIZED_GOLD_HERO_BG_IMAGE,
   heroBgFlip = false,
+  heroBgColor,
   heroTitle,
   heroSubtext,
   ctaLabel = "Explore Marketplace",
   sideCardHeading,
+  cardMediaType = "image",
+  cardMediaSrc = "https://res.cloudinary.com/dusinlidl/image/upload/v1777038609/toto_finance_corges.png",
+  cardMediaAlt,
+  cardMediaTitle,
+  tradingViewSymbol,
+  tradingViewLineChartType = "Line",
+  tradingViewShowTimeRange = false,
+  tradingViewTimeFrame,
+  tradingViewShowTimeScale = false,
   unitsTokenizedLabel,
   unitsTokenizedValue = "45K+",
   marketAccessLabel = "Market Access",
@@ -36,17 +47,20 @@ export default function TokenizedGoldAssetsHero({
     `${commodityName}-backed digital assets with compliant ownership, transparent reserves, and instant access to global liquidity.`;
   const cardHeading =
     sideCardHeading ?? `Physical ${commodityName}, Fractionalized for the Digital Economy`;
+  const isFlatHero = Boolean(heroBgColor);
 
   return (
-    <section className="prodhero" id={sectionId} ref={sectionRef}>
-      <div className="prodhero__video-wrap">
-        <img
-          className={`prodhero__video${heroBgFlip ? " prodhero__video--flipped" : ""}`}
-          src={heroBgImage}
-          alt=""
-          aria-hidden="true"
-        />
-        <div className="prodhero__overlay" />
+    <section className={`prodhero${isFlatHero ? " prodhero--flat" : ""}`} id={sectionId} ref={sectionRef}>
+      <div className="prodhero__video-wrap" style={isFlatHero ? { backgroundColor: heroBgColor } : undefined}>
+        {!isFlatHero ? (
+          <img
+            className={`prodhero__video${heroBgFlip ? " prodhero__video--flipped" : ""}`}
+            src={heroBgImage}
+            alt=""
+            aria-hidden="true"
+          />
+        ) : null}
+        <div className={`prodhero__overlay${isFlatHero ? " prodhero__overlay--flat" : ""}`} />
       </div>
 
       <div className="prodhero__container">
@@ -93,13 +107,55 @@ export default function TokenizedGoldAssetsHero({
 
               <div className="prodhero__card-middle">
                 <div className="prodhero__card-image-wrap">
-                  <img
-                    className="prodhero__card-image"
-                    src="https://res.cloudinary.com/dusinlidl/image/upload/v1777038609/toto_finance_corges.png"
-                    alt={`Tokenized ${commodityName.toLowerCase()} and secure reserves`}
-                    width={800}
-                    height={800}
-                  />
+                  {cardMediaType === "tradingview-mini-chart" ? (
+                    <>
+                      <Script
+                        type="module"
+                        src="https://widgets.tradingview-widget.com/w/en/tv-mini-chart.js"
+                        strategy="afterInteractive"
+                      />
+                      <div className="prodhero__tv-widget">
+                        <tv-mini-chart
+                          symbol={tradingViewSymbol || "TVC:GOLD"}
+                          line-chart-type={tradingViewLineChartType}
+                          {...(tradingViewShowTimeRange ? { "show-time-range": "" } : {})}
+                          {...(tradingViewTimeFrame ? { "time-frame": tradingViewTimeFrame } : {})}
+                          {...(tradingViewShowTimeScale ? { "show-time-scale": "" } : {})}
+                        />
+                      </div>
+                    </>
+                  ) : cardMediaType === "video" ? (
+                    <video
+                      className="prodhero__card-video"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="auto"
+                      controls={false}
+                      aria-label={cardMediaTitle || `${commodityName} media`}
+                    >
+                      <source src={cardMediaSrc} type="video/mp4" />
+                    </video>
+                  ) : cardMediaType === "iframe" ? (
+                    <iframe
+                      className="prodhero__card-iframe"
+                      src={cardMediaSrc}
+                      title={cardMediaTitle || `${commodityName} media`}
+                      loading="lazy"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                    />
+                  ) : (
+                    <img
+                      className="prodhero__card-image"
+                      src={cardMediaSrc}
+                      alt={cardMediaAlt || `Tokenized ${commodityName.toLowerCase()} and secure reserves`}
+                      width={800}
+                      height={800}
+                    />
+                  )}
                 </div>
               </div>
 

@@ -14,6 +14,11 @@ export default function TokenizedDiamondAssetsPage() {
       slugPrefix="tokenized-diamond"
       categoryPath="diamonds"
       heroContent={{
+        heroBgColor: "#EEF7FF",
+        cardMediaType: "video",
+        cardMediaSrc:
+          "https://res.cloudinary.com/dusinlidl/video/upload/q_auto,f_auto/Diamonds_vwvuaz.mp4",
+        cardMediaTitle: "Diamonds video player",
         heroTitle: "Largest Tokenized Diamonds Marketplace",
         heroSubtext:
           "Everything about diamonds, from A to Z. This handbook is your complete guide, from beginner basics to expert investment insights. Read More",
@@ -28,6 +33,8 @@ export default function TokenizedDiamondAssetsPage() {
         statement:
           "Choose Diamonds: Shine Brighter, Ethically Sourced. Every Toto Finance diamond is conflict free, sustainably mined, GIA certified, and fully traceable from earth to blockchain.",
         statsRowLabel: "RARE AND CERTIFIED",
+        imageSrc:
+          "https://res.cloudinary.com/dusinlidl/image/upload/v1778070490/diamond_final_page_oscli2.png",
         counters: [
           { value: "100%", suffix: "", label: "GIA Certified" },
           { value: "24/7", suffix: "", label: "Market Accessible" },
@@ -85,6 +92,8 @@ export default function TokenizedDiamondAssetsPage() {
         subBlockSubtext:
           "Toto Finance brings the rarity of certified diamonds and the freedom of blockchain together, giving you ownership that is transparent, global, and effortlessly managed.",
         ctaLabel: "Explore Diamonds",
+        featureImageSrc:
+          "https://res.cloudinary.com/dusinlidl/image/upload/v1778070819/diamonds_finael_isxpsv.webp",
       }}
     />
   );

@@ -14,9 +14,13 @@ export default function TokenizedSilverAssetsPage() {
       slugPrefix="tokenized-silver"
       categoryPath="silver"
       heroContent={{
-        heroBgImage:
-          "https://res.cloudinary.com/dusinlidl/image/upload/v1777995606/silver_2_final_bg_dj5p1j.webp",
-        heroBgFlip: true,
+        heroBgColor: "#E9EEF2",
+        cardMediaType: "tradingview-mini-chart",
+        tradingViewSymbol: "TVC:SILVER",
+        tradingViewLineChartType: "Line",
+        tradingViewShowTimeRange: true,
+        tradingViewTimeFrame: "60M",
+        tradingViewShowTimeScale: true,
         heroTitle: "Silver: Smart, Accessible, Secure",
         heroSubtext:
           "A proven asset for industry and investors, now digitized. Your complete guide to investing in silver, covering everything from fundamentals to tokenized ownership. Read More",
@@ -29,6 +33,9 @@ export default function TokenizedSilverAssetsPage() {
         statement:
           "Silver bridges the worlds of investment and industry, offering both store of value strength and rising demand from technology, energy, and innovation.",
         statsRowLabel: "PROVEN ASSET CLASS",
+        imageSrc:
+          "https://res.cloudinary.com/dusinlidl/image/upload/v1778068870/finl_ioc481.png",
+        imageAlt: "Silver trophy on a minimal backdrop",
         counters: [
           { value: "$1.3T", suffix: "+", label: "Global Silver Market Size" },
           { value: "1:1", suffix: "", label: "Physical Silver Backing" },
@@ -86,6 +93,9 @@ export default function TokenizedSilverAssetsPage() {
         subBlockSubtext:
           "Toto Finance combines the everyday accessibility of silver with the freedom of blockchain, giving you ownership that is transparent, global, and easy to manage.",
         ctaLabel: "Explore Silver",
+        featureImageSrc:
+          "https://res.cloudinary.com/dusinlidl/image/upload/v1778069036/silver_footer_rmqcv3.webp",
+        featureImageAlt: "Modern urban skyline with architectural bridge",
       }}
     />
   );

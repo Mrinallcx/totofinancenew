@@ -14,6 +14,10 @@ export default function TokenizedTinAssetsPage() {
       slugPrefix="tokenized-tin"
       categoryPath="tin"
       heroContent={{
+        heroBgColor: "#DCE3E8",
+        cardMediaSrc:
+          "https://res.cloudinary.com/dusinlidl/image/upload/v1778065926/tin_final_png_hero_u6vfdm.webp",
+        cardMediaAlt: "Tokenized tin and secure reserves",
         heroTitle: "Every AI Server Depends on Tin. Everyone Deserves Access to It.",
         heroSubtext:
           "Every solder joint in every AI server depends on tin. The world's most essential electronics metal hit an all-time high of $56,800 per tonne as supply collapses in Myanmar and Indonesia. Toto Finance exists to change it, making tin ownership instant, borderless, and open to everyone.",

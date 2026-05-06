@@ -14,6 +14,11 @@ export default function TokenizedSapphireAssetsPage() {
       slugPrefix="tokenized-sapphire"
       categoryPath="sapphire"
       heroContent={{
+        heroBgColor: "#DCE8FF",
+        cardMediaType: "video",
+        cardMediaSrc:
+          "https://res.cloudinary.com/dusinlidl/video/upload/q_auto,f_auto/saphire_evfhyc.mp4",
+        cardMediaTitle: "Sapphire video player",
         heroTitle: "Sapphire: Rare and Captivating",
         heroSubtext:
           "Sapphire, a symbol of wisdom and prosperity, now within reach through tokenization. Your essential guide to sapphire from its rich history to modern investment insights. Read More",
@@ -28,6 +33,9 @@ export default function TokenizedSapphireAssetsPage() {
         statement:
           "In partnership with Berr and Partners, every Toto Finance sapphire is unheated, GRS and CGL certified, and fully traceable from Sri Lanka's finest mines.",
         statsRowLabel: "RARE AND CERTIFIED",
+        imageSrc:
+          "https://res.cloudinary.com/dusinlidl/image/upload/v1778071048/sapphore_hyduls.png",
+        imageAlt: "Raw sapphire gemstone close-up",
         counters: [
           { value: "<2%", suffix: "", label: "Unheated of Global Sapphire Supply" },
           { value: "100%", suffix: "", label: "GRS and CGL Certified" },
@@ -85,6 +93,9 @@ export default function TokenizedSapphireAssetsPage() {
         subBlockSubtext:
           "Toto Finance brings the rarity of unheated sapphires and the freedom of blockchain together, giving you ownership that is transparent, global, and effortlessly managed.",
         ctaLabel: "Explore Sapphire",
+        featureImageSrc:
+          "https://res.cloudinary.com/dusinlidl/image/upload/v1778071149/sapphire_paage_footer_final_ogvw1n.webp",
+        featureImageAlt: "Aerial city skyline at sunset",
       }}
     />
   );

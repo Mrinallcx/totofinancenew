@@ -14,6 +14,10 @@ export default function TokenizedIronAssetsPage() {
       slugPrefix="tokenized-iron"
       categoryPath="iron"
       heroContent={{
+        heroBgColor: "#D8DDE3",
+        cardMediaSrc:
+          "https://res.cloudinary.com/dusinlidl/image/upload/v1778066206/iron_final_hero_w0gagy.webp",
+        cardMediaAlt: "Tokenized iron and secure reserves",
         heroTitle: "Iron Ore, Tokenized for the World",
         heroSubtext:
           "The most consumed industrial metal on earth, now accessible through tokenization. 1:1 backed, instantly redeemable, and open to everyone.",

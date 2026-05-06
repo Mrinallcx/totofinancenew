@@ -14,6 +14,13 @@ export default function TokenizedPlatinumAssetsPage() {
       slugPrefix="tokenized-platinum"
       categoryPath="platinum"
       heroContent={{
+        heroBgColor: "#E5E4E2",
+        cardMediaType: "tradingview-mini-chart",
+        tradingViewSymbol: "TVC:PLATINUM",
+        tradingViewLineChartType: "Line",
+        tradingViewShowTimeRange: true,
+        tradingViewTimeFrame: "60M",
+        tradingViewShowTimeScale: true,
         heroTitle: "Platinum: Rare, Refined, Yours",
         heroSubtext:
           "Platinum combines rarity, durability, and industrial importance, now tokenized. Your guide to platinum, from fundamentals to expert investment insights. Read More",
@@ -25,6 +32,8 @@ export default function TokenizedPlatinumAssetsPage() {
       aboutStatsContent={{
         statement:
           "Platinum is one of the rarest and most strategically important metals on Earth, prized by institutions, industries, and investors for both its scarcity and its essential role in modern technology.",
+        imageSrc:
+          "https://res.cloudinary.com/dusinlidl/image/upload/v1778069758/platinum_m9l5w8.png",
         statsRowLabel: "PROVEN ASSET CLASS",
         counters: [
           { value: "$340B", suffix: "+", label: "Global Platinum Market Size" },
@@ -64,6 +73,8 @@ export default function TokenizedPlatinumAssetsPage() {
       howItWorksContent={{
         overline: "HOW IT WORKS",
         heading: "Owning platinum, made effortless",
+        featureImageSrc:
+          "https://res.cloudinary.com/dusinlidl/image/upload/v1778069990/platinum_footer_bevvli.webp",
         steps: [
           {
             title: "Sign Up and Verify",

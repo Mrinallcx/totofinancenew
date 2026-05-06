@@ -14,6 +14,13 @@ export default function TokenizedCopperAssetsPage() {
       slugPrefix="tokenized-copper"
       categoryPath="copper"
       heroContent={{
+        heroBgColor: "#F4D2C2",
+        cardMediaType: "tradingview-mini-chart",
+        tradingViewSymbol: "CAPITALCOM:COPPER",
+        tradingViewLineChartType: "Line",
+        tradingViewShowTimeRange: true,
+        tradingViewTimeFrame: "60M",
+        tradingViewShowTimeScale: true,
         heroTitle: "The World Needs Copper. Everyone Deserves Access to It.",
         heroSubtext:
           "The metal powering every AI chip, every electric vehicle, and every watt of clean energy is entering a generation long shortage. Toto Finance makes copper ownership instant, borderless, and open to everyone.",
@@ -27,6 +34,9 @@ export default function TokenizedCopperAssetsPage() {
       aboutStatsContent={{
         statement:
           "Copper is the new oil, and the world is running out. Every AI breakthrough, every electric vehicle, every watt of clean energy depends on a single irreplaceable metal entering structural decline just as demand is exploding.",
+        imageSrc:
+          "https://res.cloudinary.com/dusinlidl/image/upload/v1778071554/copper_chg31m.png",
+        imageAlt: "Copper element cube on a periodic table background",
         statsRowLabel: "THE DEFICIT IS HERE",
         counters: [
           { value: "304K", suffix: " tonnes", label: "Refined Copper Deficit in 2025" },
@@ -85,6 +95,9 @@ export default function TokenizedCopperAssetsPage() {
         subBlockSubtext:
           "The traditional commodity system was built for a world of paper contracts and correspondent banks. Toto Finance connects copper producers with buyers directly on chain, replacing seven intermediaries with one platform and T+0 settlement in stablecoins.",
         ctaLabel: "Explore Copper",
+        featureImageSrc:
+          "https://res.cloudinary.com/dusinlidl/image/upload/v1778069990/platinum_footer_bevvli.webp",
+        featureImageAlt: "Skyscrapers viewed from below against a bright sky",
       }}
     />
   );
