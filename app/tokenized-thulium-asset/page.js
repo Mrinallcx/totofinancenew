@@ -1,4 +1,4 @@
-import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import TokenizedThuliumAssetPageContent from "./TokenizedThuliumAssetPageContent";
 
 export const metadata = {
   title: "Tokenized Thulium Asset — Toto Finance",
@@ -8,11 +8,5 @@ export const metadata = {
 };
 
 export default function TokenizedThuliumAssetPage() {
-  return (
-    <TokenizedCommodityPageContent
-      commodityName="Thulium"
-      slugPrefix="tokenized-thulium-asset"
-      categoryPath="thulium"
-    />
-  );
+  return <TokenizedThuliumAssetPageContent />;
 }

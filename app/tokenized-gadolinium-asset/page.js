@@ -1,4 +1,4 @@
-import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import TokenizedGadoliniumAssetPageContent from "./TokenizedGadoliniumAssetPageContent";
 
 export const metadata = {
   title: "Tokenized Gadolinium Asset — Toto Finance",
@@ -8,11 +8,5 @@ export const metadata = {
 };
 
 export default function TokenizedGadoliniumAssetPage() {
-  return (
-    <TokenizedCommodityPageContent
-      commodityName="Gadolinium"
-      slugPrefix="tokenized-gadolinium-asset"
-      categoryPath="gadolinium"
-    />
-  );
+  return <TokenizedGadoliniumAssetPageContent />;
 }

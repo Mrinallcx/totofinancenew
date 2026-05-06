@@ -1,4 +1,4 @@
-import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import TokenizedTerbiumAssetPageContent from "./TokenizedTerbiumAssetPageContent";
 
 export const metadata = {
   title: "Tokenized Terbium Asset — Toto Finance",
@@ -8,11 +8,5 @@ export const metadata = {
 };
 
 export default function TokenizedTerbiumAssetPage() {
-  return (
-    <TokenizedCommodityPageContent
-      commodityName="Terbium"
-      slugPrefix="tokenized-terbium-asset"
-      categoryPath="terbium"
-    />
-  );
+  return <TokenizedTerbiumAssetPageContent />;
 }

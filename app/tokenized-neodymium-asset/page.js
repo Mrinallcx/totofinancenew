@@ -1,4 +1,4 @@
-import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import TokenizedNeodymiumAssetPageContent from "./TokenizedNeodymiumAssetPageContent";
 
 export const metadata = {
   title: "Tokenized Neodymium Asset — Toto Finance",
@@ -8,11 +8,5 @@ export const metadata = {
 };
 
 export default function TokenizedNeodymiumAssetPage() {
-  return (
-    <TokenizedCommodityPageContent
-      commodityName="Neodymium"
-      slugPrefix="tokenized-neodymium-asset"
-      categoryPath="neodymium"
-    />
-  );
+  return <TokenizedNeodymiumAssetPageContent />;
 }

@@ -1,4 +1,4 @@
-import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import TokenizedYtterbiumAssetPageContent from "./TokenizedYtterbiumAssetPageContent";
 
 export const metadata = {
   title: "Tokenized Ytterbium Asset — Toto Finance",
@@ -8,11 +8,5 @@ export const metadata = {
 };
 
 export default function TokenizedYtterbiumAssetPage() {
-  return (
-    <TokenizedCommodityPageContent
-      commodityName="Ytterbium"
-      slugPrefix="tokenized-ytterbium-asset"
-      categoryPath="ytterbium"
-    />
-  );
+  return <TokenizedYtterbiumAssetPageContent />;
 }

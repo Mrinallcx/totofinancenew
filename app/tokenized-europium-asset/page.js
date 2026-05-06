@@ -1,4 +1,4 @@
-import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import TokenizedEuropiumAssetPageContent from "./TokenizedEuropiumAssetPageContent";
 
 export const metadata = {
   title: "Tokenized Europium Asset — Toto Finance",
@@ -8,11 +8,5 @@ export const metadata = {
 };
 
 export default function TokenizedEuropiumAssetPage() {
-  return (
-    <TokenizedCommodityPageContent
-      commodityName="Europium"
-      slugPrefix="tokenized-europium-asset"
-      categoryPath="europium"
-    />
-  );
+  return <TokenizedEuropiumAssetPageContent />;
 }

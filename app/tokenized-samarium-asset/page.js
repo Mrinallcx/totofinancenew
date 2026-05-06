@@ -1,4 +1,4 @@
-import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import TokenizedSamariumAssetPageContent from "./TokenizedSamariumAssetPageContent";
 
 export const metadata = {
   title: "Tokenized Samarium Asset — Toto Finance",
@@ -8,11 +8,5 @@ export const metadata = {
 };
 
 export default function TokenizedSamariumAssetPage() {
-  return (
-    <TokenizedCommodityPageContent
-      commodityName="Samarium"
-      slugPrefix="tokenized-samarium-asset"
-      categoryPath="samarium"
-    />
-  );
+  return <TokenizedSamariumAssetPageContent />;
 }

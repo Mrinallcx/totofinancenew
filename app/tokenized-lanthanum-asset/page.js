@@ -1,4 +1,4 @@
-import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import TokenizedLanthanumAssetPageContent from "./TokenizedLanthanumAssetPageContent";
 
 export const metadata = {
   title: "Tokenized Lanthanum Asset — Toto Finance",
@@ -8,11 +8,5 @@ export const metadata = {
 };
 
 export default function TokenizedLanthanumAssetPage() {
-  return (
-    <TokenizedCommodityPageContent
-      commodityName="Lanthanum"
-      slugPrefix="tokenized-lanthanum-asset"
-      categoryPath="lanthanum"
-    />
-  );
+  return <TokenizedLanthanumAssetPageContent />;
 }

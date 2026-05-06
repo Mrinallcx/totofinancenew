@@ -30,8 +30,8 @@ export default function TokenizedGoldHowItWorks({
   subBlockHeading = "Find Clarity and Confidence in Every Decision",
   subBlockSubtext,
   ctaLabel,
-  featureImageSrc = "https://framerusercontent.com/images/t0Ze2dHrAtbW7dOFiDqa65YYes.png?width=1260&height=872",
-  featureImageAlt = "Property style showcase visual",
+  featureImageSrc = "https://res.cloudinary.com/dusinlidl/image/upload/v1778069036/silver_footer_rmqcv3.webp",
+  featureImageAlt = "Modern urban skyline with architectural bridge",
 }) {
   const sectionRef = useScrollReveal(0.12);
   const featureOverline = subBlockOverline ?? `Tokenized ${commodityName} Service Built Around People`;

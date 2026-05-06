@@ -1,4 +1,4 @@
-import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import TokenizedDysprosiumAssetPageContent from "./TokenizedDysprosiumAssetPageContent";
 
 export const metadata = {
   title: "Tokenized Dysprosium Asset — Toto Finance",
@@ -8,11 +8,5 @@ export const metadata = {
 };
 
 export default function TokenizedDysprosiumAssetPage() {
-  return (
-    <TokenizedCommodityPageContent
-      commodityName="Dysprosium"
-      slugPrefix="tokenized-dysprosium-asset"
-      categoryPath="dysprosium"
-    />
-  );
+  return <TokenizedDysprosiumAssetPageContent />;
 }

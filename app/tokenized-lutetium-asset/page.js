@@ -1,4 +1,4 @@
-import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import TokenizedLutetiumAssetPageContent from "./TokenizedLutetiumAssetPageContent";
 
 export const metadata = {
   title: "Tokenized Lutetium Asset — Toto Finance",
@@ -8,11 +8,5 @@ export const metadata = {
 };
 
 export default function TokenizedLutetiumAssetPage() {
-  return (
-    <TokenizedCommodityPageContent
-      commodityName="Lutetium"
-      slugPrefix="tokenized-lutetium-asset"
-      categoryPath="lutetium"
-    />
-  );
+  return <TokenizedLutetiumAssetPageContent />;
 }

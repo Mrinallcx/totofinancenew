@@ -1,4 +1,4 @@
-import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import TokenizedScandiumAssetPageContent from "./TokenizedScandiumAssetPageContent";
 
 export const metadata = {
   title: "Tokenized Scandium Asset — Toto Finance",
@@ -8,11 +8,5 @@ export const metadata = {
 };
 
 export default function TokenizedScandiumAssetPage() {
-  return (
-    <TokenizedCommodityPageContent
-      commodityName="Scandium"
-      slugPrefix="tokenized-scandium-asset"
-      categoryPath="scandium"
-    />
-  );
+  return <TokenizedScandiumAssetPageContent />;
 }

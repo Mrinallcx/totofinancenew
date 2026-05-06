@@ -1,4 +1,4 @@
-import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import TokenizedCeriumAssetPageContent from "./TokenizedCeriumAssetPageContent";
 
 export const metadata = {
   title: "Tokenized Cerium Asset — Toto Finance",
@@ -8,11 +8,5 @@ export const metadata = {
 };
 
 export default function TokenizedCeriumAssetPage() {
-  return (
-    <TokenizedCommodityPageContent
-      commodityName="Cerium"
-      slugPrefix="tokenized-cerium-asset"
-      categoryPath="cerium"
-    />
-  );
+  return <TokenizedCeriumAssetPageContent />;
 }
