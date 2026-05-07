@@ -13,7 +13,7 @@ export default function BlogPageHero() {
     <section className="bloghero" id="blog-hero">
       <div className="bloghero__wrapper">
         <h1 className="bloghero__title">
-          Stories, thoughts and reflection about design
+          Stories, thoughts and insights on tokenized commodities
         </h1>
 
         <div className="bloghero__input-block">

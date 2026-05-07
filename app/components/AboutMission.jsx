@@ -23,18 +23,24 @@ function MissionHeading() {
     if (part.icon) {
       wordIndex++;
       return (
-        <span key={pi} className="abtmission__inline-icon sr-word" style={{ animationDelay: `${0.1 + wordIndex * 0.05}s` }}>
-          <img src="/totofinance-dark.svg" alt="" width={48} height={48} />
+        <span key={pi}>
+          <span className="abtmission__inline-icon sr-word" style={{ animationDelay: `${0.1 + wordIndex * 0.05}s` }}>
+            <img src="/totofinance-dark.svg" alt="" width={48} height={48} />
+          </span>
+          {" "}
         </span>
       );
     }
     const words = part.text.split(" ").filter(Boolean);
-    return words.map((word) => {
+    return words.map((word, wi) => {
       const delay = 0.1 + wordIndex * 0.05;
       wordIndex++;
       return (
-        <span key={`${pi}-${wordIndex}`} className="sr-word" style={{ animationDelay: `${delay}s` }}>
-          {word}
+        <span key={`${pi}-${wi}`}>
+          <span className="sr-word" style={{ animationDelay: `${delay}s` }}>
+            {word}
+          </span>
+          {wi < words.length - 1 ? " " : ""}
         </span>
       );
     });

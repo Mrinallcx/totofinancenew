@@ -50,20 +50,32 @@ export default function HeroSection() {
           <div className="hero__text-wrap">
             <h1 className="hero__title">
               <span className="hero__title--green">
-                {"The Global Infrastructure for Tokenized Commodities".split(" ").map((word, i) => (
-                  <span key={i} className="hero__word" style={{ animationDelay: `${0.2 + i * 0.05}s` }}>
-                    {word}
-                  </span>
-                ))}
+                {(() => {
+                  const titleWords = "The Global Infrastructure for Tokenized Commodities".split(" ");
+                  return titleWords.map((word, i) => (
+                    <span key={i}>
+                      <span className="hero__word" style={{ animationDelay: `${0.2 + i * 0.05}s` }}>
+                        {word}
+                      </span>
+                      {i < titleWords.length - 1 ? " " : ""}
+                    </span>
+                  ));
+                })()}
               </span>
             </h1>
 
             <p className="hero__subtitle">
-              {"Asset-backed ownership, instant settlement, and compliant global trade for metals, energy, and real-world assets.".split(" ").map((word, i) => (
-                <span key={i} className="hero__char-word" style={{ animationDelay: `${0.7 + i * 0.015}s` }}>
-                  {word}
-                </span>
-              ))}
+              {(() => {
+                const subtitleWords = "Asset-backed ownership, instant settlement, and compliant global trade for metals, energy, and real-world assets.".split(" ");
+                return subtitleWords.map((word, i) => (
+                  <span key={i}>
+                    <span className="hero__char-word" style={{ animationDelay: `${0.7 + i * 0.015}s` }}>
+                      {word}
+                    </span>
+                    {i < subtitleWords.length - 1 ? " " : ""}
+                  </span>
+                ));
+              })()}
             </p>
           </div>
 

@@ -11,12 +11,15 @@ function SplitHeading({ parts, startDelay = 0.1, stagger = 0.05 }) {
   let wordIndex = 0;
   return parts.map((part, pi) => {
     const words = part.text.split(" ").filter(Boolean);
-    const spans = words.map((word) => {
+    const spans = words.map((word, wi) => {
       const delay = startDelay + wordIndex * stagger;
       wordIndex++;
       return (
-        <span key={`${pi}-${wordIndex}`} className="sr-word" style={{ animationDelay: `${delay}s` }}>
-          {word}
+        <span key={`${pi}-${wi}`}>
+          <span className="sr-word" style={{ animationDelay: `${delay}s` }}>
+            {word}
+          </span>
+          {wi < words.length - 1 ? " " : ""}
         </span>
       );
     });

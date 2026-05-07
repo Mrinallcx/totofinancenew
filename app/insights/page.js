@@ -4,7 +4,7 @@ import { fetchWordPressPosts } from "../../lib/wordpress";
 export const metadata = {
   title: "Insights — Toto Finance",
   description:
-    "Stories, thoughts, and insights on tokenized commodities, design, and building the open commodity economy.",
+    "Stories, thoughts, and insights on tokenized commodities and building the open commodity economy.",
   alternates: { canonical: "/insights" },
 };
 

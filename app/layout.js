@@ -61,6 +61,7 @@ export default function RootLayout({ children }) {
         />
         <meta name="apple-mobile-web-app-title" content={SITE_NAME} />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link
           rel="preload"
           as="video"
