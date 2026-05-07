@@ -1,5 +1,7 @@
 import { getSiteUrl } from "../lib/site-url";
 
+const MARKETPLACE_SITEMAP_URL = "https://app.totofinance.co/sitemap.xml";
+
 /** @type {import('next').MetadataRoute.Robots} */
 export default function robots() {
   const base = getSiteUrl();
@@ -8,6 +10,11 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: `${base}/sitemap.xml`,
+    sitemap: [
+      `${base}/sitemap.xml`,
+      `${base}/sitemap-main.xml`,
+      `${base}/sitemap-blog.xml`,
+      MARKETPLACE_SITEMAP_URL,
+    ],
   };
 }
