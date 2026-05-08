@@ -1,4 +1,5 @@
 import TokenizedCeriumAssetPageContent from "./TokenizedCeriumAssetPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Cerium Asset — Toto Finance",
@@ -8,5 +9,14 @@ export const metadata = {
 };
 
 export default function TokenizedCeriumAssetPage() {
-  return <TokenizedCeriumAssetPageContent />;
+  return (
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Cerium Asset"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedCeriumAssetPageContent />
+    </>
+  );
 }

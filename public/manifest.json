@@ -1,6 +1,9 @@
 {
   "name": "Toto Finance",
   "short_name": "Toto Finance",
+  "description": "The global infrastructure for tokenized commodities",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

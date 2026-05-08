@@ -1,4 +1,5 @@
 import TokenizedDysprosiumAssetPageContent from "./TokenizedDysprosiumAssetPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Dysprosium Asset — Toto Finance",
@@ -8,5 +9,14 @@ export const metadata = {
 };
 
 export default function TokenizedDysprosiumAssetPage() {
-  return <TokenizedDysprosiumAssetPageContent />;
+  return (
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Dysprosium Asset"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedDysprosiumAssetPageContent />
+    </>
+  );
 }

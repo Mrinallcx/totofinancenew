@@ -1,4 +1,5 @@
 import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Iron Assets — Toto Finance",
@@ -9,7 +10,13 @@ export const metadata = {
 
 export default function TokenizedIronAssetsPage() {
   return (
-    <TokenizedCommodityPageContent
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Iron Assets"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedCommodityPageContent
       commodityName="Iron"
       slugPrefix="tokenized-iron"
       categoryPath="iron"
@@ -90,6 +97,7 @@ export default function TokenizedIronAssetsPage() {
           "Toto Finance connects iron ore producers with buyers directly on chain, replacing seven intermediaries with T+0 settlement in stablecoins.",
         ctaLabel: "Explore Iron",
       }}
-    />
+      />
+    </>
   );
 }

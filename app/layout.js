@@ -12,6 +12,14 @@ const dmSans = DM_Sans({
 const SITE_NAME = "Toto Finance";
 const siteUrl = getSiteUrl();
 const siteUrlTrailing = `${siteUrl.replace(/\/$/, "")}/`;
+const organizationLogoUrl = `${siteUrl}/totofinance-white.svg`;
+const organizationContactUrl = `${siteUrl}/contact-us`;
+const organizationSameAs = [
+  "https://x.com/totofinance",
+  "https://www.linkedin.com/company/totofinance/",
+  "https://www.instagram.com/totofinance.co",
+  "https://www.youtube.com/@Toto-Finance",
+];
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
@@ -29,6 +37,16 @@ const websiteJsonLd = {
       "@id": `${siteUrlTrailing}#organization`,
       name: SITE_NAME,
       url: siteUrlTrailing,
+      logo: {
+        "@type": "ImageObject",
+        url: organizationLogoUrl,
+      },
+      sameAs: organizationSameAs,
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        url: organizationContactUrl,
+      },
     },
   ],
 };

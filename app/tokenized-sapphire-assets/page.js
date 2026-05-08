@@ -1,4 +1,5 @@
 import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Sapphire Assets — Toto Finance",
@@ -9,7 +10,13 @@ export const metadata = {
 
 export default function TokenizedSapphireAssetsPage() {
   return (
-    <TokenizedCommodityPageContent
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Sapphire Assets"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedCommodityPageContent
       commodityName="Sapphire"
       slugPrefix="tokenized-sapphire"
       categoryPath="sapphire"
@@ -97,6 +104,7 @@ export default function TokenizedSapphireAssetsPage() {
           "https://res.cloudinary.com/dusinlidl/image/upload/v1778071149/sapphire_paage_footer_final_ogvw1n.webp",
         featureImageAlt: "Aerial city skyline at sunset",
       }}
-    />
+      />
+    </>
   );
 }

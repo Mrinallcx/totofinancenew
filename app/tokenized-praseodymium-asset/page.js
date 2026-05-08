@@ -1,4 +1,5 @@
 import TokenizedPraseodymiumAssetPageContent from "./TokenizedPraseodymiumAssetPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Praseodymium Asset — Toto Finance",
@@ -8,5 +9,14 @@ export const metadata = {
 };
 
 export default function TokenizedPraseodymiumAssetPage() {
-  return <TokenizedPraseodymiumAssetPageContent />;
+  return (
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Praseodymium Asset"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedPraseodymiumAssetPageContent />
+    </>
+  );
 }

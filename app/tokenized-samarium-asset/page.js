@@ -1,4 +1,5 @@
 import TokenizedSamariumAssetPageContent from "./TokenizedSamariumAssetPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Samarium Asset — Toto Finance",
@@ -8,5 +9,14 @@ export const metadata = {
 };
 
 export default function TokenizedSamariumAssetPage() {
-  return <TokenizedSamariumAssetPageContent />;
+  return (
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Samarium Asset"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedSamariumAssetPageContent />
+    </>
+  );
 }

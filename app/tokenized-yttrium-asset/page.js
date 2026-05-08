@@ -1,4 +1,5 @@
 import TokenizedYttriumAssetPageContent from "./TokenizedYttriumAssetPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Yttrium Asset — Toto Finance",
@@ -8,5 +9,14 @@ export const metadata = {
 };
 
 export default function TokenizedYttriumAssetPage() {
-  return <TokenizedYttriumAssetPageContent />;
+  return (
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Yttrium Asset"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedYttriumAssetPageContent />
+    </>
+  );
 }

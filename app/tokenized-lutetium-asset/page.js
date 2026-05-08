@@ -1,4 +1,5 @@
 import TokenizedLutetiumAssetPageContent from "./TokenizedLutetiumAssetPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Lutetium Asset — Toto Finance",
@@ -8,5 +9,14 @@ export const metadata = {
 };
 
 export default function TokenizedLutetiumAssetPage() {
-  return <TokenizedLutetiumAssetPageContent />;
+  return (
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Lutetium Asset"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedLutetiumAssetPageContent />
+    </>
+  );
 }
