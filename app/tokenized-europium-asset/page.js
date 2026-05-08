@@ -1,4 +1,5 @@
 import TokenizedEuropiumAssetPageContent from "./TokenizedEuropiumAssetPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Europium Asset — Toto Finance",
@@ -8,5 +9,14 @@ export const metadata = {
 };
 
 export default function TokenizedEuropiumAssetPage() {
-  return <TokenizedEuropiumAssetPageContent />;
+  return (
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Europium Asset"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedEuropiumAssetPageContent />
+    </>
+  );
 }

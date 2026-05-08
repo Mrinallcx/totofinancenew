@@ -1,4 +1,5 @@
 import TokenizedErbiumAssetPageContent from "./TokenizedErbiumAssetPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Erbium Asset — Toto Finance",
@@ -8,5 +9,14 @@ export const metadata = {
 };
 
 export default function TokenizedErbiumAssetPage() {
-  return <TokenizedErbiumAssetPageContent />;
+  return (
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Erbium Asset"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedErbiumAssetPageContent />
+    </>
+  );
 }

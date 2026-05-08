@@ -1,4 +1,5 @@
 import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Tin Assets — Toto Finance",
@@ -9,7 +10,13 @@ export const metadata = {
 
 export default function TokenizedTinAssetsPage() {
   return (
-    <TokenizedCommodityPageContent
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Tin Assets"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedCommodityPageContent
       commodityName="Tin"
       slugPrefix="tokenized-tin"
       categoryPath="tin"
@@ -90,6 +97,7 @@ export default function TokenizedTinAssetsPage() {
           "The traditional commodity system was built for a world of paper contracts and correspondent banks. Toto Finance connects tin producers with buyers directly on chain, replacing seven intermediaries with one platform and T+0 settlement in stablecoins.",
         ctaLabel: "Explore Tin",
       }}
-    />
+      />
+    </>
   );
 }

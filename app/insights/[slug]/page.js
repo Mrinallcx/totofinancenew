@@ -7,7 +7,7 @@ import {
   fetchWordPressPosts,
   stripForMetaDescription,
 } from "../../../lib/wordpress";
-import { canonicalPath } from "../../../lib/site-url";
+import { canonicalPath, getSiteUrl } from "../../../lib/site-url";
 import "./BlogPostArticle.css";
 
 const INSIGHTS_LOCAL_LINKS = [
@@ -43,6 +43,7 @@ export async function generateMetadata({ params }) {
 
 export default async function InsightsPostPage({ params }) {
   const { slug } = await params;
+  const siteUrl = getSiteUrl();
 
   let post = null;
   try {
@@ -54,6 +55,10 @@ export default async function InsightsPostPage({ params }) {
   if (!post) {
     notFound();
   }
+
+  const description =
+    stripForMetaDescription(post.excerpt || post.contentHtml || "") ||
+    `Read "${post.title}" on the Toto Finance insights page.`;
 
   let suggestedPosts = [];
   try {
@@ -69,6 +74,58 @@ export default async function InsightsPostPage({ params }) {
     <main>
       <NavBar pageTitle="Insights" localLinks={INSIGHTS_LOCAL_LINKS} />
       <article className="blogpost">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              headline: post.title,
+              description: description,
+              image: post.image || null,
+              datePublished: post.date,
+              dateModified: post.modified || post.date,
+              author: { "@type": "Organization", name: "Toto Finance" },
+              publisher: {
+                "@type": "Organization",
+                name: "Toto Finance",
+                logo: {
+                  "@type": "ImageObject",
+                  url: `${siteUrl}/totofinance-white.svg`,
+                },
+              },
+              url: `${siteUrl}/insights/${slug}`,
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: siteUrl,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Insights",
+                  item: `${siteUrl}/insights`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: post.title,
+                },
+              ],
+            }),
+          }}
+        />
         <header className="blogpost__hero">
           <h1 className="blogpost__title">{post.title}</h1>
           {post.excerpt ? <p className="blogpost__lead">{post.excerpt}</p> : null}

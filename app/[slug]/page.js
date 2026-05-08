@@ -20,6 +20,17 @@ const SLUG_DESCRIPTIONS = {
     "Answers to common questions about Toto Finance — tokenized commodities, custody, compliance, settlement, and how to get started.",
 };
 
+function buildPlaceholderDescription(slug, title) {
+  const specificDescription = SLUG_DESCRIPTIONS[slug];
+  if (specificDescription) return specificDescription;
+
+  const readableSlug = slug
+    .split("-")
+    .filter(Boolean)
+    .join(" ");
+
+  return `Explore upcoming ${title} resources on Toto Finance, including practical guidance, platform updates, and details related to ${readableSlug}.`;
+}
 export async function generateStaticParams() {
   return getFooterPlaceholderSlugs().map((slug) => ({ slug }));
 }
@@ -30,11 +41,9 @@ export async function generateMetadata({ params }) {
     return {};
   }
   const title = getPlaceholderTitle(slug);
-  const description =
-    SLUG_DESCRIPTIONS[slug] ?? `${title} — Toto Finance.`;
   return {
     title: `${title} — Toto Finance`,
-    description,
+    description: buildPlaceholderDescription(slug, title),
     alternates: { canonical: `/${slug}` },
   };
 }

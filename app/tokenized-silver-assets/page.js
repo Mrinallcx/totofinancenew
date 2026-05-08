@@ -1,4 +1,5 @@
 import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Silver Assets — Toto Finance",
@@ -9,7 +10,13 @@ export const metadata = {
 
 export default function TokenizedSilverAssetsPage() {
   return (
-    <TokenizedCommodityPageContent
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Silver Assets"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedCommodityPageContent
       commodityName="Silver"
       slugPrefix="tokenized-silver"
       categoryPath="silver"
@@ -97,6 +104,7 @@ export default function TokenizedSilverAssetsPage() {
           "https://res.cloudinary.com/dusinlidl/image/upload/v1778069036/silver_footer_rmqcv3.webp",
         featureImageAlt: "Modern urban skyline with architectural bridge",
       }}
-    />
+      />
+    </>
   );
 }

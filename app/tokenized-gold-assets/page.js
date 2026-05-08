@@ -1,4 +1,5 @@
 import TokenizedGoldAssetsPageContent from "./TokenizedGoldAssetsPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Gold Assets — Toto Finance",
@@ -8,5 +9,14 @@ export const metadata = {
 };
 
 export default function TokenizedGoldAssetsPage() {
-  return <TokenizedGoldAssetsPageContent />;
+  return (
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Gold Assets"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedGoldAssetsPageContent />
+    </>
+  );
 }

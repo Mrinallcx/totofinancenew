@@ -1,4 +1,5 @@
 import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Platinum Assets — Toto Finance",
@@ -9,7 +10,13 @@ export const metadata = {
 
 export default function TokenizedPlatinumAssetsPage() {
   return (
-    <TokenizedCommodityPageContent
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Platinum Assets"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedCommodityPageContent
       commodityName="Platinum"
       slugPrefix="tokenized-platinum"
       categoryPath="platinum"
@@ -95,6 +102,7 @@ export default function TokenizedPlatinumAssetsPage() {
           "Toto Finance brings the rarity of platinum and the freedom of blockchain together, giving you ownership that is transparent, global, and effortlessly managed.",
         ctaLabel: "Explore Platinum",
       }}
-    />
+      />
+    </>
   );
 }

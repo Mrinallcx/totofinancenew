@@ -1,4 +1,5 @@
 import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Diamond Assets — Toto Finance",
@@ -9,7 +10,13 @@ export const metadata = {
 
 export default function TokenizedDiamondAssetsPage() {
   return (
-    <TokenizedCommodityPageContent
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Diamond Assets"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedCommodityPageContent
       commodityName="Diamond"
       slugPrefix="tokenized-diamond"
       categoryPath="diamonds"
@@ -95,6 +102,7 @@ export default function TokenizedDiamondAssetsPage() {
         featureImageSrc:
           "https://res.cloudinary.com/dusinlidl/image/upload/v1778070819/diamonds_finael_isxpsv.webp",
       }}
-    />
+      />
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import TokenizedHolmiumAssetPageContent from "./TokenizedHolmiumAssetPageContent";
+import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
 
 export const metadata = {
   title: "Tokenized Holmium Asset — Toto Finance",
@@ -8,5 +9,14 @@ export const metadata = {
 };
 
 export default function TokenizedHolmiumAssetPage() {
-  return <TokenizedHolmiumAssetPageContent />;
+  return (
+    <>
+      <FinancialProductJsonLd
+        name="Tokenized Holmium Asset"
+        description={metadata.description}
+        path={metadata.alternates.canonical}
+      />
+      <TokenizedHolmiumAssetPageContent />
+    </>
+  );
 }
