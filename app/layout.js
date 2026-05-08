@@ -12,6 +12,8 @@ const dmSans = DM_Sans({
 const SITE_NAME = "Toto Finance";
 const siteUrl = getSiteUrl();
 const siteUrlTrailing = `${siteUrl.replace(/\/$/, "")}/`;
+const OG_IMAGE_URL =
+  "https://res.cloudinary.com/dusinlidl/image/upload/v1778234309/OG_image_2_mcoaco.webp";
 const organizationLogoUrl = `${siteUrl}/totofinance-white.svg`;
 const organizationContactUrl = `${siteUrl}/contact-us`;
 const organizationSameAs = [
@@ -64,6 +66,14 @@ export const metadata = {
       "Enabling asset-backed ownership, instant settlement, and compliant global trade across metals, energy, and real-world assets.",
     type: "website",
     url: siteUrlTrailing,
+    images: [OG_IMAGE_URL],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Toto Finance — The Global Infrastructure for Tokenized Commodities",
+    description:
+      "Enabling asset-backed ownership, instant settlement, and compliant global trade across metals, energy, and real-world assets.",
+    images: [OG_IMAGE_URL],
   },
 };
 
