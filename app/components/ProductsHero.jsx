@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import useScrollReveal from "../hooks/useScrollReveal";
 import SplitWords from "../hooks/SplitWords";
 import "./ProductsHero.css";
@@ -32,9 +33,7 @@ export default function ProductsHero() {
         <div className="prodhero__content">
           <div className="prodhero__left">
             <div className="prodhero__text">
-              <h1 className="prodhero__title">
-                <SplitWords text="Tokenized Commodities, Built for Global Markets" startDelay={0.2} stagger={0.06} />
-              </h1>
+              <h1 className="prodhero__title">Tokenized Commodities, Built for Global Markets</h1>
               <p className="prodhero__body">
                 <SplitWords
                   text="Asset-backed tokenized commodities with compliant ownership, instant settlement, and global market access."
@@ -72,12 +71,13 @@ export default function ProductsHero() {
 
               <div className="prodhero__card-middle">
                 <div className="prodhero__card-image-wrap">
-                  <img
+                  <Image
                     className="prodhero__card-image"
                     src="https://res.cloudinary.com/dusinlidl/image/upload/v1777038609/toto_finance_corges.png"
                     alt="Tokenized commodities and secure value"
-                    width={800}
-                    height={800}
+                    fill
+                    sizes="(max-width: 479px) 90vw, (max-width: 991px) 360px, 400px"
+                    priority
                   />
                 </div>
               </div>

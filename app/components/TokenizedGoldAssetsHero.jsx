@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Script from "next/script";
 import useScrollReveal from "../hooks/useScrollReveal";
 import SplitWords from "../hooks/SplitWords";
@@ -67,9 +68,7 @@ export default function TokenizedGoldAssetsHero({
         <div className="prodhero__content">
           <div className="prodhero__left">
             <div className="prodhero__text">
-              <h1 className="prodhero__title">
-                <SplitWords text={titleText} startDelay={0.2} stagger={0.06} />
-              </h1>
+              <h1 className="prodhero__title">{titleText}</h1>
               <p className="prodhero__body">
                 <SplitWords
                   text={subtext}
@@ -148,12 +147,13 @@ export default function TokenizedGoldAssetsHero({
                       referrerPolicy="strict-origin-when-cross-origin"
                     />
                   ) : (
-                    <img
+                    <Image
                       className="prodhero__card-image"
                       src={cardMediaSrc}
                       alt={cardMediaAlt || `Tokenized ${commodityName.toLowerCase()} and secure reserves`}
-                      width={800}
-                      height={800}
+                      fill
+                      sizes="(max-width: 479px) 90vw, (max-width: 991px) 360px, 400px"
+                      priority
                     />
                   )}
                 </div>

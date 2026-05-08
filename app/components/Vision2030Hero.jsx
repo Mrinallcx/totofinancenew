@@ -41,11 +41,7 @@ export default function Vision2030Hero() {
       <div className="visionhero__inner">
         <div className="visionhero__headline">
           <h1 id="visionhero-heading" className="visionhero__title">
-            {"Vision 2030: Infrastructure for the World's Commodities".split(" ").map((word, i) => (
-              <span key={i} className="visionhero__title-word" style={{ animationDelay: `${0.2 + i * 0.06}s` }}>
-                {word}
-              </span>
-            ))}
+            Vision 2030: Infrastructure for the World's Commodities
           </h1>
         </div>
 
