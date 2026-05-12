@@ -1,5 +1,6 @@
 import { DM_Sans } from "next/font/google";
 import BharatXWidgetScripts from "./components/BharatXWidget";
+import GTM from "./components/GTM";
 import { DEFAULT_OG_IMAGE, SITE_NAME, getSiteUrl } from "../lib/site-url";
 import "./globals.css";
 
@@ -77,6 +78,9 @@ export const metadata = {
     card: "summary_large_image",
     images: [OG_IMAGE_URL],
   },
+  verification: {
+    google: "PU5ePrpoHebS2k5_nj7bPg6af_2QfIIB2kKdlkhoT_E",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -113,6 +117,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${dmSans.className} ${dmSans.variable}`}>
+        <GTM />
         {children}
         <BharatXWidgetScripts />
       </body>
