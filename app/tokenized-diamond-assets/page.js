@@ -1,12 +1,13 @@
 import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
 import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
+import { buildPageMetadata } from "../../lib/site-url";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
+  path: "/tokenized-diamond-assets",
   title: "Tokenized Diamond Assets — Toto Finance",
   description:
     "Diamond-backed tokenized assets with compliant ownership, instant settlement, and global market access.",
-  alternates: { canonical: "/tokenized-diamond-assets" },
-};
+});
 
 export default function TokenizedDiamondAssetsPage() {
   return (

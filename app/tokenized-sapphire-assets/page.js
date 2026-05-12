@@ -1,12 +1,13 @@
 import TokenizedCommodityPageContent from "../components/TokenizedCommodityPageContent";
 import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
+import { buildPageMetadata } from "../../lib/site-url";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
+  path: "/tokenized-sapphire-assets",
   title: "Tokenized Sapphire Assets — Toto Finance",
   description:
     "Sapphire-backed tokenized assets with compliant ownership, instant settlement, and global market access.",
-  alternates: { canonical: "/tokenized-sapphire-assets" },
-};
+});
 
 export default function TokenizedSapphireAssetsPage() {
   return (

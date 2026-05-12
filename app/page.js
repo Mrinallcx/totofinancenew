@@ -10,29 +10,14 @@ import AskAI from "./components/AskAI";
 import CtaImage from "./components/CtaImage";
 import Footer from "./components/Footer";
 import { fetchWordPressPosts } from "../lib/wordpress";
+import { buildPageMetadata } from "../lib/site-url";
 
-const HOME_OG_IMAGE_URL =
-  "https://res.cloudinary.com/dusinlidl/image/upload/v1778234309/OG_image_2_mcoaco.webp";
-
-export const metadata = {
+export const metadata = buildPageMetadata({
+  path: "/",
   title: "Toto Finance — The Global Infrastructure for Tokenized Commodities",
   description:
     "Build asset-backed ownership with compliant tokenization, instant settlement, and transparent access to metals, gems, and rare-earth commodities.",
-  alternates: { canonical: "/" },
-  openGraph: {
-    title: "Toto Finance — The Global Infrastructure for Tokenized Commodities",
-    description:
-      "Build asset-backed ownership with compliant tokenization, instant settlement, and transparent access to metals, gems, and rare-earth commodities.",
-    images: [
-      {
-        url: HOME_OG_IMAGE_URL,
-        width: 1200,
-        height: 630,
-        alt: "Toto Finance",
-      },
-    ],
-  },
-};
+});
 
 export const revalidate = 120;
 

@@ -1,6 +1,6 @@
 import { DM_Sans } from "next/font/google";
 import BharatXWidgetScripts from "./components/BharatXWidget";
-import { getSiteUrl } from "../lib/site-url";
+import { DEFAULT_OG_IMAGE, SITE_NAME, getSiteUrl } from "../lib/site-url";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -9,11 +9,9 @@ const dmSans = DM_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const SITE_NAME = "Toto Finance";
 const siteUrl = getSiteUrl();
 const siteUrlTrailing = `${siteUrl.replace(/\/$/, "")}/`;
-const OG_IMAGE_URL =
-  "https://res.cloudinary.com/dusinlidl/image/upload/v1778234309/OG_image_2_mcoaco.webp";
+const OG_IMAGE_URL = DEFAULT_OG_IMAGE;
 const organizationLogoUrl = `${siteUrl}/totofinance-white.svg`;
 const organizationContactUrl = `${siteUrl}/contact-us`;
 const organizationSameAs = [
@@ -59,20 +57,24 @@ export const metadata = {
   title: "Toto Finance — The Global Infrastructure for Tokenized Commodities",
   description:
     "Toto Finance is building the digital infrastructure for tokenized commodities - enabling asset-backed ownership, instant settlement, and compliant global trade across metals, energy, and real-world assets.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     siteName: SITE_NAME,
-    title: "Toto Finance — The Global Infrastructure for Tokenized Commodities",
-    description:
-      "Enabling asset-backed ownership, instant settlement, and compliant global trade across metals, energy, and real-world assets.",
     type: "website",
-    url: siteUrlTrailing,
     images: [OG_IMAGE_URL],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Toto Finance — The Global Infrastructure for Tokenized Commodities",
-    description:
-      "Enabling asset-backed ownership, instant settlement, and compliant global trade across metals, energy, and real-world assets.",
     images: [OG_IMAGE_URL],
   },
 };

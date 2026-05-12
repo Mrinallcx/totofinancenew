@@ -4,10 +4,11 @@ import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import {
   fetchWordPressPostBySlug,
+  fetchWordPressPostUrlsForSitemap,
   fetchWordPressPosts,
   stripForMetaDescription,
 } from "../../../lib/wordpress";
-import { canonicalPath, getSiteUrl } from "../../../lib/site-url";
+import { buildPageMetadata, getSiteUrl } from "../../../lib/site-url";
 import "./BlogPostArticle.css";
 
 const INSIGHTS_LOCAL_LINKS = [
@@ -16,6 +17,16 @@ const INSIGHTS_LOCAL_LINKS = [
 ];
 
 export const revalidate = 120;
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  try {
+    const posts = await fetchWordPressPostUrlsForSitemap({ revalidate: 300 });
+    return posts.map((post) => ({ slug: post.slug }));
+  } catch {
+    return [];
+  }
+}
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -30,15 +41,17 @@ export async function generateMetadata({ params }) {
     return { title: "Article — Toto Finance" };
   }
 
-  const description = stripForMetaDescription(
-    post.excerpt || post.contentHtml || ""
-  );
+  const description =
+    stripForMetaDescription(post.excerpt || post.contentHtml || "") ||
+    `Read "${post.title}" on the Toto Finance insights page.`;
 
-  return {
+  return buildPageMetadata({
+    path: `/insights/${slug}`,
     title: `${post.title} — Toto Finance`,
-    description: description || `Read "${post.title}" on the Toto Finance insights page.`,
-    alternates: { canonical: canonicalPath(`/insights/${slug}`) },
-  };
+    description,
+    ogType: "article",
+    ogImage: post.image || undefined,
+  });
 }
 
 export default async function InsightsPostPage({ params }) {
