@@ -41,8 +41,12 @@ export async function generateMetadata({ params }) {
     return { title: "Article — Toto Finance" };
   }
 
+  // Prefer the full article body so the truncator can cut at a word
+  // boundary within the 160-char budget. The WP auto-excerpt is itself a
+  // mid-sentence pre-truncation (e.g. "By 2030, the") and would be passed
+  // through as-is because it's already under 160 chars.
   const description =
-    stripForMetaDescription(post.excerpt || post.contentHtml || "") ||
+    stripForMetaDescription(post.contentHtml || post.excerpt || "") ||
     `Read "${post.title}" on the Toto Finance insights page.`;
 
   return buildPageMetadata({
@@ -70,7 +74,7 @@ export default async function InsightsPostPage({ params }) {
   }
 
   const description =
-    stripForMetaDescription(post.excerpt || post.contentHtml || "") ||
+    stripForMetaDescription(post.contentHtml || post.excerpt || "") ||
     `Read "${post.title}" on the Toto Finance insights page.`;
 
   let suggestedPosts = [];
