@@ -36,8 +36,13 @@ export default function TokenizedCommodityPageContent({
         heroBgColor={heroContent.heroBgColor}
         heroTitle={heroContent.heroTitle}
         heroSubtext={heroContent.heroSubtext}
+        heroReadMoreHref={heroContent.heroReadMoreHref}
+        heroReadMoreLabel={heroContent.heroReadMoreLabel}
+        heroCtaHref={heroContent.heroCtaHref}
         ctaLabel={heroContent.ctaLabel}
         sideCardHeading={heroContent.sideCardHeading}
+        sideCardHref={heroContent.sideCardHref}
+        sideCardOpenInNewTab={heroContent.sideCardOpenInNewTab}
         cardMediaType={heroContent.cardMediaType}
         cardMediaSrc={heroContent.cardMediaSrc}
         cardMediaAlt={heroContent.cardMediaAlt}
@@ -78,6 +83,7 @@ export default function TokenizedCommodityPageContent({
         subBlockHeading={howItWorksContent.subBlockHeading}
         subBlockSubtext={howItWorksContent.subBlockSubtext}
         ctaLabel={howItWorksContent.ctaLabel}
+        ctaHref={howItWorksContent.ctaHref}
         featureImageSrc={howItWorksContent.featureImageSrc}
         featureImageAlt={howItWorksContent.featureImageAlt}
       />

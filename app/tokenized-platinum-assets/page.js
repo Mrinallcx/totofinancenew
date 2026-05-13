@@ -31,9 +31,13 @@ export default function TokenizedPlatinumAssetsPage() {
         tradingViewShowTimeScale: true,
         heroTitle: "Platinum: Rare, Refined, Yours",
         heroSubtext:
-          "Platinum combines rarity, durability, and industrial importance, now tokenized. Your guide to platinum, from fundamentals to expert investment insights. Read More",
+          "Platinum combines rarity, durability, and industrial importance, now tokenized. Your guide to platinum, from fundamentals to expert investment insights.",
+        heroReadMoreHref: "https://totofinance.co/insights/platinum-handbook",
         ctaLabel: "Explore Assets",
+        heroCtaHref: "https://app.totofinance.co/category/platinum",
         sideCardHeading: "Real Platinum, Tokenized for the Discerning Investor",
+        sideCardHref: "https://www.tradingview.com/symbols/TVC-PLATINUM/",
+        sideCardOpenInNewTab: true,
         unitsTokenizedValue: "$1M",
         marketAccessValue: "24/7",
       }}
@@ -54,27 +58,33 @@ export default function TokenizedPlatinumAssetsPage() {
         cards: [
           {
             title: "Borderless Portability",
-            body: "Move your tokenized platinum globally, securely, and instantly, just like any cryptocurrency asset.",
+            body: "Move your tokenized platinum globally, securely, and instantly, free from borders or geographical restrictions of any kind.",
+            href: null,
           },
           {
             title: "24/7 Global Trading",
-            body: "Access platinum markets anytime, anywhere, free from market hours, intermediaries, or geographical restrictions.",
+            body: "Access platinum markets anytime, anywhere, free from market hours, intermediaries, or geographical restrictions worldwide.",
+            href: null,
           },
           {
             title: "Easy Redeemability",
-            body: "Redeem your tokens for real platinum and have it delivered directly to you, insured and securely.",
+            body: "Redeem your tokens for real platinum anytime on demand. Delivery is insured, direct, and fully secure.",
+            href: null,
           },
           {
             title: "No Storage Worries",
-            body: "Your platinum is stored in insured vaults, tracked on chain, and free from the limitations of traditional storage.",
+            body: "Your platinum is stored in insured vaults, tracked on-chain, and free from the costs of traditional storage.",
+            href: null,
           },
           {
             title: "On Chain Transparency",
-            body: "Real time tracking and verification of your holdings via blockchain, fully audited and always verifiable.",
+            body: "Real time tracking and verification of your holdings via blockchain, fully audited and always verifiable on-chain.",
+            href: null,
           },
           {
             title: "Regulated Compliance",
-            body: "KYC and AML checks combined with asset validation by LCX, ensuring every platinum unit is verified, certified, and compliant.",
+            body: "KYC and AML checks combined with LCX asset validation ensure every platinum unit is verified, certified, and compliant.",
+            href: null,
           },
         ],
       }}

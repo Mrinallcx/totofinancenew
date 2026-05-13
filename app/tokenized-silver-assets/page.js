@@ -31,9 +31,13 @@ export default function TokenizedSilverAssetsPage() {
         tradingViewShowTimeScale: true,
         heroTitle: "Silver: Smart, Accessible, Secure",
         heroSubtext:
-          "A proven asset for industry and investors, now digitized. Your complete guide to investing in silver, covering everything from fundamentals to tokenized ownership. Read More",
+          "A proven asset for industry and investors, now digitized. Your complete guide to investing in silver, covering everything from fundamentals to tokenized ownership.",
+        heroReadMoreHref: "https://totofinance.co/insights/silver-handbook",
         ctaLabel: "Explore Assets",
+        heroCtaHref: "https://app.totofinance.co/category/silver",
         sideCardHeading: "Real Silver, Tokenized for the Modern Investor",
+        sideCardHref: "https://www.tradingview.com/symbols/TVC-SILVER/",
+        sideCardOpenInNewTab: true,
         unitsTokenizedValue: "$20K",
         marketAccessValue: "24/7",
       }}
@@ -55,27 +59,33 @@ export default function TokenizedSilverAssetsPage() {
         cards: [
           {
             title: "True Ownership",
-            body: "Each token is 1:1 backed by physical silver, legally enforceable, with verifiable ownership rights.",
+            body: "Every token is 1:1 backed by physical silver, legally enforceable, with fully verifiable on-chain ownership rights.",
+            href: null,
           },
           {
             title: "Full Transparency",
-            body: "On chain verification of origin, purity, and custody, with every detail recorded immutably on the blockchain.",
+            body: "On-chain verification of origin, purity, and custody, with every detail recorded immutably on the blockchain.",
+            href: null,
           },
           {
             title: "Global Access",
-            body: "Invest from anywhere in the world, with no banking barriers, geographical restrictions, or import limits.",
+            body: "Invest from anywhere in the world with no banking barriers, geographical restrictions, or import limits whatsoever.",
+            href: null,
           },
           {
             title: "Instant Transferability",
-            body: "Trade peer to peer or via the Toto Finance marketplace 24/7, free from time zones or traditional market hours.",
+            body: "Trade peer to peer or via the Toto Finance marketplace 24/7, free from time zones or market hour restrictions.",
+            href: null,
           },
           {
             title: "No Storage Worries",
-            body: "Fully insured third party vault custody, eliminating the risks and costs of storing physical silver yourself.",
+            body: "Fully insured third-party vault custody eliminates the risks and costs of storing physical silver yourself entirely.",
+            href: null,
           },
           {
             title: "Regulated Compliance",
-            body: "KYC and AML checks combined with asset validation by LCX, ensuring every silver unit is verified, certified, and compliant.",
+            body: "KYC and AML checks combined with LCX asset validation ensure every silver unit is verified, certified, and compliant.",
+            href: null,
           },
         ],
       }}

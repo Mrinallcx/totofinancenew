@@ -25,8 +25,13 @@ export default function TokenizedGoldAssetsHero({
   heroBgColor,
   heroTitle,
   heroSubtext,
+  heroReadMoreHref,
+  heroReadMoreLabel = "Read More",
+  heroCtaHref = "https://app.totofinance.co/",
   ctaLabel = "Explore Marketplace",
   sideCardHeading,
+  sideCardHref,
+  sideCardOpenInNewTab = false,
   cardMediaType = "image",
   cardMediaSrc = "https://res.cloudinary.com/dusinlidl/image/upload/v1777038609/toto_finance_corges.png",
   cardMediaAlt,
@@ -50,6 +55,18 @@ export default function TokenizedGoldAssetsHero({
   const cardHeading =
     sideCardHeading ?? `Physical ${commodityName}, Fractionalized for the Digital Economy`;
   const isFlatHero = Boolean(heroBgColor);
+  const resolvedSideCardHref =
+    sideCardHref === undefined
+      ? `https://app.totofinance.co/category/${categoryPath}`
+      : sideCardHref;
+  const SideCardTag = resolvedSideCardHref ? "a" : "div";
+  const sideCardProps = resolvedSideCardHref
+    ? {
+        href: resolvedSideCardHref,
+        target: sideCardOpenInNewTab ? "_blank" : undefined,
+        rel: sideCardOpenInNewTab ? "noopener noreferrer" : undefined,
+      }
+    : {};
 
   return (
     <section className={`prodhero${isFlatHero ? " prodhero--flat" : ""}`} id={sectionId} ref={sectionRef}>
@@ -77,10 +94,18 @@ export default function TokenizedGoldAssetsHero({
                   startDelay={0.7}
                   stagger={0.015}
                 />
+                {heroReadMoreHref ? (
+                  <>
+                    {" "}
+                    <a href={heroReadMoreHref} target="_blank" rel="noopener noreferrer">
+                      {heroReadMoreLabel}
+                    </a>
+                  </>
+                ) : null}
               </p>
             </div>
             <a
-              href="https://app.totofinance.co/"
+              href={heroCtaHref}
               target="_blank"
               rel="noopener noreferrer"
               className="prodhero__cta sr-item"
@@ -99,7 +124,7 @@ export default function TokenizedGoldAssetsHero({
           </div>
 
           <div className="prodhero__right">
-            <a href={`https://app.totofinance.co/category/${categoryPath}`} className="prodhero__card">
+            <SideCardTag className="prodhero__card" {...sideCardProps}>
               <div className="prodhero__card-top">
                 <p className="prodhero__card-title">
                   {cardHeading}
@@ -176,7 +201,7 @@ export default function TokenizedGoldAssetsHero({
                   <h2 className="prodhero__stat-value">{marketAccessValue}</h2>
                 </div>
               </div>
-            </a>
+            </SideCardTag>
             <div className="prodhero__shape prodhero__shape--1" aria-hidden="true">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <path d="M18 0C18 9.941 9.941 18 0 18H18V0Z" fill="white" />
