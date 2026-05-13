@@ -52,6 +52,10 @@ export default function TokenizedGoldAssetsHero({
   const subtext =
     heroSubtext ??
     `${commodityName}-backed digital assets with compliant ownership, transparent reserves, and instant access to global liquidity.`;
+  const splitStartDelay = 0.7;
+  const splitStagger = 0.015;
+  const readMoreDelay =
+    splitStartDelay + subtext.split(/\s+/).filter(Boolean).length * splitStagger;
   const cardHeading =
     sideCardHeading ?? `Physical ${commodityName}, Fractionalized for the Digital Economy`;
   const isFlatHero = Boolean(heroBgColor);
@@ -91,13 +95,19 @@ export default function TokenizedGoldAssetsHero({
               <p className="prodhero__body">
                 <SplitWords
                   text={subtext}
-                  startDelay={0.7}
-                  stagger={0.015}
+                  startDelay={splitStartDelay}
+                  stagger={splitStagger}
                 />
                 {heroReadMoreHref ? (
                   <>
                     {" "}
-                    <a href={heroReadMoreHref} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={heroReadMoreHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="prodhero__readmore sr-word"
+                      style={{ animationDelay: `${readMoreDelay}s` }}
+                    >
                       {heroReadMoreLabel}
                     </a>
                   </>
