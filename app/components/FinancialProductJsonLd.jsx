@@ -1,11 +1,33 @@
 import { getSiteUrl } from "../../lib/site-url";
+import { getAssetByPath, getBreadcrumbItems } from "../../lib/internal-linking";
 
 const siteUrl = getSiteUrl();
 
 export default function FinancialProductJsonLd({ name, description, path }) {
   const normalizedPath = path?.startsWith("/") ? path : `/${path || ""}`;
   const url = `${siteUrl}${normalizedPath}`;
-  const productListingUrl = `${siteUrl}/product`;
+  const asset = getAssetByPath(normalizedPath);
+  const breadcrumbItems = asset
+    ? getBreadcrumbItems(asset.commodityName)
+    : [
+        { label: "Home", href: "/" },
+        { label: "Products", href: "/product" },
+        { label: name, href: null },
+      ];
+
+  const itemListElement = breadcrumbItems.map((item, index) => {
+    const breadcrumb = {
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.label,
+    };
+
+    if (item.href) {
+      breadcrumb.item = `${siteUrl}${item.href}`;
+    }
+
+    return breadcrumb;
+  });
 
   return (
     <script
@@ -24,25 +46,7 @@ export default function FinancialProductJsonLd({ name, description, path }) {
             },
             {
               "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: siteUrl,
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Products",
-                  item: productListingUrl,
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name,
-                },
-              ],
+              itemListElement,
             },
           ],
         }),

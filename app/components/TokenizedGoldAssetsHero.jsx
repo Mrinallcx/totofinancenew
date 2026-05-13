@@ -4,6 +4,7 @@ import Image from "next/image";
 import Script from "next/script";
 import useScrollReveal from "../hooks/useScrollReveal";
 import SplitWords from "../hooks/SplitWords";
+import { AssetBreadcrumbs } from "./InternalLinkingBlocks";
 import "./ProductsHero.css";
 
 /** Shared hero background image for tokenized commodity pages. */
@@ -65,6 +66,7 @@ export default function TokenizedGoldAssetsHero({
       </div>
 
       <div className="prodhero__container">
+        <AssetBreadcrumbs commodityName={commodityName} />
         <div className="prodhero__content">
           <div className="prodhero__left">
             <div className="prodhero__text">
