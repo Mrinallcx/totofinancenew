@@ -31,6 +31,7 @@ export default function TokenizedGoldHowItWorks({
   subBlockHeading = "Find Clarity and Confidence in Every Decision",
   subBlockSubtext,
   ctaLabel,
+  ctaHref,
   featureImageSrc = "https://res.cloudinary.com/dusinlidl/image/upload/v1778069036/silver_footer_rmqcv3.webp",
   featureImageAlt = "Modern urban skyline with architectural bridge",
 }) {
@@ -40,6 +41,7 @@ export default function TokenizedGoldHowItWorks({
     subBlockSubtext ??
     "Toto Finance is built on a simple mission: make access to trusted gold ownership transparent, global, and easy to understand.";
   const buttonLabel = ctaLabel ?? `Explore ${commodityName}`;
+  const buttonHref = ctaHref ?? `https://app.totofinance.co/category/${categoryPath}`;
   const marqueeSequence = marqueeSteps ? [...steps, ...steps] : steps;
 
   return (
@@ -67,7 +69,21 @@ export default function TokenizedGoldHowItWorks({
                 >
                   <div className="tghiw__step-text">
                     <h3 className="tghiw__step-title">{step.title}</h3>
-                    <p className="tghiw__step-body">{step.body}</p>
+                    <p className="tghiw__step-body">
+                      {step.body}
+                      {step.readMoreHref ? (
+                        <>
+                          {" "}
+                          <a
+                            href={step.readMoreHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {step.readMoreLabel || "Read More"}
+                          </a>
+                        </>
+                      ) : null}
+                    </p>
                   </div>
                 </article>
               ))}
@@ -79,7 +95,21 @@ export default function TokenizedGoldHowItWorks({
               <article key={step.title} className="tghiw__step sr-item" style={{ animationDelay: `${0.12 + i * 0.08}s` }}>
                 <div className="tghiw__step-text">
                   <h3 className="tghiw__step-title">{step.title}</h3>
-                  <p className="tghiw__step-body">{step.body}</p>
+                  <p className="tghiw__step-body">
+                    {step.body}
+                    {step.readMoreHref ? (
+                      <>
+                        {" "}
+                        <a
+                          href={step.readMoreHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {step.readMoreLabel || "Read More"}
+                        </a>
+                      </>
+                    ) : null}
+                  </p>
                 </div>
               </article>
             ))}
@@ -100,7 +130,7 @@ export default function TokenizedGoldHowItWorks({
             <h3 className="tghiw__feature-title">{subBlockHeading}</h3>
             <p className="tghiw__feature-body">{featureSubtext}</p>
             <a
-              href={`https://app.totofinance.co/category/${categoryPath}`}
+              href={buttonHref}
               target="_blank"
               rel="noopener noreferrer"
               className="tghiw__cta"

@@ -30,7 +30,9 @@ export default function TokenizedIronAssetsPage() {
         heroSubtext:
           "The most consumed industrial metal on earth, now accessible through tokenization. 1:1 backed, instantly redeemable, and open to everyone.",
         ctaLabel: "Explore Our Products",
+        heroCtaHref: "https://totofinance.co/product",
         sideCardHeading: "Real Iron Ore, Tokenized for the World",
+        sideCardHref: null,
         unitsTokenizedLabel: "Global Market",
         unitsTokenizedValue: "$275B+",
         marketAccessLabel: "Market Access",
@@ -38,7 +40,7 @@ export default function TokenizedIronAssetsPage() {
       }}
       aboutStatsContent={{
         statement:
-          "Nothing gets built without iron. Steel made from iron ore accounts for over 95% of all metal used in the world by weight. Construction, defense, automotive, energy, every major industry depends on it.",
+          "Steel made from iron ore accounts for 95% of all metal used globally. Construction, defense, automotive, and energy all depend on it.",
         statsRowLabel: "THE IRON IMPERATIVE",
         counters: [
           { value: "$275B", suffix: "+", label: "Global Iron Ore Market" },
@@ -51,7 +53,7 @@ export default function TokenizedIronAssetsPage() {
         cards: [
           {
             title: "1:1 Iron Ore Backing",
-            body: "Every token is backed 1:1 by high grade iron ore pellets in insured, audited facilities. Real iron. No synthetic exposure.",
+            body: "Every token backed 1:1 by high-grade iron ore pellets in insured, audited facilities. Real iron. No synthetic exposure.",
           },
           {
             title: "Always Redeemable",
@@ -59,7 +61,7 @@ export default function TokenizedIronAssetsPage() {
           },
           {
             title: "Fractional Ownership",
-            body: "Own from $1, tradeable 24/7 with instant stablecoin settlement. No minimum tonnage. No warehouse logistics.",
+            body: "Own from $1, tradeable 24/7 with instant stablecoin settlement. No minimum tonnage. No warehouse logistics required.",
           },
           {
             title: "In Ground Iron",
@@ -71,7 +73,7 @@ export default function TokenizedIronAssetsPage() {
           },
           {
             title: "Direct from Source",
-            body: "Sourced directly from publicly listed mining companies in Australia, Brazil, Africa, and North America. No middlemen.",
+            body: "Sourced directly from listed mining companies in Australia, Brazil, Africa, and North America. No middlemen.",
           },
         ],
       }}
@@ -97,6 +99,7 @@ export default function TokenizedIronAssetsPage() {
         subBlockSubtext:
           "Toto Finance connects iron ore producers with buyers directly on chain, replacing seven intermediaries with T+0 settlement in stablecoins.",
         ctaLabel: "Explore Iron",
+        ctaHref: "https://totofinance.co/product",
       }}
       />
     </>

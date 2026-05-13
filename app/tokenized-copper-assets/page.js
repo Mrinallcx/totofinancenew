@@ -29,11 +29,14 @@ export default function TokenizedCopperAssetsPage() {
           tradingViewShowTimeRange: true,
           tradingViewTimeFrame: "60M",
           tradingViewShowTimeScale: true,
-          heroTitle: "The World Needs Copper. Everyone Deserves Access to It.",
+          heroTitle: "Tokenized Copper Assets, Built for Global Markets",
           heroSubtext:
-            "The metal powering every AI chip, every electric vehicle, and every watt of clean energy is entering a generation long shortage. Toto Finance makes copper ownership instant, borderless, and open to everyone.",
+            "Copper-backed digital assets with compliant ownership, transparent reserves, and instant access to global liquidity.",
           ctaLabel: "Explore Our Products",
+          heroCtaHref: "https://totofinance.co/product",
           sideCardHeading: "Real Copper, Tokenized for the AI Era",
+          sideCardHref: "https://www.tradingview.com/symbols/CAPITALCOM-COPPER/",
+          sideCardOpenInNewTab: true,
           unitsTokenizedLabel: "Global Market",
           unitsTokenizedValue: "$350B+",
           marketAccessLabel: "Market Access",
@@ -41,7 +44,7 @@ export default function TokenizedCopperAssetsPage() {
         }}
         aboutStatsContent={{
           statement:
-            "Copper is the new oil, and the world is running out. Every AI breakthrough, every electric vehicle, every watt of clean energy depends on a single irreplaceable metal entering structural decline just as demand is exploding.",
+            "Every AI chip, every EV, every watt of clean energy runs on copper. Supply is in structural decline just as demand explodes.",
           imageSrc:
             "https://res.cloudinary.com/dusinlidl/image/upload/v1778071554/copper_chg31m.png",
           imageAlt: "Copper element cube on a periodic table background",
@@ -57,27 +60,33 @@ export default function TokenizedCopperAssetsPage() {
           cards: [
             {
               title: "1:1 Cathode Backing",
-              body: "Every token is backed 1:1 by refined copper cathodes (Grade A, LME quality) stored in insured, independently audited vaults. No synthetic exposure. No paper promises. Real copper.",
+              body: "Every token backed 1:1 by refined copper cathodes (Grade A, LME quality) in insured, audited vaults. No paper promises.",
+              href: null,
             },
             {
               title: "Always Redeemable",
-              body: "Always redeemable for physical copper delivery on demand. Ready for industrial end use across data centers, energy, construction, and electronics.",
+              body: "Redeemable for physical copper on demand, ready for data centers, energy, construction, and electronics end use.",
+              href: null,
             },
             {
               title: "Fractional Ownership",
-              body: "Fractional ownership starting from $1, tradeable 24/7 with instant stablecoin settlement. No minimum tonnage. No warehouse logistics.",
+              body: "Own from $1, tradeable 24/7 with instant stablecoin settlement. No minimum tonnage. No warehouse logistics required.",
+              href: null,
             },
             {
               title: "In Ground Copper",
-              body: "Tokenized future delivery contracts backed by proven and probable reserves at certified mining operations. Pre production pricing with built in scarcity premium.",
+              body: "Future delivery contracts backed by proven reserves at certified mining operations, with pre-production pricing and scarcity premium.",
+              href: null,
             },
             {
               title: "On Chain Transparency",
-              body: "On chain proof of reserves with real time oracle feeds and third party audits. Every token is verifiable on the blockchain at any time.",
+              body: "Real time proof of reserves with oracle feeds and third party audits. Every token verifiable on the blockchain.",
+              href: null,
             },
             {
               title: "Direct from Source",
-              body: "Toto Finance works directly with publicly listed mining companies across Africa, MENA, North America, and Asia. No commodity brokers. No trading intermediaries.",
+              body: "Toto Finance works directly with listed mining companies across Africa, MENA, North America, and Asia. No brokers.",
+              href: null,
             },
           ],
         }}
@@ -87,22 +96,23 @@ export default function TokenizedCopperAssetsPage() {
           steps: [
             {
               title: "Sign Up and Verify",
-              body: "Create your account on totofinance.co and complete a quick verification to access regulated tokenized copper products.",
+              body: "Create your account on totofinance.co and complete a quick verification to access tokenized copper products.",
             },
             {
               title: "Choose Your Product",
-              body: "Select between the 1:1 Copper Cathode Token for refined, vaulted copper, or In Ground Copper future delivery contracts for pre production positions.",
+              body: "Select the 1:1 Copper Cathode Token for refined, vaulted copper, or In-Ground contracts for pre-production positions.",
             },
             {
               title: "Settle, Hold, or Redeem",
-              body: "Settle instantly in USDC, USDT, or USAT stablecoins. Hold long term, trade peer to peer, deploy in DeFi for yield and loans, or redeem for physical copper delivery.",
+              body: "Settle instantly in USDC, USDT, or USAT. Hold, trade peer to peer, earn yield, or redeem for physical delivery.",
             },
           ],
           subBlockOverline: "Built for the AI Era",
           subBlockHeading: "Instant Settlement, No Banks, No Brokers",
           subBlockSubtext:
-            "The traditional commodity system was built for a world of paper contracts and correspondent banks. Toto Finance connects copper producers with buyers directly on chain, replacing seven intermediaries with one platform and T+0 settlement in stablecoins.",
+            "Toto Finance connects copper producers with buyers directly on chain, replacing seven intermediaries with T+0 stablecoin settlement.",
           ctaLabel: "Explore Copper",
+          ctaHref: "https://totofinance.co/product",
           featureImageSrc:
             "https://res.cloudinary.com/dusinlidl/image/upload/v1778069990/platinum_footer_bevvli.webp",
           featureImageAlt: "Skyscrapers viewed from below against a bright sky",

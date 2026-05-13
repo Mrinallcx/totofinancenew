@@ -152,6 +152,17 @@
   max-width: 386px;
 }
 
+.tghiw__step-body a {
+  color: var(--color-primary);
+  font-weight: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.tghiw__step-body a:hover {
+  color: #d4a01e;
+}
+
 .tghiw__feature {
   margin-top: 56px;
   display: grid;

@@ -29,9 +29,13 @@ export default function TokenizedSapphireAssetsPage() {
         cardMediaTitle: "Sapphire video player",
         heroTitle: "Sapphire: Rare and Captivating",
         heroSubtext:
-          "Sapphire, a symbol of wisdom and prosperity, now within reach through tokenization. Your essential guide to sapphire from its rich history to modern investment insights. Read More",
+          "Sapphire, a symbol of wisdom and prosperity, now within reach through tokenization. Your essential guide to sapphire from its rich history to modern investment insights.",
+        heroReadMoreHref: "https://totofinance.co/insights/introducing-the-sapphires-handbook",
         ctaLabel: "Explore Assets",
+        heroCtaHref: "https://app.totofinance.co/category/sapphire",
         sideCardHeading: "Certified Sri Lankan Sapphires, Tokenized for the Modern Collector",
+        sideCardHref: "https://www.tradingview.com/symbols/TVC-SAPPHIRE/",
+        sideCardOpenInNewTab: true,
         unitsTokenizedLabel: "Sapphires Tokenized",
         unitsTokenizedValue: "$300K",
         marketAccessLabel: "Insurance",
@@ -55,27 +59,33 @@ export default function TokenizedSapphireAssetsPage() {
         cards: [
           {
             title: "Seamless Portability",
-            body: "Easily move your tokenized sapphire across borders. Your assets flow globally, seamlessly, and securely, just like any cryptocurrency asset.",
+            body: "Move your tokenized sapphire across borders instantly. Assets flow globally, seamlessly, and securely, like any digital asset.",
+            href: null,
           },
           {
             title: "24/7 Global Trading",
-            body: "Trade tokenized sapphire instantly, anytime and anywhere globally, free from limitations of time zones or traditional market hours.",
+            body: "Trade tokenized sapphire anytime, anywhere, free from time zone restrictions or traditional market hours. Always open.",
+            href: null,
           },
           {
             title: "Instant Redeemability",
-            body: "Easily redeem your sapphire anytime, and the physical sapphire will be delivered directly and safely to your doorstep.",
+            body: "Redeem your sapphire anytime on demand. The physical stone is delivered directly and safely to your doorstep.",
+            href: null,
           },
           {
             title: "Affordable Storage",
-            body: "Your sapphire is securely stored in a high security vault with no storage fees. We cover all custodial costs, giving you long term peace of mind at no extra charge.",
+            body: "Your sapphire is stored in a high-security vault at no cost. All custodial fees are covered by Toto Finance.",
+            href: null,
           },
           {
             title: "Fully Insured",
-            body: "Each sapphire is fully insured by Lloyd's of London, ensuring protection against loss or damage while in storage. Your investment is safeguarded from day one.",
+            body: "Every sapphire is fully insured by Lloyd's of London against loss or damage in storage, from day one.",
+            href: null,
           },
           {
             title: "Onchain Transparency",
-            body: "Easily track and verify your allocated sapphire anytime using real time blockchain technology and fully transparent auditing and reporting processes.",
+            body: "Track and verify your allocated sapphire in real time using blockchain technology and fully transparent auditing processes.",
+            href: null,
           },
         ],
       }}

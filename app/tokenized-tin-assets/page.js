@@ -26,11 +26,13 @@ export default function TokenizedTinAssetsPage() {
         cardMediaSrc:
           "https://res.cloudinary.com/dusinlidl/image/upload/v1778065926/tin_final_png_hero_u6vfdm.webp",
         cardMediaAlt: "Tokenized tin and secure reserves",
-        heroTitle: "Every AI Server Depends on Tin. Everyone Deserves Access to It.",
+        heroTitle: "Tokenized Tin Assets, Built for Global Markets",
         heroSubtext:
-          "Every solder joint in every AI server depends on tin. The world's most essential electronics metal hit an all-time high of $56,800 per tonne as supply collapses in Myanmar and Indonesia. Toto Finance exists to change it, making tin ownership instant, borderless, and open to everyone.",
+          "Tin-backed digital assets with compliant ownership, transparent reserves, and instant access to global liquidity.",
         ctaLabel: "Explore Our Products",
+        heroCtaHref: "https://totofinance.co/product",
         sideCardHeading: "Real Tin, Tokenized for the AI Era",
+        sideCardHref: null,
         unitsTokenizedLabel: "All Time High",
         unitsTokenizedValue: "$56,800/t",
         marketAccessLabel: "Market Access",
@@ -38,7 +40,7 @@ export default function TokenizedTinAssetsPage() {
       }}
       aboutStatsContent={{
         statement:
-          "Tin is the silent metal powering AI, and the world is running out. Every circuit board, every solder joint, every semiconductor package in every AI server depends on tin, while supply from Myanmar and Indonesia continues to collapse.",
+          "Every circuit board, every solder joint, every AI server depends on tin. Supply from Myanmar and Indonesia is collapsing.",
         statsRowLabel: "THE DEFICIT IS HERE",
         counters: [
           { value: "40K t/year", suffix: "", label: "Projected Annual Deficit by 2030" },
@@ -51,27 +53,33 @@ export default function TokenizedTinAssetsPage() {
         cards: [
           {
             title: "1:1 Tin Ingot Backing",
-            body: "Every token is backed 1:1 by refined tin ingots (Grade A, LME quality) stored in insured, independently audited vaults. No synthetic exposure. No paper promises. Real tin.",
+            body: "Every token backed 1:1 by refined tin ingots (Grade A, LME quality) in insured, audited vaults. No paper promises.",
+            href: null,
           },
           {
             title: "Always Redeemable",
-            body: "Always redeemable for physical tin delivery on demand. Ready for industrial end use across electronics, semiconductors, solar panels, EV batteries, and packaging.",
+            body: "Redeemable for physical tin on demand, ready for electronics, semiconductors, solar panels, EV batteries, and packaging end use.",
+            href: null,
           },
           {
             title: "Fractional Ownership",
-            body: "Fractional ownership from $1, tradeable 24/7 with instant stablecoin settlement in USDC, USDT, or USAT. No minimum tonnage. No warehouse logistics.",
+            body: "Own from $1, tradeable 24/7 with instant stablecoin settlement. No minimum tonnage. No warehouse logistics required.",
+            href: null,
           },
           {
             title: "In Ground Tin",
-            body: "Tokenized future delivery contracts backed by proven and probable cassiterite reserves at certified mining operations. Pre production pricing with built in scarcity premium. Short term (1 to 12 months) and long term (1 to 6 years) options.",
+            body: "Future delivery contracts backed by proven cassiterite reserves. Short term (1 to 12 months) or long term (1 to 6 years).",
+            href: null,
           },
           {
             title: "On Chain Transparency",
-            body: "On chain proof of reserves with real time oracle feeds and third party audits. Every token is verifiable on the blockchain at any time.",
+            body: "Real time proof of reserves with oracle feeds and third party audits. Every token verifiable on the blockchain.",
+            href: null,
           },
           {
             title: "Direct from Source",
-            body: "Toto Finance works directly with major tin mining and smelting companies in Southeast Asia, Africa, South America, and China. No commodity brokers. No trading intermediaries.",
+            body: "Toto Finance works directly with tin mining and smelting companies across Southeast Asia, Africa, South America, and China",
+            href: null,
           },
         ],
       }}
@@ -81,22 +89,23 @@ export default function TokenizedTinAssetsPage() {
         steps: [
           {
             title: "Sign Up and Verify",
-            body: "Create your account on totofinance.co and complete a quick verification to access regulated tokenized tin products.",
+            body: "Create your account on totofinance.co and complete a quick verification to access tokenized tin products.",
           },
           {
             title: "Choose Your Product",
-            body: "Select between the 1:1 Tin Ingot Token for refined, vaulted tin, or In Ground Tin future delivery contracts for pre production positions.",
+            body: "Select the 1:1 Tin Ingot Token for refined, vaulted tin, or In-Ground contracts for pre-production positions.",
           },
           {
             title: "Settle, Hold, or Redeem",
-            body: "Settle instantly in USDC, USDT, or USAT. Hold long term, trade on decentralized exchanges, deploy in DeFi for yield and collateral loans, or redeem for physical tin delivery.",
+            body: "Settle instantly in USDC, USDT, or USAT. Hold, trade on DeFi, earn yield, or redeem for physical delivery.",
           },
         ],
         subBlockOverline: "Built for the AI Era",
         subBlockHeading: "Instant Settlement, No Banks, No Brokers",
         subBlockSubtext:
-          "The traditional commodity system was built for a world of paper contracts and correspondent banks. Toto Finance connects tin producers with buyers directly on chain, replacing seven intermediaries with one platform and T+0 settlement in stablecoins.",
+          "Toto Finance connects tin producers with buyers directly on chain, replacing seven intermediaries with T+0 stablecoin settlement.",
         ctaLabel: "Explore Tin",
+        ctaHref: "https://totofinance.co/product",
       }}
       />
     </>
