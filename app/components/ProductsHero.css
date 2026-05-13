@@ -108,6 +108,16 @@
   color: rgba(16, 30, 33, 0.8);
 }
 
+.prodhero__readmore {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prodhero__readmore:hover {
+  color: #d4a01e;
+}
+
 /* ========== CTA BUTTON ========== */
 
 .prodhero__cta {
