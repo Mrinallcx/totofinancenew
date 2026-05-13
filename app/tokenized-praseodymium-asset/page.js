@@ -1,12 +1,13 @@
 import TokenizedPraseodymiumAssetPageContent from "./TokenizedPraseodymiumAssetPageContent";
 import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
+import { buildPageMetadata } from "../../lib/site-url";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
+  path: "/tokenized-praseodymium-asset",
   title: "Tokenized Praseodymium Asset — Toto Finance",
   description:
     "Praseodymium-backed tokenized asset with compliant ownership, instant settlement, and global market access.",
-  alternates: { canonical: "/tokenized-praseodymium-asset" },
-};
+});
 
 export default function TokenizedPraseodymiumAssetPage() {
   return (

@@ -1,12 +1,13 @@
 import TokenizedYtterbiumAssetPageContent from "./TokenizedYtterbiumAssetPageContent";
 import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
+import { buildPageMetadata } from "../../lib/site-url";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
+  path: "/tokenized-ytterbium-asset",
   title: "Tokenized Ytterbium Asset — Toto Finance",
   description:
     "Ytterbium-backed tokenized asset with compliant ownership, instant settlement, and global market access.",
-  alternates: { canonical: "/tokenized-ytterbium-asset" },
-};
+});
 
 export default function TokenizedYtterbiumAssetPage() {
   return (

@@ -1,6 +1,7 @@
 "use client";
 
 import useScrollReveal from "../hooks/useScrollReveal";
+import { BackToHubLink, RelatedTokenizedAssets } from "./InternalLinkingBlocks";
 import "./TokenizedGoldHowItWorks.css";
 
 const STEPS = [
@@ -117,6 +118,8 @@ export default function TokenizedGoldHowItWorks({
           </div>
         </div>
       </div>
+      <RelatedTokenizedAssets commodityName={commodityName} />
+      <BackToHubLink commodityName={commodityName} />
     </section>
   );
 }

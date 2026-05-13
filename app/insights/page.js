@@ -1,12 +1,13 @@
 import BlogPageContent from "./BlogPageContent";
 import { fetchWordPressPosts } from "../../lib/wordpress";
+import { buildPageMetadata } from "../../lib/site-url";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
+  path: "/insights",
   title: "Insights — Toto Finance",
   description:
     "Stories, thoughts, and insights on tokenized commodities and building the open commodity economy.",
-  alternates: { canonical: "/insights" },
-};
+});
 
 export const revalidate = 120;
 

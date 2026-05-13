@@ -5,6 +5,7 @@ import {
   getPlaceholderTitle,
   isFooterPlaceholderSlug,
 } from "../../lib/footer-nav";
+import { buildPageMetadata } from "../../lib/site-url";
 
 /** Only footer placeholder slugs are valid; other one-segment URLs stay 404. */
 export const dynamicParams = false;
@@ -41,11 +42,11 @@ export async function generateMetadata({ params }) {
     return {};
   }
   const title = getPlaceholderTitle(slug);
-  return {
+  return buildPageMetadata({
+    path: `/${slug}`,
     title: `${title} — Toto Finance`,
     description: buildPlaceholderDescription(slug, title),
-    alternates: { canonical: `/${slug}` },
-  };
+  });
 }
 
 export default async function FooterPlaceholderPage({ params }) {

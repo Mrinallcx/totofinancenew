@@ -1,0 +1,68 @@
+.assethub {
+  padding-top: 40px;
+}
+
+.assethub__groups {
+  margin-top: 34px;
+  display: grid;
+  gap: 40px;
+}
+
+.assethub__group {
+  display: grid;
+  gap: 18px;
+}
+
+.assethub__group-title {
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #101e21;
+  font-weight: 500;
+}
+
+.assethub__card-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.assethub__card {
+  min-height: 240px;
+  height: auto;
+  padding: 30px 24px;
+}
+
+@media (max-width: 991px) {
+  .assethub__card-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .assethub {
+    padding-top: 20px;
+  }
+
+  .assethub__groups {
+    margin-top: 24px;
+    gap: 28px;
+  }
+
+  .assethub__group {
+    gap: 14px;
+  }
+
+  .assethub__group-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 479px) {
+  .assethub__card-list {
+    grid-template-columns: 1fr;
+  }
+
+  .assethub__card {
+    min-height: 0;
+    padding: 24px 20px;
+  }
+}

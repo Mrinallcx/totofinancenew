@@ -1,11 +1,12 @@
 import ProductsPageContent from "./ProductsPageContent";
+import { buildPageMetadata } from "../../lib/site-url";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
+  path: "/product",
   title: "Product — Toto Finance",
   description:
     "Asset-backed tokenized commodities with compliant ownership, instant settlement, and global market access.",
-  alternates: { canonical: "/product" },
-};
+});
 
 export default function ProductsPage() {
   return <ProductsPageContent />;

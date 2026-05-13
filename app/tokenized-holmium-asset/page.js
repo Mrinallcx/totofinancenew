@@ -1,12 +1,13 @@
 import TokenizedHolmiumAssetPageContent from "./TokenizedHolmiumAssetPageContent";
 import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
+import { buildPageMetadata } from "../../lib/site-url";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
+  path: "/tokenized-holmium-asset",
   title: "Tokenized Holmium Asset — Toto Finance",
   description:
     "Holmium-backed tokenized asset with compliant ownership, instant settlement, and global market access.",
-  alternates: { canonical: "/tokenized-holmium-asset" },
-};
+});
 
 export default function TokenizedHolmiumAssetPage() {
   return (

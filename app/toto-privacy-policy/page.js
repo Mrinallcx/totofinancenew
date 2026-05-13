@@ -1,11 +1,12 @@
 import TotoPrivacyPolicyPageContent from "./TotoPrivacyPolicyPageContent";
+import { buildPageMetadata } from "../../lib/site-url";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
+  path: "/toto-privacy-policy",
   title: "Privacy Policy — Toto Finance",
   description:
     "Read Toto Finance privacy practices, including data collection, processing, retention, security, and user rights.",
-  alternates: { canonical: "/toto-privacy-policy" },
-};
+});
 
 export default function TotoPrivacyPolicyPage() {
   return <TotoPrivacyPolicyPageContent />;

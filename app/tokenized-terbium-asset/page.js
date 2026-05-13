@@ -1,12 +1,13 @@
 import TokenizedTerbiumAssetPageContent from "./TokenizedTerbiumAssetPageContent";
 import FinancialProductJsonLd from "../components/FinancialProductJsonLd";
+import { buildPageMetadata } from "../../lib/site-url";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
+  path: "/tokenized-terbium-asset",
   title: "Tokenized Terbium Asset — Toto Finance",
   description:
     "Terbium-backed tokenized asset with compliant ownership, instant settlement, and global market access.",
-  alternates: { canonical: "/tokenized-terbium-asset" },
-};
+});
 
 export default function TokenizedTerbiumAssetPage() {
   return (
