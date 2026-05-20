@@ -28,22 +28,24 @@ export default function TokenizedHolmiumAssetPageContent() {
         sectionId={`${SLUG_PREFIX}-overview`}
         categoryPath={CATEGORY_PATH}
         heroBgColor="#F2DDE3"
-        heroTitle="Every Surgical Laser That Saves Lives Depends on Holmium."
-        heroSubtext="18 tonnes produced per year. 85% goes directly into surgical lasers. No substitute exists. Now on-chain."
+        heroTitle="Tokenized Holmium Assets, Built for Global Markets"
+        heroSubtext="Holmium-backed digital assets powering surgical lasers, nuclear systems, and quantum magnets. 85% of processing in one country. Now on-chain."
         ctaLabel="Explore Our Products"
+        heroCtaHref="https://totofinance.co/product"
         sideCardHeading="Real Holmium, Fractionalized for the Digital Economy"
-        unitsTokenizedLabel="Global Market"
-        unitsTokenizedValue="$95M+"
+        sideCardHref={null}
+        unitsTokenizedLabel="Annual Production"
+        unitsTokenizedValue="~10-20t"
         marketAccessLabel="Market Access"
         marketAccessValue="24/7"
       />
       <TokenizedGoldAboutStats
         sectionId={`${SLUG_PREFIX}-highlights`}
-        statement="Surgeons worldwide depend on holmium lasers. The world produces 18 tonnes per year. Demand will reach 65 tonnes by 2030. No mine can fix this."
+        statement="Surgeons worldwide depend on holmium lasers. The world produces just 15-20 tonnes per year. Demand is growing. No mine can fix this."
         statsRowLabel="THE DEFICIT IS HERE"
         counters={[
-          { value: "8.5", suffix: " t", label: "Holmium Deficit in 2025" },
-          { value: "32", suffix: " t", label: "Supply Gap by 2030" },
+          { value: "15-20", suffix: "t", label: "Global Annual Production (USGS / Spherical Insights)" },
+          { value: "85", suffix: "%", label: "Processing Controlled by China" },
         ]}
       />
       <TokenizedGoldWhatWeDo
@@ -55,26 +57,32 @@ export default function TokenizedHolmiumAssetPageContent() {
           {
             title: "1:1 Holmium Oxide Backing",
             body: "Every token backed 1:1 by refined holmium oxide (99.9%+ Ho2O3) in insured, audited vaults. Always redeemable.",
+            href: null,
           },
           {
             title: "Always Redeemable",
             body: "Redeem for physical holmium on demand, ready for surgical laser crystals, nuclear control rods, or magnetic materials.",
+            href: null,
           },
           {
             title: "Fractional Ownership",
-            body: "Own from $1, tradeable 24/7 with instant stablecoin settlement. No specialist dealer access required.",
+            body: "Own from $1, tradeable 24/7 with instant stablecoin settlement in USDC, USDT, or USAT. No specialist dealer required.",
+            href: null,
           },
           {
             title: "In Ground Holmium",
             body: "Future delivery contracts backed by proven reserves. Short term (1 to 12 months) or long term (1 to 6 years).",
+            href: null,
           },
           {
             title: "On Chain Transparency",
             body: "Real time proof of reserves with oracle feeds and third party audits. Every token verifiable on chain.",
+            href: null,
           },
           {
             title: "Direct from Source",
             body: "Secured from heavy rare earth separation facilities in China, Australia, North America, and Southeast Asia. No middlemen.",
+            href: null,
           },
         ]}
       />
@@ -83,7 +91,7 @@ export default function TokenizedHolmiumAssetPageContent() {
         commodityName={COMMODITY_NAME}
         categoryPath={CATEGORY_PATH}
         overline="HOW IT WORKS"
-        heading="From heavy rare earth separation to wallet, instantly"
+        heading="From separation to wallet, instantly"
         steps={[
           {
             title: "Sign Up and Verify",
@@ -100,8 +108,9 @@ export default function TokenizedHolmiumAssetPageContent() {
         ]}
         subBlockOverline="Built for Surgical Supply Chains"
         subBlockHeading="Instant Settlement, No Specialist Dealers"
-        subBlockSubtext="Toto Finance connects holmium sources with buyers directly on chain, replacing eight intermediaries with T+0 stablecoin settlement."
+        subBlockSubtext="Toto Finance connects holmium sources with buyers directly on chain, replacing multiple intermediaries with T+0 stablecoin settlement."
         ctaLabel="Explore Holmium"
+        ctaHref="https://totofinance.co/product"
         featureImageSrc="https://framerusercontent.com/images/t0Ze2dHrAtbW7dOFiDqa65YYes.png?width=1260&height=872"
         featureImageAlt="Property style showcase visual"
       />

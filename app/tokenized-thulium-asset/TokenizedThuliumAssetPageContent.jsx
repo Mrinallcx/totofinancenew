@@ -28,10 +28,12 @@ export default function TokenizedThuliumAssetPageContent() {
         sectionId={`${SLUG_PREFIX}-overview`}
         categoryPath={CATEGORY_PATH}
         heroBgColor="#DDEAF5"
-        heroTitle="The Surgeon's Element. 4.2 Tonnes a Year. Now On-Chain."
-        heroSubtext="91% of global thulium comes from one country. The element behind surgical lasers and portable X-rays is now open to everyone."
+        heroTitle="Tokenized Thulium Assets, Built for Global Markets"
+        heroSubtext="Thulium-backed digital assets powering surgical lasers and portable X-rays. Scarce supply, concentrated in one country. Now on-chain."
         ctaLabel="Explore Our Products"
+        heroCtaHref="https://totofinance.co/product"
         sideCardHeading="Real Thulium, Fractionalized for the Digital Economy"
+        sideCardHref={null}
         unitsTokenizedLabel="Global Market"
         unitsTokenizedValue="$28M+"
         marketAccessLabel="Market Access"
@@ -39,11 +41,11 @@ export default function TokenizedThuliumAssetPageContent() {
       />
       <TokenizedGoldAboutStats
         sectionId={`${SLUG_PREFIX}-highlights`}
-        statement="Surgical suites are adopting thulium lasers at 32% annual growth. The world produces 4.2 tonnes of the element per year. The math does not work."
+        statement="Surgical suites worldwide are adopting thulium lasers at growing rates. Supply is scarce, concentrated in one country, and demand is outpacing what the market can deliver."
         statsRowLabel="THE DEFICIT IS HERE"
         counters={[
-          { value: "1.8", suffix: " t", label: "Thulium Deficit in 2025" },
-          { value: "8.5", suffix: " t", label: "Supply Gap by 2030" },
+          { value: "$28M", suffix: "+", label: "Global Thulium Market" },
+          { value: "6-8", suffix: "%", label: "Annual Demand Growth (Medical Lasers)" },
         ]}
       />
       <TokenizedGoldWhatWeDo
@@ -55,26 +57,32 @@ export default function TokenizedThuliumAssetPageContent() {
           {
             title: "1:1 Thulium Oxide Backing",
             body: "Every token backed 1:1 by refined thulium oxide (99.9%+ Tm2O3) in insured, audited vaults. Always redeemable.",
+            href: null,
           },
           {
             title: "Always Redeemable",
             body: "Redeem for physical thulium on demand, ready for surgical laser doping, Tm-170 X-ray sources, or superconductor synthesis.",
+            href: null,
           },
           {
             title: "Fractional Ownership",
             body: "Own from $1, tradeable 24/7 with instant stablecoin settlement. No minimum. No specialty dealer relationships required.",
+            href: null,
           },
           {
             title: "In Ground Thulium",
             body: "Tokenized future delivery contracts backed by proven reserves. Short term (1 to 12 months) or long term (1 to 6 years).",
+            href: null,
           },
           {
             title: "On Chain Transparency",
             body: "Real time proof of reserves with oracle feeds and third party audits. Every token verifiable on chain.",
+            href: null,
           },
           {
             title: "Direct from Source",
             body: "Secured directly from heavy rare earth separation facilities in China, North America, Australia, and Southeast Asia.",
+            href: null,
           },
         ]}
       />
@@ -83,7 +91,7 @@ export default function TokenizedThuliumAssetPageContent() {
         commodityName={COMMODITY_NAME}
         categoryPath={CATEGORY_PATH}
         overline="HOW IT WORKS"
-        heading="From rare earth fractionation to wallet, instantly"
+        heading="From fractionation to wallet, instantly"
         steps={[
           {
             title: "Sign Up and Verify",
@@ -100,8 +108,9 @@ export default function TokenizedThuliumAssetPageContent() {
         ]}
         subBlockOverline="Built for Medical Supply Chains"
         subBlockHeading="Instant Settlement, No Specialty Dealers"
-        subBlockSubtext="Toto Finance connects thulium sources with buyers directly on chain, replacing eight intermediaries with T+0 stablecoin settlement."
+        subBlockSubtext="Toto Finance connects thulium sources with buyers directly on chain, replacing multiple intermediaries with T+0 stablecoin settlement."
         ctaLabel="Explore Thulium"
+        ctaHref="https://totofinance.co/product"
         featureImageSrc="https://framerusercontent.com/images/t0Ze2dHrAtbW7dOFiDqa65YYes.png?width=1260&height=872"
         featureImageAlt="Property style showcase visual"
       />

@@ -28,10 +28,12 @@ export default function TokenizedSamariumAssetPageContent() {
         sectionId={`${SLUG_PREFIX}-overview`}
         categoryPath={CATEGORY_PATH}
         heroBgColor="#E7E2F0"
-        heroTitle="Where Neodymium Fails from Heat, Samarium Keeps Working."
-        heroSubtext="Every fighter jet, missile, and satellite depends on samarium. 85% comes from one country. Now anyone can own it."
+        heroTitle="Tokenized Samarium Assets, Built for Global Markets"
+        heroSubtext="Samarium-backed digital assets powering defense, aerospace, and satellites. 85% from one country. Now open to everyone."
         ctaLabel="Explore Our Products"
+        heroCtaHref="https://totofinance.co/product"
         sideCardHeading="Real Samarium, Fractionalized for the Digital Economy"
+        sideCardHref={null}
         unitsTokenizedLabel="Global Market"
         unitsTokenizedValue="$3.8B+"
         marketAccessLabel="Market Access"
@@ -55,26 +57,32 @@ export default function TokenizedSamariumAssetPageContent() {
           {
             title: "1:1 Samarium Metal Backing",
             body: "Every token backed 1:1 by refined samarium metal (99.9%+ Sm) in insured, audited vaults. Always redeemable.",
+            href: null,
           },
           {
             title: "Always Redeemable",
-            body: "Redeem for physical samarium on demand, ready for SmCo alloy sintering, nuclear control rods, or cancer therapy production.",
+            body: "Redeem for physical samarium on demand, ready for SmCo alloy sintering, nuclear control rods, or cancer therapy.",
+            href: null,
           },
           {
             title: "Fractional Ownership",
-            body: "Own from $1, tradeable 24/7 with instant stablecoin settlement. No minimum tonnage. No rare earth trader access required.",
+            body: "Own from $1, tradeable 24/7 with instant stablecoin settlement. No minimum tonnage. No rare earth trader required.",
+            href: null,
           },
           {
             title: "In Ground Samarium",
             body: "Future delivery contracts backed by proven reserves. Short term (1 to 12 months) or long term (1 to 6 years).",
+            href: null,
           },
           {
             title: "On Chain Transparency",
             body: "Real time proof of reserves with oracle feeds and third party audits. Every token verifiable on chain.",
+            href: null,
           },
           {
             title: "Direct from Source",
-            body: "Secured from rare earth separation facilities in North America, Australia, Greenland, Africa, and allied nations. No middlemen.",
+            body: "Secured from rare earth separation facilities in North America, Australia, Greenland, and Africa. No middlemen.",
+            href: null,
           },
         ]}
       />
@@ -83,7 +91,7 @@ export default function TokenizedSamariumAssetPageContent() {
         commodityName={COMMODITY_NAME}
         categoryPath={CATEGORY_PATH}
         overline="HOW IT WORKS"
-        heading="From rare earth separation to wallet, instantly"
+        heading="From separation to wallet, instantly"
         steps={[
           {
             title: "Sign Up and Verify",
@@ -102,6 +110,7 @@ export default function TokenizedSamariumAssetPageContent() {
         subBlockHeading="Instant Settlement, No Rare Earth Traders"
         subBlockSubtext="Toto Finance connects samarium sources with buyers directly on chain, replacing eight intermediaries with T+0 stablecoin settlement."
         ctaLabel="Explore Samarium"
+        ctaHref="https://totofinance.co/product"
         featureImageSrc="https://framerusercontent.com/images/t0Ze2dHrAtbW7dOFiDqa65YYes.png?width=1260&height=872"
         featureImageAlt="Property style showcase visual"
       />

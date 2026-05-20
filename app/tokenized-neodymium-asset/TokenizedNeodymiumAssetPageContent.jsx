@@ -28,22 +28,24 @@ export default function TokenizedNeodymiumAssetPageContent() {
         sectionId={`${SLUG_PREFIX}-overview`}
         categoryPath={CATEGORY_PATH}
         heroBgColor="#E5D9FF"
-        heroTitle="Every Electric Motor Depends on Neodymium. Own It."
-        heroSubtext="87% of neodymium processing is in one country. Demand grows 12% per year. A 45,000 tonne deficit is coming."
+        heroTitle="Tokenized Neodymium Assets, Built for Global Markets"
+        heroSubtext="90% of neodymium processing is in one country. Demand grows every year. A structural deficit is coming."
         ctaLabel="Explore Our Products"
+        heroCtaHref="https://totofinance.co/product"
         sideCardHeading="Real Neodymium, Fractionalized for the Digital Economy"
+        sideCardHref={null}
         unitsTokenizedLabel="NdFeB Magnet Market"
-        unitsTokenizedValue="$12B+"
+        unitsTokenizedValue="$16B+"
         marketAccessLabel="Market Access"
         marketAccessValue="24/7"
       />
       <TokenizedGoldAboutStats
         sectionId={`${SLUG_PREFIX}-highlights`}
-        statement="NdFeB magnets power every EV, every wind turbine, and every robot. There is no substitute. 87% of processing is in China. The deficit is structural."
+        statement="NdFeB magnets power every EV, every wind turbine, and every robot. There is no substitute. 90% of processing is in China. The deficit is structural."
         statsRowLabel="THE DEFICIT IS HERE"
         counters={[
-          { value: "18,000", suffix: " t", label: "Neodymium Deficit in 2025" },
-          { value: "45,000", suffix: " t", label: "Supply Gap by 2030" },
+          { value: "18,000", suffix: "t", label: "Neodymium Deficit in 2025" },
+          { value: "45,000", suffix: "t", label: "Supply Gap by 2030" },
         ]}
       />
       <TokenizedGoldWhatWeDo
@@ -53,28 +55,34 @@ export default function TokenizedNeodymiumAssetPageContent() {
         defaultCardHref={`https://app.totofinance.co/category/${CATEGORY_PATH}`}
         cards={[
           {
-            title: "1:1 Neodymium Oxide Backing",
-            body: "Every token backed 1:1 by refined neodymium oxide (99.9%+ Nd2O3) in insured, audited vaults. Always redeemable.",
+            title: "1:1 Oxide Backing",
+            body: "Every token backed 1:1 by refined neodymium oxide (99.9%+ Nd₂O₃) in insured, audited vaults. Always redeemable.",
+            href: null,
           },
           {
             title: "Always Redeemable",
             body: "Redeem for physical neodymium on demand, ready for NdFeB magnet alloy, EV motors, or wind turbine generators.",
+            href: null,
           },
           {
             title: "Fractional Ownership",
             body: "Own from $1, tradeable 24/7 with instant stablecoin settlement. No minimum tonnage. No Chinese supply chain dependency.",
+            href: null,
           },
           {
             title: "In Ground Neodymium",
             body: "Future delivery contracts backed by proven reserves. Short term (1 to 12 months) or long term (1 to 6 years).",
+            href: null,
           },
           {
             title: "On Chain Transparency",
-            body: "Real time proof of reserves with oracle feeds and third party audits. Every token verifiable on chain.",
+            body: "Real time proof of reserves with oracle feeds and third party audits. Every token verifiable on chain at any time.",
+            href: null,
           },
           {
             title: "Direct from Source",
             body: "Secured from processing facilities in North America, Australia, Southeast Asia, and allied nations. No middlemen.",
+            href: null,
           },
         ]}
       />
@@ -83,7 +91,7 @@ export default function TokenizedNeodymiumAssetPageContent() {
         commodityName={COMMODITY_NAME}
         categoryPath={CATEGORY_PATH}
         overline="HOW IT WORKS"
-        heading="From rare earth processing to wallet, instantly"
+        heading="From processing to wallet, instantly"
         steps={[
           {
             title: "Sign Up and Verify",
@@ -100,8 +108,9 @@ export default function TokenizedNeodymiumAssetPageContent() {
         ]}
         subBlockOverline="Built for the Electrification Supply Chain"
         subBlockHeading="Instant Settlement, No Rare Earth Traders"
-        subBlockSubtext="Toto Finance connects neodymium sources with buyers directly on chain, replacing eight intermediaries with T+0 stablecoin settlement."
+        subBlockSubtext="Toto Finance connects neodymium sources with buyers directly on chain, replacing multiple intermediaries with T+0 stablecoin settlement."
         ctaLabel="Explore Neodymium"
+        ctaHref="https://totofinance.co/product"
         featureImageSrc="https://framerusercontent.com/images/t0Ze2dHrAtbW7dOFiDqa65YYes.png?width=1260&height=872"
         featureImageAlt="Property style showcase visual"
       />
