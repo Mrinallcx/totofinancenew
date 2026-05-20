@@ -28,22 +28,24 @@ export default function TokenizedEuropiumAssetPageContent() {
         sectionId={`${SLUG_PREFIX}-overview`}
         categoryPath={CATEGORY_PATH}
         heroBgColor="#EFE3FF"
-        heroTitle="Every Color on Every Screen Begins with Europium."
-        heroSubtext="The rarest commercial rare earth. 0.05% of deposits. 95% goes into displays and lighting. A 650 tonne deficit is coming."
+        heroTitle="Tokenized Europium Assets, Built for Global Markets"
+        heroSubtext="Europium-backed digital assets powering displays, lighting, and security printing. 85% from one country. Now on-chain."
         ctaLabel="Explore Our Products"
+        heroCtaHref="https://totofinance.co/product"
         sideCardHeading="Real Europium, Fractionalized for the Digital Economy"
+        sideCardHref={null}
         unitsTokenizedLabel="Global Market"
-        unitsTokenizedValue="$1.2B+"
+        unitsTokenizedValue="$260M+"
         marketAccessLabel="Market Access"
         marketAccessValue="24/7"
       />
       <TokenizedGoldAboutStats
         sectionId={`${SLUG_PREFIX}-highlights`}
-        statement="No other element produces red and blue phosphor emissions with europium's purity. Every screen, every LED, every secure banknote depends on it. Supply cannot follow demand."
+        statement="Europium produces red and blue phosphors found in every screen, LED, and secure banknote. No substitute exists. Supply cannot follow demand."
         statsRowLabel="THE DEFICIT IS HERE"
         counters={[
-          { value: "180", suffix: " t", label: "Europium Deficit in 2025" },
-          { value: "650", suffix: " t", label: "Supply Gap by 2030" },
+          { value: "400-500", suffix: " t", label: "Global Annual Consumption" },
+          { value: "85", suffix: "%", label: "Processing Controlled by China" },
         ]}
       />
       <TokenizedGoldWhatWeDo
@@ -54,27 +56,33 @@ export default function TokenizedEuropiumAssetPageContent() {
         cards={[
           {
             title: "1:1 Europium Oxide Backing",
-            body: "Every token backed 1:1 by refined europium oxide (99.99%+ Eu2O3) in insured, audited vaults. Always redeemable.",
+            body: "Every token backed 1:1 by refined europium oxide (99.99%+ Eu₂O₃) in insured, audited vaults. Always redeemable.",
+            href: null,
           },
           {
             title: "Always Redeemable",
-            body: "Redeem for physical europium on demand, ready for OLED phosphors, LED lighting, security printing, or nuclear applications.",
+            body: "Redeem for physical europium on demand, ready for OLED phosphors, LED lighting, security printing, or nuclear use.",
+            href: null,
           },
           {
             title: "Fractional Ownership",
-            body: "Own from $1, tradeable 24/7 with instant stablecoin settlement. No minimum. No rare earth trader relationship required.",
+            body: "Own from $1, tradeable 24/7 with instant stablecoin settlement. No minimum. No rare earth trader required.",
+            href: null,
           },
           {
             title: "In Ground Europium",
             body: "Future delivery contracts backed by proven reserves. Short term (1 to 12 months) or long term (1 to 6 years).",
+            href: null,
           },
           {
             title: "On Chain Transparency",
             body: "Real time proof of reserves with oracle feeds and third party audits. Every token verifiable on chain.",
+            href: null,
           },
           {
             title: "Direct from Source",
             body: "Secured from separation facilities in China, North America, Australia, and Brazil. No trading intermediaries.",
+            href: null,
           },
         ]}
       />
@@ -83,7 +91,7 @@ export default function TokenizedEuropiumAssetPageContent() {
         commodityName={COMMODITY_NAME}
         categoryPath={CATEGORY_PATH}
         overline="HOW IT WORKS"
-        heading="From rare earth separation to wallet, instantly"
+        heading="From separation to wallet, instantly"
         steps={[
           {
             title: "Sign Up and Verify",
@@ -100,8 +108,9 @@ export default function TokenizedEuropiumAssetPageContent() {
         ]}
         subBlockOverline="Built for the Display Economy"
         subBlockHeading="Instant Settlement, No Rare Earth Traders"
-        subBlockSubtext="Toto Finance connects europium sources with buyers directly on chain, replacing eight intermediaries with T+0 stablecoin settlement."
+        subBlockSubtext="Toto Finance connects europium sources with buyers directly on chain, replacing multiple intermediaries with T+0 stablecoin settlement."
         ctaLabel="Explore Europium"
+        ctaHref="https://totofinance.co/product"
         featureImageSrc="https://framerusercontent.com/images/t0Ze2dHrAtbW7dOFiDqa65YYes.png?width=1260&height=872"
         featureImageAlt="Property style showcase visual"
       />
