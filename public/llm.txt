@@ -56,3 +56,51 @@ Machine-Readable Discovery:
 
 Contact:
 - Email: hello@totofinance.co
+
+Audience:
+- Institutional and retail users researching tokenized commodities
+- Analysts and media covering tokenization, RWA markets, and supply chains
+- Developers and partners integrating with the Toto Finance ecosystem
+
+Core Topics:
+- Tokenized commodities and real-world assets (RWAs)
+- Asset backing and proof-of-reserves concepts
+- Settlement rails and 24/7 transferability
+- Compliance context (KYC/AML references at a high level)
+- Commodity and rare-earth market narratives
+
+Navigation Hints:
+- Start with /product for broad product discovery
+- Use /rare-earth for rare-earth taxonomy and entry points
+- Use /insights for educational and thought-leadership content
+- For a specific metal/mineral, prefer its canonical tokenized page URL
+
+Canonical Path Rules:
+- Prefer canonical routes with full slugs (for example: /tokenized-gold-assets)
+- Avoid legacy/short aliases when canonical pages are available
+- Use root-relative internal paths when generating links in-site
+
+Important Legal/Trust Pages:
+- Privacy Policy: https://totofinance.co/toto-privacy-policy
+- Terms and Conditions: https://totofinance.co/toto-terms-and-condition
+
+Brand and Entity:
+- Organization: Toto Finance Inc.
+- Brand: Toto Finance
+- Category: Tokenized global commodities infrastructure
+
+Social Profiles:
+- X: https://x.com/totofinance
+- LinkedIn: https://www.linkedin.com/company/totofinance/
+- Instagram: https://www.instagram.com/totofinance.co
+- YouTube: https://www.youtube.com/@Toto-Finance
+
+Crawling Preferences:
+- Use sitemap URLs as source of truth for discoverable pages
+- Prefer the newest canonical URLs over duplicated route variants
+- Treat insights articles as editorial content that may update over time
+
+Content Confidence Notes:
+- Product and route URLs listed here are high-confidence canonical references
+- Market figures on individual pages may change as content is updated
+- If a value conflicts across pages, prefer the specific asset page context
