@@ -1,0 +1,106 @@
+Site: Toto Finance
+Canonical: https://totofinance.co
+Type: Marketing website for tokenized commodities and rare earth assets
+Last-Updated: 2026-05-22
+
+Summary:
+Toto Finance provides information about tokenized real-world commodities, including
+precious metals, industrial metals, gemstones, and rare earth elements. The site
+explains product concepts, ownership model, settlement, transparency, and compliance.
+
+Primary Pages:
+- Home: https://totofinance.co/
+- Products: https://totofinance.co/product
+- Rare Earth Hub: https://totofinance.co/rare-earth
+- Insights: https://totofinance.co/insights
+- About: https://totofinance.co/about-us
+- Contact: https://totofinance.co/contact-us
+- Docs: https://totofinance.co/docs
+- Ecosystem: https://totofinance.co/toto-ecosystem
+- Vision: https://totofinance.co/vision
+
+Tokenized Asset Pages (examples):
+- Gold: https://totofinance.co/tokenized-gold-assets
+- Silver: https://totofinance.co/tokenized-silver-assets
+- Platinum: https://totofinance.co/tokenized-platinum-assets
+- Diamond: https://totofinance.co/tokenized-diamond-assets
+- Sapphire: https://totofinance.co/tokenized-sapphire-assets
+- Copper: https://totofinance.co/tokenized-copper-assets
+- Tin: https://totofinance.co/tokenized-tin-assets
+- Iron: https://totofinance.co/tokenized-iron-assets
+
+Rare Earth Asset Pages:
+- Cerium: https://totofinance.co/tokenized-cerium-asset
+- Dysprosium: https://totofinance.co/tokenized-dysprosium-asset
+- Erbium: https://totofinance.co/tokenized-erbium-asset
+- Europium: https://totofinance.co/tokenized-europium-asset
+- Gadolinium: https://totofinance.co/tokenized-gadolinium-asset
+- Holmium: https://totofinance.co/tokenized-holmium-asset
+- Lanthanum: https://totofinance.co/tokenized-lanthanum-asset
+- Lutetium: https://totofinance.co/tokenized-lutetium-asset
+- Neodymium: https://totofinance.co/tokenized-neodymium-asset
+- Praseodymium: https://totofinance.co/tokenized-praseodymium-asset
+- Promethium: https://totofinance.co/tokenized-promethium-asset
+- Samarium: https://totofinance.co/tokenized-samarium-asset
+- Scandium: https://totofinance.co/tokenized-scandium-asset
+- Terbium: https://totofinance.co/tokenized-terbium-asset
+- Thulium: https://totofinance.co/tokenized-thulium-asset
+- Ytterbium: https://totofinance.co/tokenized-ytterbium-asset
+- Yttrium: https://totofinance.co/tokenized-yttrium-asset
+
+Machine-Readable Discovery:
+- Robots: https://totofinance.co/robots.txt
+- Sitemap Index: https://totofinance.co/sitemap.xml
+- Main Sitemap: https://totofinance.co/sitemap-main.xml
+- Blog Sitemap: https://totofinance.co/sitemap-blog.xml
+
+Contact:
+- Email: hello@totofinance.co
+
+Audience:
+- Institutional and retail users researching tokenized commodities
+- Analysts and media covering tokenization, RWA markets, and supply chains
+- Developers and partners integrating with the Toto Finance ecosystem
+
+Core Topics:
+- Tokenized commodities and real-world assets (RWAs)
+- Asset backing and proof-of-reserves concepts
+- Settlement rails and 24/7 transferability
+- Compliance context (KYC/AML references at a high level)
+- Commodity and rare-earth market narratives
+
+Navigation Hints:
+- Start with /product for broad product discovery
+- Use /rare-earth for rare-earth taxonomy and entry points
+- Use /insights for educational and thought-leadership content
+- For a specific metal/mineral, prefer its canonical tokenized page URL
+
+Canonical Path Rules:
+- Prefer canonical routes with full slugs (for example: /tokenized-gold-assets)
+- Avoid legacy/short aliases when canonical pages are available
+- Use root-relative internal paths when generating links in-site
+
+Important Legal/Trust Pages:
+- Privacy Policy: https://totofinance.co/toto-privacy-policy
+- Terms and Conditions: https://totofinance.co/toto-terms-and-condition
+
+Brand and Entity:
+- Organization: Toto Finance Inc.
+- Brand: Toto Finance
+- Category: Tokenized global commodities infrastructure
+
+Social Profiles:
+- X: https://x.com/totofinance
+- LinkedIn: https://www.linkedin.com/company/totofinance/
+- Instagram: https://www.instagram.com/totofinance.co
+- YouTube: https://www.youtube.com/@Toto-Finance
+
+Crawling Preferences:
+- Use sitemap URLs as source of truth for discoverable pages
+- Prefer the newest canonical URLs over duplicated route variants
+- Treat insights articles as editorial content that may update over time
+
+Content Confidence Notes:
+- Product and route URLs listed here are high-confidence canonical references
+- Market figures on individual pages may change as content is updated
+- If a value conflicts across pages, prefer the specific asset page context

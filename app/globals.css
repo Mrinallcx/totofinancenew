@@ -64,21 +64,80 @@ img, video {
   }
 }
 
+/* Visible by default for SSR, no-JS crawlers, and reduced motion */
 .sr-word {
   display: inline-block;
-  opacity: 0;
-  filter: blur(10px);
-  will-change: transform, opacity, filter;
+  opacity: 1;
+  filter: none;
+  transform: none;
   margin-right: 0.25em;
 }
 
 .sr-item {
-  opacity: 0;
-  filter: blur(10px);
-  will-change: transform, opacity, filter;
+  opacity: 1;
+  filter: none;
+  transform: none;
 }
 
-.sr-visible .sr-word,
-.sr-visible .sr-item {
-  animation: scrollWordReveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+@media (prefers-reduced-motion: no-preference) {
+  html.js .sr-word {
+    opacity: 0;
+    filter: blur(10px);
+    will-change: transform, opacity, filter;
+  }
+
+  html.js .sr-item {
+    opacity: 0;
+    filter: blur(10px);
+    will-change: transform, opacity, filter;
+  }
+
+  html.js .sr-visible .sr-word,
+  html.js .sr-visible .sr-item {
+    animation: scrollWordReveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+}
+
+/* ========================================
+   SSR / NO-JS: keep animated heroes readable
+   (component CSS loads later; these win via html:not(.js))
+   ======================================== */
+html:not(.js) .hero__word,
+html:not(.js) .hero__char-word,
+html:not(.js) .hero__btn,
+html:not(.js) .hero__scroll-indicator,
+html:not(.js) .remhero__title-word,
+html:not(.js) .remhero__desc-word,
+html:not(.js) .ecohero__title-word,
+html:not(.js) .ecohero__desc-word,
+html:not(.js) .ecohero__pill-stack,
+html:not(.js) .visionhero__title-word,
+html:not(.js) .visionhero__desc-word,
+html:not(.js) .sr-word,
+html:not(.js) .sr-item {
+  opacity: 1;
+  filter: none;
+  transform: none;
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__word,
+  .hero__char-word,
+  .hero__btn,
+  .hero__scroll-indicator,
+  .remhero__title-word,
+  .remhero__desc-word,
+  .ecohero__title-word,
+  .ecohero__desc-word,
+  .ecohero__pill-stack,
+  .visionhero__title-word,
+  .visionhero__desc-word,
+  .sr-word,
+  .sr-item {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    animation: none;
+  }
 }
