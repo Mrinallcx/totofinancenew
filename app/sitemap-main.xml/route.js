@@ -29,9 +29,7 @@ export async function GET() {
 
   const entries = paths.map((path) => {
     const url = path === "/" ? base : `${base}${path}`;
-    const priority = path === "/" ? "1.0" : "0.8";
-    const changefreq = path === "/" ? "weekly" : "monthly";
-    return { url, priority, changefreq };
+    return { url };
   });
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -39,7 +37,7 @@ export async function GET() {
 ${entries
   .map(
     (e) =>
-      `  <url>\n    <loc>${escapeXml(e.url)}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${e.changefreq}</changefreq>\n    <priority>${e.priority}</priority>\n  </url>`
+      `  <url>\n    <loc>${escapeXml(e.url)}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`
   )
   .join("\n")}
 </urlset>

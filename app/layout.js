@@ -30,23 +30,30 @@ const websiteJsonLd = {
       "@id": `${siteUrlTrailing}#website`,
       url: siteUrlTrailing,
       name: SITE_NAME,
-      alternateName: ["Toto Finance", "totofinance.co", "totofinance.xyz"],
+      inLanguage: "en",
+      alternateName: ["Toto Finance", "totofinance.co"],
       publisher: { "@id": `${siteUrlTrailing}#organization` },
     },
     {
       "@type": "Organization",
       "@id": `${siteUrlTrailing}#organization`,
       name: SITE_NAME,
+      legalName: "Toto Finance",
+      description:
+        "The global infrastructure for tokenized commodities — enabling asset-backed ownership, instant settlement, and compliant global trade across metals, gems, and rare-earth elements.",
       url: siteUrlTrailing,
       logo: {
         "@type": "ImageObject",
         url: organizationLogoUrl,
+        width: 512,
+        height: 512,
       },
       sameAs: organizationSameAs,
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer support",
         url: organizationContactUrl,
+        availableLanguage: ["en"],
       },
     },
   ],
@@ -72,12 +79,14 @@ export const metadata = {
   openGraph: {
     siteName: SITE_NAME,
     type: "website",
+    locale: "en_US",
     images: [OG_IMAGE_URL],
   },
   twitter: {
     card: "summary_large_image",
     images: [OG_IMAGE_URL],
   },
+  themeColor: "#0a0a0a",
   verification: {
     google: "PU5ePrpoHebS2k5_nj7bPg6af_2QfIIB2kKdlkhoT_E",
   },

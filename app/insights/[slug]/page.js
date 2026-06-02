@@ -97,20 +97,35 @@ export default async function InsightsPostPage({ params }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Article",
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": `${siteUrl}/insights/${slug}`,
+              },
               headline: post.title,
               description: description,
-              image: post.image || null,
-              datePublished: post.date,
-              dateModified: post.modified || post.date,
-              author: { "@type": "Organization", name: "Toto Finance" },
-              publisher: {
-                "@type": "Organization",
-                name: "Toto Finance",
-                logo: {
-                  "@type": "ImageObject",
-                  url: `${siteUrl}/totofinance-white.svg`,
-                },
-              },
+              image: post.image
+                ? [post.image]
+                : undefined,
+              datePublished: post.date
+                ? post.date.includes("+") || post.date.includes("Z")
+                  ? post.date
+                  : `${post.date}+00:00`
+                : undefined,
+              dateModified: post.modified
+                ? post.modified.includes("+") || post.modified.includes("Z")
+                  ? post.modified
+                  : `${post.modified}+00:00`
+                : undefined,
+              author: post.author?.name
+                ? {
+                    "@type": "Person",
+                    name: post.author.name,
+                    url: post.author.url || undefined,
+                  }
+                : { "@id": `${siteUrl}/#organization` },
+              publisher: { "@id": `${siteUrl}/#organization` },
+              articleSection: post.categoryLabel || "Tokenization",
+              inLanguage: "en",
               url: `${siteUrl}/insights/${slug}`,
             }),
           }}

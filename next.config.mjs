@@ -1,7 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
+      // Normalise trailing slashes → no trailing slash (except root)
+      { source: "/:path+/", destination: "/:path+", permanent: true },
       { source: "/products", destination: "/product", permanent: true },
       { source: "/products/:path*", destination: "/product/:path*", permanent: true },
       { source: "/vision-2030", destination: "/vision", permanent: true },
